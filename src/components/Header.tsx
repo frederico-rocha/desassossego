@@ -35,7 +35,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between h-20 px-6">
         <a href="#" className="flex items-center">
-          <img src={logo} alt="desassossego" className={`h-10 md:h-12 w-auto transition-all duration-300 ${scrolled ? "brightness-75" : "brightness-0 invert"}`} />
+          <img src={logo} alt="desassossego" className={`h-24 md:h-28 w-auto -my-6 transition-all duration-300 ${scrolled ? "brightness-75" : "brightness-0 invert"}`} />
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
