@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
@@ -33,8 +34,8 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-20 px-6">
-        <a href="#" className={`font-display text-2xl font-semibold tracking-tight transition-colors duration-300 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
-          desassossego
+        <a href="#" className="flex items-center">
+          <img src={logo} alt="desassossego" className={`h-10 md:h-12 w-auto transition-all duration-300 ${scrolled ? "brightness-75" : "brightness-0 invert"}`} />
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
