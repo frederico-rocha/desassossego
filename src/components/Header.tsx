@@ -42,7 +42,7 @@ const Header = () => {
             <button
               key={item.href}
               onClick={() => handleClick(item.href)}
-              className="font-body text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
+              className={`font-body text-sm font-medium transition-colors duration-300 ${scrolled ? "text-muted-foreground hover:text-primary" : "text-primary-foreground/80 hover:text-primary-foreground"}`}
             >
               {item.label}
             </button>
