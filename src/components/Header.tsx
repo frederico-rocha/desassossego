@@ -33,7 +33,7 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-20 px-6">
-        <a href="#" className="font-display text-2xl font-semibold tracking-tight text-primary">
+        <a href="#" className={`font-display text-2xl font-semibold tracking-tight transition-colors duration-300 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
           desassossego
         </a>
 
@@ -42,7 +42,7 @@ const Header = () => {
             <button
               key={item.href}
               onClick={() => handleClick(item.href)}
-              className="font-body text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
+              className={`font-body text-sm font-medium transition-colors duration-300 ${scrolled ? "text-muted-foreground hover:text-primary" : "text-primary-foreground/80 hover:text-primary-foreground"}`}
             >
               {item.label}
             </button>
