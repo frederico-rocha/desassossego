@@ -52,14 +52,13 @@ const ProtocolsSection = () => (
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
-            className="bg-card rounded-xl p-4 md:p-6 border border-border flex items-center gap-3 md:gap-4 hover:shadow-md transition-shadow duration-300 overflow-hidden"
+            className="bg-card rounded-xl p-6 md:p-8 border border-border flex items-center justify-center hover:shadow-md transition-shadow duration-300"
           >
             {protocol.logo ? (
-              <img src={protocol.logo} alt={protocol.name} className="h-8 w-auto object-contain flex-shrink-0" />
+              <img src={protocol.logo} alt={protocol.name} className="h-8 md:h-10 w-auto max-w-[140px] object-contain" />
             ) : (
-              <Shield className="w-5 h-5 text-primary flex-shrink-0" />
+              <Shield className="w-6 h-6 text-primary" />
             )}
-            
           </motion.div>
         ))}
       </div>
