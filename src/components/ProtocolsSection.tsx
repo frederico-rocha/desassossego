@@ -1,15 +1,20 @@
 import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
 
-const protocols = [
-  "ADSE",
-  "Multicare",
-  "AdvanceCare",
-  "Médis",
-  "Allianz",
-  "Fidelidade",
-  "Ageas",
-  "Medicare",
+interface Protocol {
+  name: string;
+  logo?: string;
+}
+
+const protocols: Protocol[] = [
+  { name: "ADSE" },
+  { name: "Multicare" },
+  { name: "AdvanceCare" },
+  { name: "Médis" },
+  { name: "Allianz" },
+  { name: "Fidelidade" },
+  { name: "Ageas" },
+  { name: "Medicare" },
 ];
 
 const ProtocolsSection = () => (
