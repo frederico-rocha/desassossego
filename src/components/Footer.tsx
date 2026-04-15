@@ -30,7 +30,7 @@ const Footer = () => (
 
       <div className="border-t border-primary-foreground/15 mt-8 pt-8 text-center">
         <p className="text-xs text-primary-foreground/50 font-body">
-          © 2024 Clínica Desassossego. Todos os direitos reservados. Cédula Profissional n.º XXXXX da Ordem dos Psicólogos Portugueses.
+          © 2026 Clínica Desassossego. Todos os direitos reservados. Cédula Profissional n.º XXXXX da Ordem dos Psicólogos Portugueses.
         </p>
       </div>
     </div>
