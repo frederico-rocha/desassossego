@@ -1,15 +1,20 @@
 import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
 
-const protocols = [
-  "ADSE",
-  "Multicare",
-  "AdvanceCare",
-  "Médis",
-  "Allianz",
-  "Fidelidade",
-  "Ageas",
-  "Medicare",
+interface Protocol {
+  name: string;
+  logo?: string;
+}
+
+const protocols: Protocol[] = [
+  { name: "ADSE" },
+  { name: "Multicare" },
+  { name: "AdvanceCare" },
+  { name: "Médis" },
+  { name: "Allianz" },
+  { name: "Fidelidade" },
+  { name: "Ageas" },
+  { name: "Medicare" },
 ];
 
 const ProtocolsSection = () => (
@@ -32,17 +37,21 @@ const ProtocolsSection = () => (
       </motion.div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {protocols.map((name, i) => (
+        {protocols.map((protocol, i) => (
           <motion.div
-            key={name}
+            key={protocol.name}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
             className="bg-card rounded-xl p-6 border border-border flex items-center gap-4 hover:shadow-md transition-shadow duration-300"
           >
-            <Shield className="w-5 h-5 text-primary flex-shrink-0" />
-            <span className="font-body font-medium text-foreground">{name}</span>
+            {protocol.logo ? (
+              <img src={protocol.logo} alt={protocol.name} className="h-8 w-auto object-contain flex-shrink-0" />
+            ) : (
+              <Shield className="w-5 h-5 text-primary flex-shrink-0" />
+            )}
+            <span className="font-body font-medium text-foreground">{protocol.name}</span>
           </motion.div>
         ))}
       </div>
