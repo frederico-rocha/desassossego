@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import team1 from "@/assets/team-1.jpg";
+import team1 from "@/assets/team-1.png";
 import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
 
 const team = [
   {
-    name: "Dra. Mariana Ferreira",
+    name: "Dra. Vera Botelho da Costa",
     role: "Psicóloga Clínica · Diretora",
     specialty: "Especialista em Ansiedade e Depressão",
     image: team1,
+  },
+  {
+    name: "Dra. Débora Macedo",
+    role: "Psicóloga Clínica · Diretora",
+    specialty: "Psicologia Infantojuvenil",
+    image: team3,
   },
   {
     name: "Dr. Tomás Almeida",
     role: "Psicólogo Clínico",
     specialty: "Terapia de Casal e Família",
     image: team2,
-  },
-  {
-    name: "Dra. Helena Costa",
-    role: "Psicóloga Clínica Sénior",
-    specialty: "Psicologia Infantojuvenil",
-    image: team3,
   },
 ];
 
