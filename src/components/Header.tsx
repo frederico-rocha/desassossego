@@ -34,8 +34,12 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-20 px-6">
-        <a href="#" className="flex items-center">
-          <img src={logo} alt="desassossego" className={`h-40 md:h-48 w-auto -my-14 transition-all duration-300 ${scrolled ? "brightness-75" : "brightness-0 invert"}`} />
+        <a href="#" className="flex h-14 w-40 items-center justify-center overflow-hidden md:h-16 md:w-56">
+          <img
+            src={logo}
+            alt="desassossego"
+            className={`h-48 md:h-56 w-auto max-w-none transition-all duration-300 ${scrolled ? "brightness-75" : "brightness-0 invert"}`}
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
