@@ -59,7 +59,7 @@ const ProtocolsSection = () => (
             ) : (
               <Shield className="w-5 h-5 text-primary flex-shrink-0" />
             )}
-            <span className="font-body font-medium text-foreground text-sm md:text-base truncate">{protocol.name}</span>
+            
           </motion.div>
         ))}
       </div>
