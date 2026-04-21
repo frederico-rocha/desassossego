@@ -19,7 +19,7 @@ const ContactsSection = () => (
         </p>
       </motion.div>
 
-      <div className="grid lg:grid-cols-2 gap-10 mb-12">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mb-12">
         {[
           {
             icon: Phone,
@@ -106,26 +106,6 @@ const ContactsSection = () => (
             />
           </motion.div>
         ))}
-      </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="rounded-xl overflow-hidden border border-border h-80 lg:h-auto min-h-[320px]"
-        >
-          <iframe
-            title="Localização da Clínica Desassossego"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.0!2d-9.146!3d38.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQzJzEyLjAiTiA5wrAwOCc0NS42Ilc!5e0!3m2!1spt-PT!2spt!4v1"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </motion.div>
       </div>
     </div>
   </section>
