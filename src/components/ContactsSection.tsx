@@ -24,12 +24,12 @@ const ContactsSection = () => (
           {
             icon: Phone,
             title: "Telefone",
-            lines: ["+351 21 234 5678", "+351 912 345 678"],
+            lines: ["+351 910 786 339"],
           },
           {
             icon: Mail,
             title: "Email",
-            lines: ["geral@desassossego.pt", "consultas@desassossego.pt"],
+            lines: ["clinicadesassossego@gmail.com"],
           },
           {
             icon: MapPin,
