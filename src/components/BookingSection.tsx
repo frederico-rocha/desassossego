@@ -109,6 +109,21 @@ const BookingSection = () => {
               </div>
             </div>
 
+            <div className="mb-5">
+              <label className="block text-sm font-body font-medium text-foreground mb-2">
+                Clínica preferida
+              </label>
+              <select
+                required
+                defaultValue=""
+                className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
+              >
+                <option value="" disabled>Selecionar clínica...</option>
+                <option value="lisboa">Lisboa — Av. António Serpa, 32</option>
+                <option value="cascais">Cascais — Av. 25 de Abril, 672</option>
+              </select>
+            </div>
+
             <div className="mb-6">
               <label className="block text-sm font-body font-medium text-foreground mb-2">
                 Mensagem (opcional)
