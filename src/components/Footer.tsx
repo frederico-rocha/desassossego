@@ -1,3 +1,5 @@
+import logo from "@/assets/logo.png";
+
 const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
     <path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.24-1.46 1.5-1.46H16.5V4.4c-.27-.04-1.2-.12-2.28-.12-2.26 0-3.8 1.38-3.8 3.91v2.18H8v3h2.42V21h3.08z" />
@@ -18,12 +20,11 @@ const Footer = () => (
     <div className="container mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <p className="font-display text-xl font-semibold text-primary-foreground">
-            desassossego
-          </p>
-          <p className="text-sm text-primary-foreground/60 font-body mt-1">
-            Clínica de Psicologia
-          </p>
+          <img
+            src={logo}
+            alt="Clínica Desassossego"
+            className="h-14 md:h-16 w-auto object-contain"
+          />
         </div>
 
         <div className="flex gap-8">
