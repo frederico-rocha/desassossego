@@ -44,7 +44,7 @@ const Header = () => {
           <img
             src={logo}
             alt="desassossego"
-            className={`h-12 md:h-14 w-auto transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
+            className={`h-12 md:h-14 w-auto transition-all duration-300 ${scrolled ? "[filter:brightness(0)_saturate(100%)_invert(15%)_sepia(85%)_saturate(2200%)_hue-rotate(180deg)_brightness(95%)_contrast(101%)]" : "brightness-0 invert"}`}
           />
         </a>
 
