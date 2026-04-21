@@ -50,7 +50,7 @@ const Footer = () => (
             aria-label="Facebook"
             className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center text-primary-foreground transition-colors duration-300"
           >
-            <Facebook className="w-5 h-5" />
+            <FacebookIcon className="w-5 h-5" />
           </a>
           <a
             href="https://www.instagram.com/desassossego_psicologia/"
