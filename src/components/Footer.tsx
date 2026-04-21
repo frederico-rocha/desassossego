@@ -59,7 +59,7 @@ const Footer = () => (
             aria-label="Instagram"
             className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center text-primary-foreground transition-colors duration-300"
           >
-            <Instagram className="w-5 h-5" />
+            <InstagramIcon className="w-5 h-5" />
           </a>
         </div>
       </div>
