@@ -18,12 +18,11 @@ const Footer = () => (
     <div className="container mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <p className="font-display text-xl font-semibold text-primary-foreground">
-            desassossego
-          </p>
-          <p className="text-sm text-primary-foreground/60 font-body mt-1">
-            Clínica de Psicologia
-          </p>
+          <img
+            src={logo}
+            alt="Clínica Desassossego"
+            className="h-14 md:h-16 w-auto object-contain"
+          />
         </div>
 
         <div className="flex gap-8">
