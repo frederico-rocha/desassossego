@@ -44,7 +44,7 @@ const Header = () => {
           <img
             src={logo}
             alt="desassossego"
-            className={`h-12 md:h-14 w-auto transition-all duration-300 ${scrolled ? "brightness-75" : "brightness-0 invert"}`}
+            className={`h-12 md:h-14 w-auto transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
           />
         </a>
 
