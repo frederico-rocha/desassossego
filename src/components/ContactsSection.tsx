@@ -34,8 +34,17 @@ const ContactsSection = () => (
             },
             {
               icon: MapPin,
-              title: "Morada",
-              lines: ["Av. da Liberdade, 120 — 3.º Dto.", "1250-146 Lisboa"],
+              title: "Lisboa",
+              lines: ["Av. António Serpa, 32, 8.º C", "1050-027 Lisboa"],
+            },
+            {
+              icon: MapPin,
+              title: "Cascais",
+              lines: [
+                "Av. 25 de Abril, Edif. Alvorada,",
+                "672, 5A, Sala 7",
+                "2750-512 Cascais",
+              ],
             },
             {
               icon: Clock,
