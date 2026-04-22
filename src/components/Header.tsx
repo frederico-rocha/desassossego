@@ -41,10 +41,20 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between h-20 px-6">
         <a href="#" className="flex items-center">
-          <img
-            src={logo}
-            alt="desassossego"
-            className={`h-12 md:h-14 w-auto transition-all duration-300 ${scrolled ? "[filter:brightness(0)_saturate(100%)_invert(15%)_sepia(85%)_saturate(2200%)_hue-rotate(180deg)_brightness(95%)_contrast(101%)]" : "brightness-0 invert"}`}
+          <div
+            aria-label="desassossego"
+            role="img"
+            className={`h-12 md:h-14 w-40 md:w-48 transition-colors duration-300 ${scrolled ? "bg-primary" : "bg-primary-foreground"}`}
+            style={{
+              WebkitMaskImage: `url(${logo})`,
+              maskImage: `url(${logo})`,
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskPosition: "left center",
+              maskPosition: "left center",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+            }}
           />
         </a>
 
