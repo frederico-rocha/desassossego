@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/desassossego",
+  //base: "/desassossego",
   test: {
     environment: "jsdom",
     globals: true,
