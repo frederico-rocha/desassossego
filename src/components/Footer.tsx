@@ -69,6 +69,17 @@ const Footer = () => (
         <p className="text-xs text-primary-foreground/50 font-body">
           © 2026 Clínica Desassossego. Todos os direitos reservados. Cédula Profissional n.º XXXXX da Ordem dos Psicólogos Portugueses.
         </p>
+        <p className="text-xs text-primary-foreground/50 font-body mt-2">
+          Designed by{" "}
+          <a
+            href="https://scaleautomation.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-primary-foreground transition-colors duration-300"
+          >
+            ScaleAutomation
+          </a>
+        </p>
       </div>
     </div>
   </footer>
