@@ -24,10 +24,10 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        <div className="space-y-6 max-w-5xl mx-auto">
-          {/* Row 1 - 3 services */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {t.services.items.slice(0, 3).map((service, i) => {
+        <div className="space-y-6">
+          {/* Row 1 - 2 services */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {t.services.items.slice(0, 2).map((service, i) => {
               const Icon = icons[i];
               return (
                 <motion.div
@@ -53,16 +53,16 @@ const ServicesSection = () => {
           </div>
 
           {/* Row 2 - 2 services */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {t.services.items.slice(3, 5).map((service, i) => {
-              const Icon = icons[i + 3];
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {t.services.items.slice(2, 4).map((service, i) => {
+              const Icon = icons[i + 2];
               return (
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.6, delay: (i + 3) * 0.1 }}
+                  transition={{ duration: 0.6, delay: (i + 2) * 0.1 }}
                   className="bg-card rounded-xl p-8 border border-border hover:shadow-lg hover:shadow-primary/5 transition-all duration-500 group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mb-5 group-hover:bg-primary/10 transition-colors duration-300">
@@ -79,17 +79,17 @@ const ServicesSection = () => {
             })}
           </div>
 
-          {/* Row 3 - 2 services */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {t.services.items.slice(5, 7).map((service, i) => {
-              const Icon = icons[i + 5];
+          {/* Row 3 - 3 services */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {t.services.items.slice(4, 7).map((service, i) => {
+              const Icon = icons[i + 4];
               return (
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.6, delay: (i + 5) * 0.1 }}
+                  transition={{ duration: 0.6, delay: (i + 4) * 0.1 }}
                   className="bg-card rounded-xl p-8 border border-border hover:shadow-lg hover:shadow-primary/5 transition-all duration-500 group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mb-5 group-hover:bg-primary/10 transition-colors duration-300">
