@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Brain, Heart, Users, Baby, Sparkles, Clock } from "lucide-react";
+import { Baby, GraduationCap, Brain, Video, ClipboardCheck, Compass, Heart } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const icons = [Brain, Users, Heart, Baby, Sparkles, Clock];
+const icons = [Baby, GraduationCap, Brain, Video, ClipboardCheck, Compass, Heart];
 
 const ServicesSection = () => {
   const { t } = useLanguage();

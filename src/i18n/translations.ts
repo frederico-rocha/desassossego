@@ -12,51 +12,56 @@ const pt = {
     titleA: "O primeiro passo é",
     titleB: " permitir-se.",
     description:
-      "A Clínica Desassossego é um espaço seguro de escuta, compreensão e transformação. Acompanhamos adultos e famílias no caminho do bem-estar emocional.",
+      "A desasSossego é um espaço dedicado à saúde mental, que nasce da vontade de facilitar o acesso à Psicologia Clínica.",
     ctaBook: "Reservar Consulta",
     ctaServices: "Conhecer os Serviços",
   },
   services: {
     title: "Os Nossos Serviços",
     subtitle:
-      "Oferecemos um acompanhamento personalizado e baseado em evidência científica, adaptado às necessidades de cada pessoa.",
+      "Psicologia Clínica numa perspectiva psicanalítica, com acompanhamento adaptado a cada fase da vida.",
     items: [
       {
-        title: "Psicologia Clínica",
+        title: "Psicoterapia de Crianças",
         description:
-          "Avaliação e intervenção psicológica individual para perturbações de ansiedade, depressão, stress e outras dificuldades emocionais.",
+          "Fobias, insónias, pesadelos, medo de separação, perturbações do desenvolvimento ou distúrbios alimentares podem traduzir o sofrimento psíquico da criança. Através do jogo e do brincar, ajudamos a transformar ansiedades e angústias, com sessões periódicas com os pais.",
       },
       {
-        title: "Terapia de Casal",
+        title: "Psicoterapia de Adolescentes",
         description:
-          "Apoio especializado para casais que desejam fortalecer a sua relação, melhorar a comunicação e ultrapassar crises.",
+          "As vivências da adolescência suscitam conflitos, dúvidas e necessidade de integração. Numa relação de confiança, criamos um clima positivo que permite ao jovem expressar e elaborar pensamentos e emoções, com sessões periódicas em conjunto com os pais.",
       },
       {
-        title: "Terapia Familiar",
+        title: "Psicoterapia de Adultos",
         description:
-          "Intervenção sistémica para famílias que enfrentam conflitos, transições ou dificuldades na dinâmica familiar.",
+          "Tristeza, ansiedade, preocupações excessivas, perturbações do sono, medos ou fobias podem tornar-se incapacitantes. A psicoterapia permite tomar consciência das causas do mal-estar e encontrar uma forma de sentir e agir mais livre e criativa.",
       },
       {
-        title: "Psicologia Infantojuvenil",
+        title: "Psicoterapia Online",
         description:
-          "Acompanhamento de crianças e adolescentes com dificuldades emocionais, comportamentais ou de aprendizagem.",
+          "Sessões à distância com a mesma confidencialidade das presenciais. Oferece maior flexibilidade de agenda, poupa tempo de deslocação e ultrapassa barreiras geográficas — com resultados cientificamente comprovados.",
       },
       {
-        title: "Desenvolvimento Pessoal",
+        title: "Avaliação Psicológica",
         description:
-          "Programas de coaching e autoconhecimento para quem procura crescimento pessoal e uma vida mais significativa.",
+          "Com técnicas adaptadas à idade e fase de desenvolvimento, acedemos ao modo de funcionamento mental, identificando pontos fortes, áreas a desenvolver e padrões de relacionamento. Realizada em várias sessões, com possibilidade de relatório final.",
       },
       {
-        title: "Consultas Online",
+        title: "Orientação Vocacional",
         description:
-          "Sessões de psicologia à distância com a mesma qualidade e confidencialidade das consultas presenciais.",
+          "Para jovens e jovens adultos, promove a consciência sobre motivação, interesses profissionais, aptidões e valores. Apoia o processo de tomada de decisão quanto ao futuro profissional, em 4 a 5 sessões, com possibilidade de relatório.",
+      },
+      {
+        title: "Aconselhamento Parental",
+        description:
+          "Apoio aos pais perante desafios da parentalidade — rotinas, comportamento, transições ou comunicação familiar. Promove a compreensão das necessidades emocionais dos filhos e reforça competências parentais, contribuindo para relações mais seguras e saudáveis.",
       },
     ],
   },
   about: {
     title: "Quem Somos",
-    p1: "A Clínica Desassossego nasceu da convicção de que cuidar da saúde mental é um ato de coragem e de amor próprio. Fundada em 2018, oferecemos um espaço acolhedor e confidencial onde cada pessoa é recebida sem julgamento.",
-    p2: "A nossa equipa é composta por psicólogos clínicos com formação especializada e experiência comprovada. Trabalhamos com abordagens integradas e baseadas em evidência, garantindo um acompanhamento rigoroso e humanizado.",
+    p1: "A desasSossego é um espaço dedicado à saúde mental, que nasce da vontade de facilitar o acesso à Psicologia Clínica. Disponibilizamos um conjunto de serviços, dos quais destacamos a Psicoterapia numa perspectiva psicanalítica.",
+    p2: "O processo psicanalítico, pelo recurso à associação livre, permite elaborar as dificuldades da pessoa através da compreensão da origem dos seus problemas e insatisfações.",
     p3: "Acreditamos que o desassossego — aquela inquietação interior que nos leva a procurar ajuda — é, na verdade, o primeiro passo para uma mudança genuína e duradoura.",
     stats: {
       years: "Anos de experiência",
@@ -138,51 +143,56 @@ const en: typeof pt = {
     titleA: "The first step is",
     titleB: " allowing yourself.",
     description:
-      "Clínica Desassossego is a safe space for listening, understanding and transformation. We support adults and families on the path to emotional well-being.",
+      "desaSossego is a space dedicated to mental health, created with the purpose of making Clinical Psychology more accessible.",
     ctaBook: "Book a Session",
     ctaServices: "Explore our Services",
   },
   services: {
     title: "Our Services",
     subtitle:
-      "We offer personalised, evidence-based care adapted to the needs of each person.",
+      "Clinical Psychology from a psychoanalytic perspective, with care tailored to every stage of life.",
     items: [
       {
-        title: "Clinical Psychology",
+        title: "Children Psychotherapy",
         description:
-          "Individual psychological assessment and intervention for anxiety, depression, stress and other emotional difficulties.",
+          "Phobias, insomnia, nightmares, separation anxiety, developmental disorders or eating disturbances may reflect a child's psychological pain. Through play and symbolic expression, we help process anxiety and distress, with regular sessions with the parents.",
       },
       {
-        title: "Couples Therapy",
+        title: "Adolescent Psychotherapy",
         description:
-          "Specialised support for couples who wish to strengthen their relationship, improve communication and overcome crises.",
+          "Adolescence brings internal and external conflicts, doubts and a need for integration. Through a trusting relationship, we foster a safe environment where the adolescent can express and process thoughts and emotions, with regular joint sessions with the parents.",
       },
       {
-        title: "Family Therapy",
+        title: "Adult Psychotherapy",
         description:
-          "Systemic intervention for families facing conflicts, transitions or difficulties in their dynamics.",
+          "Sadness, anxiety, excessive worries, sleep disturbances, fears or phobias can become debilitating. Psychotherapy offers insight into the underlying causes of emotional distress and supports a freer, more creative way of feeling and acting.",
       },
       {
-        title: "Child & Adolescent Psychology",
+        title: "Online Psychotherapy",
         description:
-          "Support for children and adolescents with emotional, behavioural or learning difficulties.",
+          "Remote sessions with the same confidentiality as in-person care. Offers greater scheduling flexibility, saves travel time and overcomes geographical barriers — with scientifically supported results.",
       },
       {
-        title: "Personal Development",
+        title: "Psychological Assessment",
         description:
-          "Coaching and self-awareness programmes for those seeking personal growth and a more meaningful life.",
+          "Using techniques tailored to age and stage of development, we gain insight into mental functioning, identifying strengths, areas for growth and relational patterns. Carried out over several sessions, with a final written report available on request.",
       },
       {
-        title: "Online Sessions",
+        title: "Career Guidance",
         description:
-          "Remote psychology sessions with the same quality and confidentiality as in-person consultations.",
+          "For adolescents and young adults, promotes self-awareness in motivation, professional interests, aptitudes and values. Supports decision-making about academic and professional paths, over 4 to 5 sessions, with a report available on request.",
+      },
+      {
+        title: "Parental Counseling",
+        description:
+          "Support for parents facing challenges of parenthood — routines, behavior, transitions or family communication. Promotes understanding of children's emotional needs and reinforces parental skills, contributing to safer and healthier family relationships.",
       },
     ],
   },
   about: {
     title: "About Us",
-    p1: "Clínica Desassossego was founded on the belief that caring for mental health is an act of courage and self-love. Established in 2018, we offer a welcoming and confidential space where every person is received without judgement.",
-    p2: "Our team is made up of clinical psychologists with specialised training and proven experience. We work with integrated, evidence-based approaches, ensuring rigorous and humane care.",
+    p1: "desaSossego is a space dedicated to mental health, created with the purpose of making Clinical Psychology more accessible. We provide a range of services, with a special focus on Psychotherapy from a psychoanalytic perspective.",
+    p2: "The psychoanalytic process, through the method of free association, facilitates the exploration and elaboration of personal difficulties by uncovering the underlying origins of emotional conflicts and dissatisfaction.",
     p3: "We believe that desassossego — that inner restlessness that leads us to seek help — is, in fact, the first step toward genuine and lasting change.",
     stats: {
       years: "Years of experience",
