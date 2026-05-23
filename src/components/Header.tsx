@@ -2,17 +2,19 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navItems = [
-  { label: "Serviços", href: "#servicos" },
-  { label: "Quem Somos", href: "#quem-somos" },
-  { label: "Protocolos", href: "#protocolos" },
-  { label: "Contactos", href: "#contactos" },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { lang, setLang, t } = useLanguage();
+
+  const navItems = [
+    { label: t.nav.services, href: "#servicos" },
+    { label: t.nav.about, href: "#quem-somos" },
+    { label: t.nav.protocols, href: "#protocolos" },
+    { label: t.nav.contacts, href: "#contactos" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -29,6 +31,32 @@ const Header = () => {
         window.scrollTo({ top, behavior: "smooth" });
       }
     }, 50);
+  };
+
+  const LangSwitcher = ({ inverted = false }: { inverted?: boolean }) => {
+    const base = inverted
+      ? "text-primary-foreground/70 hover:text-primary-foreground"
+      : "text-muted-foreground hover:text-primary";
+    const active = inverted ? "text-primary-foreground" : "text-primary";
+    return (
+      <div className={`flex items-center gap-1 text-xs font-body font-medium`}>
+        <button
+          onClick={() => setLang("pt")}
+          className={`uppercase transition-colors ${lang === "pt" ? active : base}`}
+          aria-label="Português"
+        >
+          PT
+        </button>
+        <span className={inverted ? "text-primary-foreground/40" : "text-muted-foreground/40"}>/</span>
+        <button
+          onClick={() => setLang("en")}
+          className={`uppercase transition-colors ${lang === "en" ? active : base}`}
+          aria-label="English"
+        >
+          EN
+        </button>
+      </div>
+    );
   };
 
   return (
@@ -68,20 +96,24 @@ const Header = () => {
               {item.label}
             </button>
           ))}
+          <LangSwitcher inverted={!scrolled} />
           <button
             onClick={() => handleClick("#reservar")}
             className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity duration-300"
           >
-            Reservar Consulta
+            {t.nav.book}
           </button>
         </nav>
 
-        <button
-          className="md:hidden text-primary"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <LangSwitcher inverted={!scrolled} />
+          <button
+            className={scrolled ? "text-primary" : "text-primary-foreground"}
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -106,7 +138,7 @@ const Header = () => {
                 onClick={() => handleClick("#reservar")}
                 className="bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold mt-2"
               >
-                Reservar Consulta
+                {t.nav.book}
               </button>
             </div>
           </motion.div>
