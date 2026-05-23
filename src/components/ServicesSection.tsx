@@ -26,7 +26,7 @@ const ServicesSection = () => {
 
         <div className="space-y-6">
           {/* Row 1 - 2 services */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {t.services.items.slice(0, 2).map((service, i) => {
               const Icon = icons[i];
               return (
@@ -53,7 +53,7 @@ const ServicesSection = () => {
           </div>
 
           {/* Row 2 - 2 services */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {t.services.items.slice(2, 4).map((service, i) => {
               const Icon = icons[i + 2];
               return (
