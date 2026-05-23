@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -15,7 +16,11 @@ const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 
-const Footer = () => (
+const Footer = () => {
+  const { t } = useLanguage();
+  const navLabels = [t.nav.services, t.nav.about, t.nav.protocols, t.nav.contacts];
+  const navIds = ["servicos", "quem-somos", "protocolos", "contactos"];
+  return (
   <footer className="bg-primary py-12 px-6">
     <div className="container mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -28,17 +33,15 @@ const Footer = () => (
         </div>
 
         <div className="flex gap-8">
-          {["Serviços", "Quem Somos", "Protocolos", "Contactos"].map((item) => (
+          {navLabels.map((label, i) => (
             <button
-              key={item}
+              key={navIds[i]}
               onClick={() =>
-                document
-                  .querySelector(`#${item.toLowerCase().replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`)
-                  ?.scrollIntoView({ behavior: "smooth" })
+                document.querySelector(`#${navIds[i]}`)?.scrollIntoView({ behavior: "smooth" })
               }
               className="text-sm text-primary-foreground/70 hover:text-primary-foreground font-body transition-colors duration-300"
             >
-              {item}
+              {label}
             </button>
           ))}
         </div>
@@ -67,10 +70,10 @@ const Footer = () => (
 
       <div className="border-t border-primary-foreground/15 mt-8 pt-8 text-center">
         <p className="text-xs text-primary-foreground/50 font-body">
-          © 2026 Clínica Desassossego. Todos os direitos reservados. Cédula Profissional n.º XXXXX da Ordem dos Psicólogos Portugueses.
+          {t.footer.rights}
         </p>
         <p className="text-xs text-primary-foreground/50 font-body mt-2">
-          Designed by{" "}
+          {t.footer.designedBy}{" "}
           <a
             href="https://scaleautomation.dev/"
             target="_blank"
@@ -83,6 +86,7 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-);
+  );
+};
 
 export default Footer;
