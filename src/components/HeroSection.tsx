@@ -21,13 +21,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-2xl"
+          className="max-w-4xl"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold leading-tight text-primary-foreground mb-6 text-balance">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-display font-semibold leading-tight text-primary-foreground mb-6 text-balance">
             {t.hero.titleA}
             <span className="italic">{t.hero.titleB}</span>
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/85 font-body font-light leading-relaxed mb-10 max-w-xl">
+          <p className="text-base md:text-lg text-primary-foreground/85 font-body font-light leading-relaxed mb-10 max-w-2xl">
             {t.hero.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
