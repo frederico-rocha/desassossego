@@ -9,10 +9,9 @@ const pt = {
     book: "Reservar Consulta",
   },
   hero: {
-    titleA: "O primeiro passo é",
-    titleB: " permitir-se.",
-    description:
-      "A desasSossego é um espaço dedicado à saúde mental, que nasce da vontade de facilitar o acesso à Psicologia Clínica.",
+    titleA: "“Há sensações que são sonos, que ocupam como uma névoa toda a extensão do espírito, que não deixam agir, que não deixam claramente",
+    titleB: " ser.”",
+    description: "— Bernardo Soares, “O Livro do Desassossego”",
     ctaBook: "Reservar Consulta",
     ctaServices: "Conhecer os Serviços",
   },
@@ -140,10 +139,9 @@ const en: typeof pt = {
     book: "Book a Session",
   },
   hero: {
-    titleA: "The first step is",
-    titleB: " allowing yourself.",
-    description:
-      "desaSossego is a space dedicated to mental health, created with the purpose of making Clinical Psychology more accessible.",
+    titleA: "“There are sensations which are sleeps, which occupy like a mist the whole extent of the spirit, which do not let one act, which do not let one clearly",
+    titleB: " be.”",
+    description: "— Bernardo Soares, “The Book of Disquiet”",
     ctaBook: "Book a Session",
     ctaServices: "Explore our Services",
   },
