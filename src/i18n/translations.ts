@@ -83,6 +83,14 @@ const pt = {
         role: "Psicóloga Clínica",
         specialty: "Terapia de Casal e Família",
       },
+      {
+        role: "Psicóloga Clínica",
+        specialty: "",
+      },
+      {
+        role: "Psicóloga Clínica",
+        specialty: "",
+      },
     ],
   },
   protocols: {
@@ -213,6 +221,14 @@ const en: typeof pt = {
       {
         role: "Clinical Psychologist",
         specialty: "Couples and Family Therapy",
+      },
+      {
+        role: "Clinical Psychologist",
+        specialty: "",
+      },
+      {
+        role: "Clinical Psychologist",
+        specialty: "",
       },
     ],
   },

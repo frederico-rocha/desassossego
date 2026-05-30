@@ -2,14 +2,16 @@ import { motion } from "framer-motion";
 import teamVera from "@/assets/team-vera.jpg";
 import teamDebora from "@/assets/team-debora.jpg";
 import teamInes from "@/assets/team-ines.jpg";
+import teamLeonor from "@/assets/team-leonor.jpg";
+import teamFrancis from "@/assets/team-francis.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const teamMembers: { name: string; image: string | null }[] = [
   { name: "Dra. Vera Botelho da Costa", image: teamVera },
   { name: "Dra. Débora Macedo", image: teamDebora },
   { name: "Dra. Inês", image: teamInes },
-  { name: "", image: null },
-  { name: "", image: null },
+  { name: "Dra. Leonor", image: teamLeonor },
+  { name: "Dra. Francis", image: teamFrancis },
 ];
 
 const AboutSection = () => {
