@@ -69,6 +69,7 @@ const pt = {
       satisfaction: "Satisfação dos pacientes",
     },
     teamTitle: "A Nossa Equipa",
+    comingSoon: "Em breve",
     team: [
       {
         role: "Psicóloga Clínica · Diretora",
@@ -79,7 +80,7 @@ const pt = {
         specialty: "Psicologia Infantojuvenil",
       },
       {
-        role: "Psicólogo Clínico",
+        role: "Psicóloga Clínica",
         specialty: "Terapia de Casal e Família",
       },
     ],
