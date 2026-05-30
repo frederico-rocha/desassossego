@@ -110,6 +110,8 @@ const Header = () => {
           <button
             className={scrolled ? "text-primary" : "text-primary-foreground"}
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
