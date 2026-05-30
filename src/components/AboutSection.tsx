@@ -64,34 +64,49 @@ const AboutSection = () => {
           <h3 className="text-2xl font-display font-semibold text-foreground mb-10 text-center">
             {t.about.teamTitle}
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamNames.map((name, i) => (
-              <motion.div
-                key={name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
-                className="text-center group"
-              >
-                <div className="w-48 h-48 mx-auto mb-5 rounded-full overflow-hidden border-4 border-card shadow-lg">
-                  <img
-                    src={teamImages[i]}
-                    alt={name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <h4 className="font-display text-lg font-semibold text-foreground">{name}</h4>
-                <p className="text-sm text-primary font-body font-medium mt-1">
-                  {t.about.team[i].role}
-                </p>
-                <p className="text-sm text-muted-foreground font-body mt-1">
-                  {t.about.team[i].specialty}
-                </p>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {teamMembers.map((member, i) => {
+              const isPlaceholder = !member.image;
+              const teamInfo = t.about.team[i];
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  className="text-center group"
+                >
+                  <div className={`w-40 h-40 mx-auto mb-5 rounded-full overflow-hidden border-4 border-card shadow-lg ${isPlaceholder ? "bg-muted flex items-center justify-center" : ""}`}>
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <span className="text-muted-foreground font-display text-sm">{t.about.comingSoon}</span>
+                    )}
+                  </div>
+                  <h4 className="font-display text-lg font-semibold text-foreground">
+                    {isPlaceholder ? t.about.comingSoon : member.name}
+                  </h4>
+                  {teamInfo && (
+                    <>
+                      <p className="text-sm text-primary font-body font-medium mt-1">
+                        {teamInfo.role}
+                      </p>
+                      <p className="text-sm text-muted-foreground font-body mt-1">
+                        {teamInfo.specialty}
+                      </p>
+                    </>
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
+
       </div>
     </section>
   );
