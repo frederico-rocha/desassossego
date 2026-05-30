@@ -83,6 +83,14 @@ const pt = {
         role: "Psicóloga Clínica",
         specialty: "Terapia de Casal e Família",
       },
+      {
+        role: "Psicóloga Clínica",
+        specialty: "",
+      },
+      {
+        role: "Psicóloga Clínica",
+        specialty: "",
+      },
     ],
   },
   protocols: {
