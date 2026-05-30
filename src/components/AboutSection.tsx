@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
-import team1 from "@/assets/team-1.png";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
+import teamVera from "@/assets/team-vera.jpg";
+import teamDebora from "@/assets/team-debora.jpg";
+import teamInes from "@/assets/team-ines.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const teamNames = [
-  "Dra. Vera Botelho da Costa",
-  "Dra. Débora Macedo",
-  "Dr. Tomás Almeida",
+const teamMembers: { name: string; image: string | null }[] = [
+  { name: "Dra. Vera Botelho da Costa", image: teamVera },
+  { name: "Dra. Débora Macedo", image: teamDebora },
+  { name: "Dra. Inês", image: teamInes },
+  { name: "", image: null },
+  { name: "", image: null },
 ];
-const teamImages = [team1, team3, team2];
 
 const AboutSection = () => {
   const { t } = useLanguage();
