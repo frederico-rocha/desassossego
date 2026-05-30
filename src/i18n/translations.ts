@@ -222,6 +222,14 @@ const en: typeof pt = {
         role: "Clinical Psychologist",
         specialty: "Couples and Family Therapy",
       },
+      {
+        role: "Clinical Psychologist",
+        specialty: "",
+      },
+      {
+        role: "Clinical Psychologist",
+        specialty: "",
+      },
     ],
   },
   protocols: {
