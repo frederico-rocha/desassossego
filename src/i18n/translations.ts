@@ -200,6 +200,7 @@ const en: typeof pt = {
       satisfaction: "Patient satisfaction",
     },
     teamTitle: "Our Team",
+    comingSoon: "Coming soon",
     team: [
       {
         role: "Clinical Psychologist · Director",
