@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
-import adse from "@/assets/adse.png";
-import multicare from "@/assets/multicare.png";
-import advancecare from "@/assets/advancecare.png";
-import medis from "@/assets/medis.png";
-import allianz from "@/assets/allianz.png";
-import fidelidade from "@/assets/fidelidade.png";
-import ageas from "@/assets/ageas.jpeg";
-import medicare from "@/assets/medicare.png";
+import acp from "@/assets/acp.jpeg";
+import olisipo from "@/assets/olisipo.jpeg";
+import cofre from "@/assets/cofre.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 interface Protocol {
@@ -16,14 +11,9 @@ interface Protocol {
 }
 
 const protocols: Protocol[] = [
-  { name: "ADSE", logo: adse },
-  { name: "Multicare", logo: multicare },
-  { name: "AdvanceCare", logo: advancecare },
-  { name: "Médis", logo: medis },
-  { name: "Allianz", logo: allianz },
-  { name: "Fidelidade", logo: fidelidade },
-  { name: "Ageas", logo: ageas },
-  { name: "Medicare", logo: medicare },
+  { name: "Automóvel Club de Portugal", logo: acp },
+  { name: "Olisipo", logo: olisipo },
+  { name: "COFRE de Previdência", logo: cofre },
 ];
 
 const ProtocolsSection = () => {
@@ -46,7 +36,7 @@ const ProtocolsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {protocols.map((protocol, i) => (
             <motion.div
               key={protocol.name}
