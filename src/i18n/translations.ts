@@ -80,7 +80,7 @@ const pt = {
         summary:
           "Cofundadora da Clínica Desassossego, dedica-se ao acompanhamento de crianças, adolescentes e famílias numa perspectiva psicanalítica.",
         bio: [
-          "Cofundadora da Clínica Desassossego, a Dra. Débora Macedo é Psicóloga Clínica com formação em psicoterapia de orientação psicanalítica.",
+          "Cofundadora da Clínica Desassossego, a Débora Macedo é Psicóloga Clínica com formação em psicoterapia de orientação psicanalítica.",
           "Tem dedicado o seu percurso ao acompanhamento de crianças, adolescentes e famílias, com particular interesse pelas dinâmicas do desenvolvimento e pelo apoio à parentalidade.",
           "Acredita que o trabalho terapêutico, num espaço de escuta atenta, permite transformar o desassossego em compreensão e mudança duradoura.",
         ],
@@ -91,7 +91,7 @@ const pt = {
         summary:
           "Cofundadora da Clínica Desassossego, acompanha adultos, casais e famílias numa abordagem clínica de inspiração psicanalítica.",
         bio: [
-          "Cofundadora da Clínica Desassossego, a Dra. Francis é Psicóloga Clínica com prática orientada para o acompanhamento de adultos, casais e famílias.",
+          "Cofundadora da Clínica Desassossego, a Francis é Psicóloga Clínica com prática orientada para o acompanhamento de adultos, casais e famílias.",
           "Privilegia uma escuta atenta às histórias e vínculos de cada pessoa, num enquadramento clínico de inspiração psicanalítica.",
           "O seu trabalho procura criar condições para que o sofrimento psíquico encontre sentido, abrindo caminho a relações mais livres e criativas.",
         ],
@@ -102,7 +102,7 @@ const pt = {
         summary:
           "Cofundadora da Clínica Desassossego, acompanha adultos em processos psicoterapêuticos focados na ansiedade, depressão e sofrimento emocional.",
         bio: [
-          "Cofundadora da Clínica Desassossego, a Dra. Vera Botelho da Costa é Psicóloga Clínica com vasta experiência no acompanhamento de adultos.",
+          "Cofundadora da Clínica Desassossego, a Vera Botelho da Costa é Psicóloga Clínica com vasta experiência no acompanhamento de adultos.",
           "Trabalha sobretudo quadros de ansiedade, depressão e sofrimento emocional, numa perspectiva psicanalítica que valoriza a singularidade de cada percurso.",
           "Coordena, com as cofundadoras, o projeto clínico e formativo da Desassossego, contribuindo para um cuidado próximo, ético e rigoroso.",
         ],
@@ -123,7 +123,7 @@ const pt = {
         summary:
           "Psicóloga Clínica da equipa Desassossego, acompanha adolescentes e adultos em processos psicoterapêuticos.",
         bio: [
-          "A Dra. Leonor integra a equipa clínica da Desassossego como Psicóloga Clínica.",
+          "A Leonor integra a equipa clínica da Desassossego como Psicóloga Clínica.",
           "Dedica-se ao acompanhamento de adolescentes e adultos, com foco na compreensão das dinâmicas internas e relacionais que sustentam o sofrimento psíquico.",
         ],
       },
@@ -250,7 +250,7 @@ const en: typeof pt = {
         summary:
           "Co-founder of Clínica Desassossego, devoted to working with children, adolescents and families from a psychoanalytic perspective.",
         bio: [
-          "Co-founder of Clínica Desassossego, Dra. Débora Macedo is a Clinical Psychologist trained in psychoanalytically oriented psychotherapy.",
+          "Co-founder of Clínica Desassossego, Débora Macedo is a Clinical Psychologist trained in psychoanalytically oriented psychotherapy.",
           "Her practice focuses on children, adolescents and families, with a particular interest in developmental dynamics and parental support.",
           "She believes that therapeutic work, held in a space of attentive listening, transforms inner restlessness into understanding and lasting change.",
         ],
@@ -261,7 +261,7 @@ const en: typeof pt = {
         summary:
           "Co-founder of Clínica Desassossego, working with adults, couples and families from a psychoanalytically informed clinical approach.",
         bio: [
-          "Co-founder of Clínica Desassossego, Dra. Francis is a Clinical Psychologist whose practice is centred on adults, couples and families.",
+          "Co-founder of Clínica Desassossego, Francis is a Clinical Psychologist whose practice is centred on adults, couples and families.",
           "She privileges attentive listening to each person's history and bonds, within a psychoanalytically informed clinical framework.",
           "Her work seeks to create the conditions for psychological suffering to find meaning, opening the way to freer and more creative relationships.",
         ],
@@ -272,7 +272,7 @@ const en: typeof pt = {
         summary:
           "Co-founder of Clínica Desassossego, supporting adults in psychotherapeutic processes focused on anxiety, depression and emotional distress.",
         bio: [
-          "Co-founder of Clínica Desassossego, Dra. Vera Botelho da Costa is a Clinical Psychologist with extensive experience working with adults.",
+          "Co-founder of Clínica Desassossego, Vera Botelho da Costa is a Clinical Psychologist with extensive experience working with adults.",
           "She mainly addresses anxiety, depression and emotional distress, from a psychoanalytic perspective that values the singularity of each life path.",
           "Together with the co-founders, she coordinates Desassossego's clinical and training project, contributing to close, ethical and rigorous care.",
         ],
@@ -283,7 +283,7 @@ const en: typeof pt = {
         summary:
           "Clinical Psychologist at Desassossego, supporting adolescents and adults in psychotherapeutic processes.",
         bio: [
-          "Dra. Inês is part of Desassossego's clinical team as a Clinical Psychologist.",
+          "Inês is part of Desassossego's clinical team as a Clinical Psychologist.",
           "She works with adolescents and adults in psychotherapy, in an approach that values listening and the therapeutic relationship as drivers of change.",
         ],
       },
@@ -293,7 +293,7 @@ const en: typeof pt = {
         summary:
           "Clinical Psychologist at Desassossego, supporting adolescents and adults in psychotherapeutic processes.",
         bio: [
-          "Dra. Leonor is part of Desassossego's clinical team as a Clinical Psychologist.",
+          "Leonor is part of Desassossego's clinical team as a Clinical Psychologist.",
           "Her work focuses on adolescents and adults, exploring the inner and relational dynamics that underlie psychological suffering.",
         ],
       },
