@@ -12,8 +12,8 @@ interface Protocol {
 
 const protocols: Protocol[] = [
   { name: "Automóvel Club de Portugal", logo: acp.url },
-  { name: "Olisipo", logo: olisipo.url },
   { name: "COFRE de Previdência", logo: cofre.url },
+  { name: "Olisipo", logo: olisipo.url },
 ];
 
 const ProtocolsSection = () => {
