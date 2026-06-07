@@ -70,28 +70,64 @@ const pt = {
     },
     teamTitle: "A Nossa Equipa",
     comingSoon: "Em breve",
-    team: [
-      {
-        role: "Psicóloga Clínica · Diretora",
-        specialty: "Especialista em Ansiedade e Depressão",
-      },
-      {
-        role: "Psicóloga Clínica · Diretora",
+    readMore: "Saber mais",
+    backToTeam: "Voltar à equipa",
+    biographyTitle: "Percurso",
+    team: {
+      debora: {
+        role: "Psicóloga Clínica · Cofundadora e Diretora",
         specialty: "Psicologia Infantojuvenil",
+        summary:
+          "Cofundadora da Clínica Desassossego, dedica-se ao acompanhamento de crianças, adolescentes e famílias numa perspectiva psicanalítica.",
+        bio: [
+          "Cofundadora da Clínica Desassossego, a Dra. Débora Macedo é Psicóloga Clínica com formação em psicoterapia de orientação psicanalítica.",
+          "Tem dedicado o seu percurso ao acompanhamento de crianças, adolescentes e famílias, com particular interesse pelas dinâmicas do desenvolvimento e pelo apoio à parentalidade.",
+          "Acredita que o trabalho terapêutico, num espaço de escuta atenta, permite transformar o desassossego em compreensão e mudança duradoura.",
+        ],
       },
-      {
-        role: "Psicóloga Clínica",
+      francis: {
+        role: "Psicóloga Clínica · Cofundadora",
         specialty: "Terapia de Casal e Família",
+        summary:
+          "Cofundadora da Clínica Desassossego, acompanha adultos, casais e famílias numa abordagem clínica de inspiração psicanalítica.",
+        bio: [
+          "Cofundadora da Clínica Desassossego, a Dra. Francis é Psicóloga Clínica com prática orientada para o acompanhamento de adultos, casais e famílias.",
+          "Privilegia uma escuta atenta às histórias e vínculos de cada pessoa, num enquadramento clínico de inspiração psicanalítica.",
+          "O seu trabalho procura criar condições para que o sofrimento psíquico encontre sentido, abrindo caminho a relações mais livres e criativas.",
+        ],
       },
-      {
+      vera: {
+        role: "Psicóloga Clínica · Cofundadora e Diretora",
+        specialty: "Especialista em Ansiedade e Depressão",
+        summary:
+          "Cofundadora da Clínica Desassossego, acompanha adultos em processos psicoterapêuticos focados na ansiedade, depressão e sofrimento emocional.",
+        bio: [
+          "Cofundadora da Clínica Desassossego, a Dra. Vera Botelho da Costa é Psicóloga Clínica com vasta experiência no acompanhamento de adultos.",
+          "Trabalha sobretudo quadros de ansiedade, depressão e sofrimento emocional, numa perspectiva psicanalítica que valoriza a singularidade de cada percurso.",
+          "Coordena, com as cofundadoras, o projeto clínico e formativo da Desassossego, contribuindo para um cuidado próximo, ético e rigoroso.",
+        ],
+      },
+      ines: {
         role: "Psicóloga Clínica",
         specialty: "",
+        summary:
+          "Psicóloga Clínica da equipa Desassossego, acompanha adolescentes e adultos numa perspectiva psicoterapêutica.",
+        bio: [
+          "A Dra. Inês integra a equipa clínica da Desassossego como Psicóloga Clínica.",
+          "Acompanha adolescentes e adultos em processos psicoterapêuticos, numa abordagem que valoriza a escuta e a relação terapêutica como eixos da mudança.",
+        ],
       },
-      {
+      leonor: {
         role: "Psicóloga Clínica",
         specialty: "",
+        summary:
+          "Psicóloga Clínica da equipa Desassossego, acompanha adolescentes e adultos em processos psicoterapêuticos.",
+        bio: [
+          "A Dra. Leonor integra a equipa clínica da Desassossego como Psicóloga Clínica.",
+          "Dedica-se ao acompanhamento de adolescentes e adultos, com foco na compreensão das dinâmicas internas e relacionais que sustentam o sofrimento psíquico.",
+        ],
       },
-    ],
+    },
   },
   protocols: {
     title: "Protocolos e Parcerias",
