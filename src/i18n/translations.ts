@@ -113,7 +113,7 @@ const pt = {
         summary:
           "Psicóloga Clínica da equipa Desassossego, acompanha adolescentes e adultos numa perspectiva psicoterapêutica.",
         bio: [
-          "A Dra. Inês integra a equipa clínica da Desassossego como Psicóloga Clínica.",
+          "A Inês integra a equipa clínica da Desassossego como Psicóloga Clínica.",
           "Acompanha adolescentes e adultos em processos psicoterapêuticos, numa abordagem que valoriza a escuta e a relação terapêutica como eixos da mudança.",
         ],
       },
