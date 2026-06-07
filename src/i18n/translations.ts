@@ -9,7 +9,8 @@ const pt = {
     book: "Reservar Consulta",
   },
   hero: {
-    titleA: "“Há sensações que são sonos, que ocupam como uma névoa toda a extensão do espírito, que não deixam agir, que não deixam claramente",
+    titleA:
+      "“Há sensações que são sonos, que ocupam como uma névoa toda a extensão do espírito, que não deixam agir, que não deixam claramente",
     titleB: " ser.”",
     description: "— Bernardo Soares, “O Livro do Desassossego”",
     ctaBook: "Reservar Consulta",
@@ -17,8 +18,7 @@ const pt = {
   },
   services: {
     title: "Os Nossos Serviços",
-    subtitle:
-      "Psicologia Clínica numa perspectiva psicanalítica, com acompanhamento adaptado a cada fase da vida.",
+    subtitle: "Psicologia Clínica numa perspectiva psicanalítica, com acompanhamento adaptado a cada fase da vida.",
     items: [
       {
         title: "Psicoterapia de Crianças",
@@ -97,13 +97,11 @@ const pt = {
     title: "Protocolos e Parcerias",
     subtitle:
       "Trabalhamos com as principais seguradoras e subsistemas de saúde para facilitar o acesso aos nossos serviços.",
-    footer:
-      "Contacte-nos para confirmar a cobertura do seu seguro ou subsistema de saúde.",
+    footer: "Contacte-nos para confirmar a cobertura do seu seguro ou subsistema de saúde.",
   },
   booking: {
     title: "Reservar Consulta",
-    subtitle:
-      "Preencha o formulário e entraremos em contacto consigo em menos de 24 horas.",
+    subtitle: "Preencha o formulário e entraremos em contacto consigo em menos de 24 horas.",
     name: "Nome completo",
     namePlaceholder: "O seu nome",
     email: "Email",
@@ -117,11 +115,9 @@ const pt = {
     message: "Mensagem (opcional)",
     messagePlaceholder: "Descreva brevemente o motivo da consulta...",
     submit: "Enviar Pedido de Consulta",
-    rgpd:
-      "Os seus dados são tratados com total confidencialidade, em conformidade com o RGPD.",
+    rgpd: "Os seus dados são tratados com total confidencialidade, em conformidade com o RGPD.",
     sentTitle: "Pedido Enviado",
-    sentBody:
-      "Obrigado pelo seu contacto. A nossa equipa entrará em contacto consigo brevemente.",
+    sentBody: "Obrigado pelo seu contacto. A nossa equipa entrará em contacto consigo brevemente.",
   },
   contacts: {
     title: "Contactos",
@@ -133,8 +129,7 @@ const pt = {
     hoursSat: "Sáb: 09h00 – 14h00",
   },
   footer: {
-    rights:
-      "© 2026 Clínica Desassossego. Todos os direitos reservados. Cédula Profissional n.º XXXXX da Ordem dos Psicólogos Portugueses.",
+    rights: "© 2026 Clínica Desassossego. Todos os direitos reservados.",
     designedBy: "Designed by",
   },
 };
@@ -148,7 +143,8 @@ const en: typeof pt = {
     book: "Book a Session",
   },
   hero: {
-    titleA: "“There are sensations which are sleeps, which occupy like a mist the whole extent of the spirit, which do not let one act, which do not let one clearly",
+    titleA:
+      "“There are sensations which are sleeps, which occupy like a mist the whole extent of the spirit, which do not let one act, which do not let one clearly",
     titleB: " be.”",
     description: "— Bernardo Soares, “The Book of Disquiet”",
     ctaBook: "Book a Session",
@@ -156,8 +152,7 @@ const en: typeof pt = {
   },
   services: {
     title: "Our Services",
-    subtitle:
-      "Clinical Psychology from a psychoanalytic perspective, with care tailored to every stage of life.",
+    subtitle: "Clinical Psychology from a psychoanalytic perspective, with care tailored to every stage of life.",
     items: [
       {
         title: "Children Psychotherapy",
@@ -234,15 +229,12 @@ const en: typeof pt = {
   },
   protocols: {
     title: "Partners & Insurers",
-    subtitle:
-      "We work with the main insurers and health subsystems to make access to our services easier.",
-    footer:
-      "Contact us to confirm coverage with your insurer or health subsystem.",
+    subtitle: "We work with the main insurers and health subsystems to make access to our services easier.",
+    footer: "Contact us to confirm coverage with your insurer or health subsystem.",
   },
   booking: {
     title: "Book a Session",
-    subtitle:
-      "Fill out the form and we will get back to you within 24 hours.",
+    subtitle: "Fill out the form and we will get back to you within 24 hours.",
     name: "Full name",
     namePlaceholder: "Your name",
     email: "Email",
@@ -256,11 +248,9 @@ const en: typeof pt = {
     message: "Message (optional)",
     messagePlaceholder: "Briefly describe the reason for the consultation...",
     submit: "Send Booking Request",
-    rgpd:
-      "Your data is treated with full confidentiality, in compliance with GDPR.",
+    rgpd: "Your data is treated with full confidentiality, in compliance with GDPR.",
     sentTitle: "Request Sent",
-    sentBody:
-      "Thank you for getting in touch. Our team will contact you shortly.",
+    sentBody: "Thank you for getting in touch. Our team will contact you shortly.",
   },
   contacts: {
     title: "Contact",
