@@ -33,14 +33,16 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button
+              type="button"
               onClick={() => scrollTo("#reservar")}
-              className="bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-base hover:opacity-90 transition-opacity duration-300"
+              className="bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-base shadow-sm hover:shadow-[0_8px_30px_rgba(255,255,255,0.18)] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
             >
               {t.hero.ctaBook}
             </button>
             <button
+              type="button"
               onClick={() => scrollTo("#servicos")}
-              className="border border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-lg font-medium text-base hover:bg-primary-foreground/10 transition-colors duration-300"
+              className="border border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-lg font-medium text-base hover:bg-primary-foreground/15 hover:border-primary-foreground/70 active:scale-[0.98] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
             >
               {t.hero.ctaServices}
             </button>
