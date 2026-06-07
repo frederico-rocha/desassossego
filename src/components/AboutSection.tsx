@@ -1,18 +1,8 @@
 import { motion } from "framer-motion";
-import teamVera from "@/assets/team-vera.jpg";
-import teamDebora from "@/assets/team-debora.jpg";
-import teamInes from "@/assets/team-ines.jpg";
-import teamLeonor from "@/assets/team-leonor.jpg";
-import teamFrancis from "@/assets/team-francis.jpg";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-
-const teamMembers: { name: string; image: string | null }[] = [
-  { name: "Dra. Vera Botelho da Costa", image: teamVera },
-  { name: "Dra. Débora Macedo", image: teamDebora },
-  { name: "Dra. Inês", image: teamInes },
-  { name: "Dra. Leonor", image: teamLeonor },
-  { name: "Dra. Francis", image: teamFrancis },
-];
+import { teamMembers } from "@/data/team";
 
 const AboutSection = () => {
   const { t } = useLanguage();
@@ -68,41 +58,50 @@ const AboutSection = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {teamMembers.map((member, i) => {
-              const isPlaceholder = !member.image;
-              const teamInfo = t.about.team[i];
+              const info = t.about.team[member.slug];
               return (
                 <motion.div
-                  key={i}
+                  key={member.slug}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="text-center group"
+                  className="text-center group flex flex-col items-center"
                 >
-                  <div className={`w-40 h-40 mx-auto mb-5 rounded-full overflow-hidden border-4 border-card shadow-lg ${isPlaceholder ? "bg-muted flex items-center justify-center" : ""}`}>
-                    {member.image ? (
+                  <Link
+                    to={`/equipa/${member.slug}`}
+                    aria-label={`${t.about.readMore} — ${member.name}`}
+                    className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-secondary rounded-full"
+                  >
+                    <div className="w-40 h-40 mx-auto mb-5 rounded-full overflow-hidden border-4 border-card shadow-lg">
                       <img
                         src={member.image}
                         alt={member.name}
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
-                    ) : (
-                      <span className="text-muted-foreground font-display text-sm">{t.about.comingSoon}</span>
-                    )}
-                  </div>
+                    </div>
+                  </Link>
                   <h4 className="font-display text-lg font-semibold text-foreground">
-                    {isPlaceholder ? t.about.comingSoon : member.name}
+                    {member.name}
                   </h4>
-                  {teamInfo && (
-                    <>
-                      <p className="text-sm text-primary font-body font-medium mt-1">
-                        {teamInfo.role}
-                      </p>
-                      <p className="text-sm text-muted-foreground font-body mt-1">
-                        {teamInfo.specialty}
-                      </p>
-                    </>
+                  <p className="text-sm text-primary font-body font-medium mt-1">
+                    {info.role}
+                  </p>
+                  {info.specialty && (
+                    <p className="text-sm text-muted-foreground font-body mt-1">
+                      {info.specialty}
+                    </p>
                   )}
+                  <p className="text-sm text-muted-foreground font-body leading-relaxed mt-3 px-1">
+                    {info.summary}
+                  </p>
+                  <Link
+                    to={`/equipa/${member.slug}`}
+                    className="inline-flex items-center gap-1 mt-4 text-sm font-body font-medium text-primary hover:text-primary/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-secondary rounded"
+                  >
+                    {t.about.readMore}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </motion.div>
               );
             })}
