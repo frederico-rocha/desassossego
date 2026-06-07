@@ -240,28 +240,64 @@ const en: typeof pt = {
     },
     teamTitle: "Our Team",
     comingSoon: "Coming soon",
-    team: [
-      {
-        role: "Clinical Psychologist · Director",
-        specialty: "Specialist in Anxiety and Depression",
-      },
-      {
-        role: "Clinical Psychologist · Director",
+    readMore: "Read more",
+    backToTeam: "Back to the team",
+    biographyTitle: "Background",
+    team: {
+      debora: {
+        role: "Clinical Psychologist · Co-founder & Director",
         specialty: "Child & Adolescent Psychology",
+        summary:
+          "Co-founder of Clínica Desassossego, devoted to working with children, adolescents and families from a psychoanalytic perspective.",
+        bio: [
+          "Co-founder of Clínica Desassossego, Dra. Débora Macedo is a Clinical Psychologist trained in psychoanalytically oriented psychotherapy.",
+          "Her practice focuses on children, adolescents and families, with a particular interest in developmental dynamics and parental support.",
+          "She believes that therapeutic work, held in a space of attentive listening, transforms inner restlessness into understanding and lasting change.",
+        ],
       },
-      {
-        role: "Clinical Psychologist",
+      francis: {
+        role: "Clinical Psychologist · Co-founder",
         specialty: "Couples and Family Therapy",
+        summary:
+          "Co-founder of Clínica Desassossego, working with adults, couples and families from a psychoanalytically informed clinical approach.",
+        bio: [
+          "Co-founder of Clínica Desassossego, Dra. Francis is a Clinical Psychologist whose practice is centred on adults, couples and families.",
+          "She privileges attentive listening to each person's history and bonds, within a psychoanalytically informed clinical framework.",
+          "Her work seeks to create the conditions for psychological suffering to find meaning, opening the way to freer and more creative relationships.",
+        ],
       },
-      {
+      vera: {
+        role: "Clinical Psychologist · Co-founder & Director",
+        specialty: "Specialist in Anxiety and Depression",
+        summary:
+          "Co-founder of Clínica Desassossego, supporting adults in psychotherapeutic processes focused on anxiety, depression and emotional distress.",
+        bio: [
+          "Co-founder of Clínica Desassossego, Dra. Vera Botelho da Costa is a Clinical Psychologist with extensive experience working with adults.",
+          "She mainly addresses anxiety, depression and emotional distress, from a psychoanalytic perspective that values the singularity of each life path.",
+          "Together with the co-founders, she coordinates Desassossego's clinical and training project, contributing to close, ethical and rigorous care.",
+        ],
+      },
+      ines: {
         role: "Clinical Psychologist",
         specialty: "",
+        summary:
+          "Clinical Psychologist at Desassossego, supporting adolescents and adults in psychotherapeutic processes.",
+        bio: [
+          "Dra. Inês is part of Desassossego's clinical team as a Clinical Psychologist.",
+          "She works with adolescents and adults in psychotherapy, in an approach that values listening and the therapeutic relationship as drivers of change.",
+        ],
       },
-      {
+      leonor: {
         role: "Clinical Psychologist",
         specialty: "",
+        summary:
+          "Clinical Psychologist at Desassossego, supporting adolescents and adults in psychotherapeutic processes.",
+        bio: [
+          "Dra. Leonor is part of Desassossego's clinical team as a Clinical Psychologist.",
+          "Her work focuses on adolescents and adults, exploring the inner and relational dynamics that underlie psychological suffering.",
+        ],
       },
-    ],
+    },
   },
   protocols: {
     title: "Partners & Insurers",
