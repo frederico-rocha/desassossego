@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
-import acp from "@/assets/acp.jpeg";
-import olisipo from "@/assets/olisipo.jpeg";
-import cofre from "@/assets/cofre.jpeg";
+import acp from "@/assets/acp.jpg.asset.json";
+import olisipo from "@/assets/olisipo.png.asset.json";
+import cofre from "@/assets/cofre.png.asset.json";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 interface Protocol {
@@ -11,9 +11,9 @@ interface Protocol {
 }
 
 const protocols: Protocol[] = [
-  { name: "Automóvel Club de Portugal", logo: acp },
-  { name: "Olisipo", logo: olisipo },
-  { name: "COFRE de Previdência", logo: cofre },
+  { name: "Automóvel Club de Portugal", logo: acp.url },
+  { name: "Olisipo", logo: olisipo.url },
+  { name: "COFRE de Previdência", logo: cofre.url },
 ];
 
 const ProtocolsSection = () => {
