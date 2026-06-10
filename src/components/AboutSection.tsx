@@ -34,20 +34,19 @@ const AboutSection = () => {
             className="grid grid-cols-2 gap-4"
           >
             <div className="bg-card rounded-xl p-8 text-center border border-border">
-              <p className="text-4xl font-display font-bold text-primary mb-2">6+</p>
+              <p className="text-4xl font-display font-bold text-primary mb-2">10+</p>
               <p className="text-sm text-muted-foreground font-body">{t.about.stats.years}</p>
             </div>
             <div className="bg-card rounded-xl p-8 text-center border border-border">
-              <p className="text-4xl font-display font-bold text-primary mb-2">3</p>
+              <p className="text-4xl font-display font-bold text-primary mb-2">5</p>
               <p className="text-sm text-muted-foreground font-body">{t.about.stats.psychologists}</p>
             </div>
             <div className="bg-card rounded-xl p-8 text-center border border-border">
-              <p className="text-4xl font-display font-bold text-primary mb-2">1500+</p>
-              <p className="text-sm text-muted-foreground font-body">{t.about.stats.patients}</p>
+              <p className="text-4xl font-display font-bold text-primary mb-2">2</p>
+              <p className="text-sm text-muted-foreground font-body">{t.about.stats.offices}</p>
             </div>
-            <div className="bg-card rounded-xl p-8 text-center border border-border">
-              <p className="text-4xl font-display font-bold text-primary mb-2">98%</p>
-              <p className="text-sm text-muted-foreground font-body">{t.about.stats.satisfaction}</p>
+            <div className="bg-card rounded-xl p-8 text-center border border-border flex flex-col justify-center">
+              <p className="text-sm text-primary font-display font-semibold">{t.about.stats.modality}</p>
             </div>
           </motion.div>
         </div>

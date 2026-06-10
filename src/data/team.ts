@@ -15,10 +15,10 @@ export interface TeamMember {
 // Displayed order: Débora, Francis, Vera (cofundadoras), depois Inês e Leonor.
 export const teamMembers: TeamMember[] = [
   { slug: "debora", name: "Débora Macedo", image: teamDebora },
-  { slug: "francis", name: "Francis", image: teamFrancis },
+  { slug: "francis", name: "Francis Anne Teplitzky", image: teamFrancis },
   { slug: "vera", name: "Vera Botelho da Costa", image: teamVera },
-  { slug: "ines", name: "Inês", image: teamInes },
-  { slug: "leonor", name: "Leonor", image: teamLeonor },
+  { slug: "ines", name: "Inês Barreira", image: teamInes },
+  { slug: "leonor", name: "Leonor Larcher", image: teamLeonor },
 ];
 
 export const getTeamMember = (slug: string): TeamMember | undefined =>

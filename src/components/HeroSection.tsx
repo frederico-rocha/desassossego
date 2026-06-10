@@ -28,8 +28,11 @@ const HeroSection = () => {
             {t.hero.titleA}
             <span className="italic">{t.hero.titleB}</span>
           </p>
-          <p className="text-base md:text-lg text-primary-foreground/85 font-body font-light leading-relaxed mb-10 max-w-2xl">
+          <p className="text-base md:text-lg text-primary-foreground/85 font-body font-light leading-relaxed mb-6 max-w-2xl">
             {t.hero.description}
+          </p>
+          <p className="text-lg md:text-xl text-primary-foreground/95 font-display italic mb-8 max-w-2xl">
+            {t.hero.tagline}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button

@@ -6,54 +6,56 @@ const pt = {
     about: "Quem Somos",
     protocols: "Protocolos",
     contacts: "Contactos",
-    book: "Reservar Consulta",
+    book: "Marcar Consulta",
   },
   hero: {
     titleA:
       "“Há sensações que são sonos, que ocupam como uma névoa toda a extensão do espírito, que não deixam agir, que não deixam claramente",
     titleB: " ser.”",
     description: "— Bernardo Soares, “O Livro do Desassossego”",
-    ctaBook: "Reservar Consulta",
+    tagline: "Cuidar de si pode começar aqui…",
+    ctaBook: "Marcar Consulta",
     ctaServices: "Conhecer os Serviços",
   },
   services: {
     title: "Os Nossos Serviços",
-    subtitle: "Psicologia Clínica numa perspectiva psicanalítica, com acompanhamento adaptado a cada fase da vida.",
+    subtitle:
+      "Psicologia Clínica numa perspectiva psicanalítica, com acompanhamento adaptado a cada fase da vida.",
     items: [
       {
         title: "Psicoterapia de Crianças",
         description:
-          "Fobias, insónias, pesadelos, medo de separação, perturbações do desenvolvimento ou distúrbios alimentares podem traduzir o sofrimento psíquico da criança. Através do jogo e do brincar, ajudamos a transformar ansiedades e angústias, com sessões periódicas com os pais.",
+          "A relação terapêutica, através do jogo e do brincar, ajuda a criança a transformar as suas ansiedades e angústias e permite o alívio do seu sofrimento, facilitando o desenvolvimento saudável.",
       },
       {
         title: "Psicoterapia de Adolescentes",
         description:
-          "As vivências da adolescência suscitam conflitos, dúvidas e necessidade de integração. Numa relação de confiança, criamos um clima positivo que permite ao jovem expressar e elaborar pensamentos e emoções, com sessões periódicas em conjunto com os pais.",
+          "Na psicoterapia trabalha-se com base numa relação de confiança, criando um clima positivo que possibilite ao jovem expressar e elaborar pensamentos e emoções.",
       },
       {
         title: "Psicoterapia de Adultos",
         description:
-          "Tristeza, ansiedade, preocupações excessivas, perturbações do sono, medos ou fobias podem tornar-se incapacitantes. A psicoterapia permite tomar consciência das causas do mal-estar e encontrar uma forma de sentir e agir mais livre e criativa.",
+          "A psicoterapia permite tomar consciência das causas do mal-estar de forma a minimizar as suas consequências e a evitar o seu retorno.",
       },
       {
         title: "Psicoterapia Online",
         description:
-          "Sessões à distância com a mesma confidencialidade das presenciais. Oferece maior flexibilidade de agenda, poupa tempo de deslocação e ultrapassa barreiras geográficas — com resultados cientificamente comprovados.",
+          "O contexto online permite o estabelecimento de uma relação terapêutica de confiança, obedecendo a critérios e regras próprias, nomeadamente, que seja assegurado um espaço que garanta a confidencialidade do processo.",
       },
       {
         title: "Avaliação Psicológica",
         description:
-          "Com técnicas adaptadas à idade e fase de desenvolvimento, acedemos ao modo de funcionamento mental, identificando pontos fortes, áreas a desenvolver e padrões de relacionamento. Realizada em várias sessões, com possibilidade de relatório final.",
+          "Com o recurso a técnicas específicas e adaptadas à idade e fase de desenvolvimento da pessoa, a avaliação psicológica permite aceder ao modo de funcionamento mental.",
       },
       {
         title: "Orientação Vocacional",
         description:
-          "Para jovens e jovens adultos, promove a consciência sobre motivação, interesses profissionais, aptidões e valores. Apoia o processo de tomada de decisão quanto ao futuro profissional, em 4 a 5 sessões, com possibilidade de relatório.",
+          "A avaliação psicológica na orientação vocacional de jovens e jovens adultos pretende promover a consciência sobre si próprio ao nível da motivação, interesses profissionais, aptidões, valores e autoconceito.",
       },
       {
         title: "Aconselhamento Parental",
         description:
-          "Apoio aos pais perante desafios da parentalidade — rotinas, comportamento, transições ou comunicação familiar. Promove a compreensão das necessidades emocionais dos filhos e reforça competências parentais, contribuindo para relações mais seguras e saudáveis.",
+          "No Aconselhamento Parental realizam-se sessões de acompanhamento com os pais, onde se procura promover uma maior compreensão das necessidades emocionais dos filhos.",
       },
     ],
   },
@@ -64,9 +66,9 @@ const pt = {
     p3: "Acreditamos que o desassossego — aquela inquietação interior que nos leva a procurar ajuda — é, na verdade, o primeiro passo para uma mudança genuína e duradoura.",
     stats: {
       years: "Anos de experiência",
-      psychologists: "Psicólogos especializados",
-      patients: "Pacientes acompanhados",
-      satisfaction: "Satisfação dos pacientes",
+      psychologists: "Psicólogas especializadas",
+      offices: "Consultórios",
+      modality: "Presencial e Online",
     },
     teamTitle: "A Nossa Equipa",
     comingSoon: "Em breve",
@@ -75,79 +77,88 @@ const pt = {
     biographyTitle: "Percurso",
     team: {
       debora: {
-        role: "Psicóloga Clínica · Cofundadora e Diretora",
-        specialty: "Psicologia Infantojuvenil",
+        role: "Psicóloga Clínica · Cofundadora",
+        specialty: "Cédula Profissional nº 20310",
         summary:
-          "Cofundadora da Clínica Desassossego, dedica-se ao acompanhamento de crianças, adolescentes e famílias numa perspectiva psicanalítica.",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
         bio: [
-          "Cofundadora da Clínica Desassossego, a Débora Macedo é Psicóloga Clínica com formação em psicoterapia de orientação psicanalítica.",
-          "Tem dedicado o seu percurso ao acompanhamento de crianças, adolescentes e famílias, com particular interesse pelas dinâmicas do desenvolvimento e pelo apoio à parentalidade.",
-          "Acredita que o trabalho terapêutico, num espaço de escuta atenta, permite transformar o desassossego em compreensão e mudança duradoura.",
+          "Cofundadora da desasSossego. Membro Efectivo da Ordem dos Psicólogos Portugueses.",
+          "Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário. Terapeuta Credenciado em Psicanálise e Psicoterapia Psicanalítica. Membro da APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
+          "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica; Orientação Vocacional e Profissional.",
         ],
       },
       francis: {
-        role: "Psicóloga Clínica · Cofundadora",
-        specialty: "Terapia de Casal e Família",
+        role: "Psicóloga Clínica e da Saúde · Cofundadora",
+        specialty: "Cédula Profissional nº 22122",
         summary:
-          "Cofundadora da Clínica Desassossego, acompanha adultos, casais e famílias numa abordagem clínica de inspiração psicanalítica.",
+          "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
         bio: [
-          "Cofundadora da Clínica Desassossego, a Francis é Psicóloga Clínica com prática orientada para o acompanhamento de adultos, casais e famílias.",
-          "Privilegia uma escuta atenta às histórias e vínculos de cada pessoa, num enquadramento clínico de inspiração psicanalítica.",
-          "O seu trabalho procura criar condições para que o sofrimento psíquico encontre sentido, abrindo caminho a relações mais livres e criativas.",
+          "Cofundadora da desasSossego. Membro Efectivo da Ordem dos Psicólogos Portugueses.",
+          "Doutorada em Psicologia Clínica pelo ISPA — Instituto Universitário. Mestre em Psicologia Clínica e Mestre em Psicologia da Saúde pelo ISPA. Pós-graduada em Intervenção Psicoterapêutica de Orientação Dinâmica pelo Instituto CRIAP. Professora Universitária no ISPA — Instituto Universitário.",
+          "Membro do Conselho Fiscal da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
+          "Áreas de atividade: Psicoterapia de Adolescentes e Adultos; Avaliação Psicológica.",
         ],
       },
       vera: {
-        role: "Psicóloga Clínica · Cofundadora e Diretora",
-        specialty: "Especialista em Ansiedade e Depressão",
+        role: "Psicóloga Clínica · Cofundadora",
+        specialty: "Cédula Profissional nº 23465",
         summary:
-          "Cofundadora da Clínica Desassossego, acompanha adultos em processos psicoterapêuticos focados na ansiedade, depressão e sofrimento emocional.",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
         bio: [
-          "Cofundadora da Clínica Desassossego, a Vera Botelho da Costa é Psicóloga Clínica com vasta experiência no acompanhamento de adultos.",
-          "Trabalha sobretudo quadros de ansiedade, depressão e sofrimento emocional, numa perspectiva psicanalítica que valoriza a singularidade de cada percurso.",
-          "Coordena, com as cofundadoras, o projeto clínico e formativo da Desassossego, contribuindo para um cuidado próximo, ético e rigoroso.",
+          "Cofundadora da desasSossego. Membro Efectivo da Ordem dos Psicólogos Portugueses.",
+          "Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário. Membro Associado da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
+          "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica; Aconselhamento Parental.",
+          "Psicóloga com actividade privada em Lisboa e Cascais. Psicoterapia presencial e online. Sessões em português e inglês.",
         ],
       },
       ines: {
         role: "Psicóloga Clínica",
-        specialty: "",
+        specialty: "Cédula Profissional nº 27026",
         summary:
-          "Psicóloga Clínica da equipa Desassossego, acompanha adolescentes e adultos numa perspectiva psicoterapêutica.",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa · Presencial e Online · Português · Inglês.",
         bio: [
-          "A Inês integra a equipa clínica da Desassossego como Psicóloga Clínica.",
-          "Acompanha adolescentes e adultos em processos psicoterapêuticos, numa abordagem que valoriza a escuta e a relação terapêutica como eixos da mudança.",
+          "Membro Efectivo da Ordem dos Psicólogos Portugueses. Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário.",
+          "Membro Associado da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
+          "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica.",
         ],
       },
       leonor: {
         role: "Psicóloga Clínica",
-        specialty: "",
+        specialty: "Cédula Profissional nº 31934",
         summary:
-          "Psicóloga Clínica da equipa Desassossego, acompanha adolescentes e adultos em processos psicoterapêuticos.",
+          "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
         bio: [
-          "A Leonor integra a equipa clínica da Desassossego como Psicóloga Clínica.",
-          "Dedica-se ao acompanhamento de adolescentes e adultos, com foco na compreensão das dinâmicas internas e relacionais que sustentam o sofrimento psíquico.",
+          "Membro Efectivo da Ordem dos Psicólogos Portugueses. Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário.",
+          "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica.",
         ],
       },
     },
   },
   protocols: {
     title: "Protocolos e Parcerias",
-    subtitle:
-      "Trabalhamos com as principais seguradoras e subsistemas de saúde para facilitar o acesso aos nossos serviços.",
-    footer: "Contacte-nos para confirmar a cobertura do seu seguro ou subsistema de saúde.",
+    subtitle: "Desconto de 20% em todos os serviços, para todos os associados e familiares.",
+    footer:
+      "Bolsa Social: 45€. Consulte as condições do seu Seguro de Saúde ou Subsistema para aceder a serviços de Saúde Mental.",
   },
   booking: {
-    title: "Reservar Consulta",
+    title: "Marcar Consulta",
     subtitle: "Preencha o formulário e entraremos em contacto consigo em menos de 24 horas.",
-    name: "Nome completo",
+    name: "Nome",
     namePlaceholder: "O seu nome",
-    email: "Email",
-    phone: "Telefone",
+    email: "E-mail",
+    phone: "Telefone (opcional)",
     service: "Serviço pretendido",
     select: "Selecionar...",
-    clinic: "Clínica preferida",
-    selectClinic: "Selecionar clínica...",
-    clinicLisboa: "Lisboa — Av. António Serpa, 32",
-    clinicCascais: "Cascais — Av. 25 de Abril, 672",
+    location: "Localização",
+    selectLocation: "Selecionar localização...",
+    locationLisboa: "Lisboa — Av. António Serpa, 32",
+    locationCascais: "Cascais — Av. 25 de Abril, 672",
+    locationOnline: "Online",
+    schedule: "Horário",
+    selectSchedule: "Selecionar horário...",
+    scheduleMorning: "Manhã (9h00 – 13h00)",
+    scheduleAfternoon: "Tarde (13h00 – 18h00)",
+    scheduleEvening: "Noite (18h00 – 21h00)",
     message: "Mensagem (opcional)",
     messagePlaceholder: "Descreva brevemente o motivo da consulta...",
     submit: "Enviar Pedido de Consulta",
@@ -161,8 +172,8 @@ const pt = {
     phone: "Telefone",
     email: "Email",
     hours: "Horário",
-    hoursWeek: "Seg–Sex: 09h00 – 20h00",
-    hoursSat: "Sáb: 09h00 – 14h00",
+    hoursWeek: "Seg–Sex: 09h00 – 21h00",
+    hoursSat: "Sáb: 09h00 – 18h00",
   },
   footer: {
     rights: "© 2026 Clínica Desassossego. Todos os direitos reservados.",
@@ -180,9 +191,10 @@ const en: typeof pt = {
   },
   hero: {
     titleA:
-      "“There are sensations which are sleeps, which occupy like a mist the whole extent of the spirit, which do not let one act, which do not let one clearly",
-    titleB: " be.”",
+      "“Certain sensations are slumbers that fill up our mind like a fog and prevent us from thinking, from acting, from clearly and simply",
+    titleB: " being.”",
     description: "— Bernardo Soares, “The Book of Disquiet”",
+    tagline: "Taking care of yourself can begin here…",
     ctaBook: "Book a Session",
     ctaServices: "Explore our Services",
   },
@@ -193,37 +205,37 @@ const en: typeof pt = {
       {
         title: "Children Psychotherapy",
         description:
-          "Phobias, insomnia, nightmares, separation anxiety, developmental disorders or eating disturbances may reflect a child's psychological pain. Through play and symbolic expression, we help process anxiety and distress, with regular sessions with the parents.",
+          "The therapeutic relationship — through play and symbolic expression — supports the child in processing anxiety and emotional distress, providing relief and promoting a healthy development.",
       },
       {
         title: "Adolescent Psychotherapy",
         description:
-          "Adolescence brings internal and external conflicts, doubts and a need for integration. Through a trusting relationship, we foster a safe environment where the adolescent can express and process thoughts and emotions, with regular joint sessions with the parents.",
+          "Psychotherapy is based on a trusting therapeutic relationship, fostering a safe and supportive environment in which the adolescent can express and process thoughts and emotions.",
       },
       {
         title: "Adult Psychotherapy",
         description:
-          "Sadness, anxiety, excessive worries, sleep disturbances, fears or phobias can become debilitating. Psychotherapy offers insight into the underlying causes of emotional distress and supports a freer, more creative way of feeling and acting.",
+          "Psychotherapy offers the opportunity to gain insight into the underlying causes of emotional distress, helping to reduce its impact and prevent its recurrence.",
       },
       {
         title: "Online Psychotherapy",
         description:
-          "Remote sessions with the same confidentiality as in-person care. Offers greater scheduling flexibility, saves travel time and overcomes geographical barriers — with scientifically supported results.",
+          "The online setting allows for the establishment of a trusting therapeutic relationship, following its own specific guidelines — particularly the need to ensure a confidential and private space for sessions.",
       },
       {
         title: "Psychological Assessment",
         description:
-          "Using techniques tailored to age and stage of development, we gain insight into mental functioning, identifying strengths, areas for growth and relational patterns. Carried out over several sessions, with a final written report available on request.",
+          "Using specific techniques tailored to the individual's age and stage of development, psychological assessment provides insight into mental functioning.",
       },
       {
         title: "Career Guidance",
         description:
-          "For adolescents and young adults, promotes self-awareness in motivation, professional interests, aptitudes and values. Supports decision-making about academic and professional paths, over 4 to 5 sessions, with a report available on request.",
+          "Psychological assessment in career guidance for adolescents and young adults aims to promote self-awareness in motivation, professional interests, aptitudes, values, and self-concept.",
       },
       {
         title: "Parental Counseling",
         description:
-          "Support for parents facing challenges of parenthood — routines, behavior, transitions or family communication. Promotes understanding of children's emotional needs and reinforces parental skills, contributing to safer and healthier family relationships.",
+          "In Parental Counseling, monitoring sessions are held with parents, seeking to promote a greater understanding of their children's emotional needs and reinforce parental skills.",
       },
     ],
   },
@@ -235,8 +247,8 @@ const en: typeof pt = {
     stats: {
       years: "Years of experience",
       psychologists: "Specialised psychologists",
-      patients: "Patients supported",
-      satisfaction: "Patient satisfaction",
+      offices: "Practices",
+      modality: "In-person and Online",
     },
     teamTitle: "Our Team",
     comingSoon: "Coming soon",
@@ -245,78 +257,88 @@ const en: typeof pt = {
     biographyTitle: "Background",
     team: {
       debora: {
-        role: "Clinical Psychologist · Co-founder & Director",
-        specialty: "Child & Adolescent Psychology",
+        role: "Clinical Psychologist · Co-founder",
+        specialty: "Professional License Nº 20310",
         summary:
-          "Co-founder of Clínica Desassossego, devoted to working with children, adolescents and families from a psychoanalytic perspective.",
+          "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
         bio: [
-          "Co-founder of Clínica Desassossego, Débora Macedo is a Clinical Psychologist trained in psychoanalytically oriented psychotherapy.",
-          "Her practice focuses on children, adolescents and families, with a particular interest in developmental dynamics and parental support.",
-          "She believes that therapeutic work, held in a space of attentive listening, transforms inner restlessness into understanding and lasting change.",
+          "Co-founder of desasSossego. Full Member of the Order of Portuguese Psychologists.",
+          "Master's Degree in Clinical Psychology from ISPA — Instituto Universitário. Accredited Therapist in Psychoanalysis and Psychoanalytic Psychotherapy. Member of the APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
+          "Activity areas: Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment; Career Guidance (only in Portuguese).",
         ],
       },
       francis: {
-        role: "Clinical Psychologist · Co-founder",
-        specialty: "Couples and Family Therapy",
+        role: "Clinical and Health Psychologist · Co-founder",
+        specialty: "Professional License Nº 22122",
         summary:
-          "Co-founder of Clínica Desassossego, working with adults, couples and families from a psychoanalytically informed clinical approach.",
+          "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
         bio: [
-          "Co-founder of Clínica Desassossego, Francis is a Clinical Psychologist whose practice is centred on adults, couples and families.",
-          "She privileges attentive listening to each person's history and bonds, within a psychoanalytically informed clinical framework.",
-          "Her work seeks to create the conditions for psychological suffering to find meaning, opening the way to freer and more creative relationships.",
+          "Co-founder of desasSossego. Full Member of the Order of Portuguese Psychologists.",
+          "PhD in Clinical Psychology from ISPA — Instituto Universitário. Master's Degree in Clinical Psychology and Master's Degree in Health Psychology from ISPA. Postgraduation in Dynamic Oriented Psychotherapeutic Intervention from Instituto CRIAP. University Professor at ISPA — Instituto Universitário.",
+          "Member of the Supervisory Board of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
+          "Activity areas: Adolescent and Adult Psychotherapy; Psychological Assessment.",
         ],
       },
       vera: {
-        role: "Clinical Psychologist · Co-founder & Director",
-        specialty: "Specialist in Anxiety and Depression",
+        role: "Clinical Psychologist · Co-founder",
+        specialty: "Professional License Nº 23465",
         summary:
-          "Co-founder of Clínica Desassossego, supporting adults in psychotherapeutic processes focused on anxiety, depression and emotional distress.",
+          "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
         bio: [
-          "Co-founder of Clínica Desassossego, Vera Botelho da Costa is a Clinical Psychologist with extensive experience working with adults.",
-          "She mainly addresses anxiety, depression and emotional distress, from a psychoanalytic perspective that values the singularity of each life path.",
-          "Together with the co-founders, she coordinates Desassossego's clinical and training project, contributing to close, ethical and rigorous care.",
+          "Co-founder of desasSossego. Full Member of the Order of Portuguese Psychologists.",
+          "Master's Degree in Clinical Psychology from ISPA — Instituto Universitário. Member of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
+          "Activity areas: Children, Adolescent and Adult Psychotherapy; Psychological Assessment; Parental Counseling.",
+          "In private practice in Lisbon and Cascais. In-person and online psychotherapy. Sessions in Portuguese and English.",
         ],
       },
       ines: {
         role: "Clinical Psychologist",
-        specialty: "",
+        specialty: "Professional License Nº 27026",
         summary:
-          "Clinical Psychologist at Desassossego, supporting adolescents and adults in psychotherapeutic processes.",
+          "Psychotherapist for Children, Adolescents and Adults. Lisbon · In-person and Online · Portuguese · English.",
         bio: [
-          "Inês is part of Desassossego's clinical team as a Clinical Psychologist.",
-          "She works with adolescents and adults in psychotherapy, in an approach that values listening and the therapeutic relationship as drivers of change.",
+          "Full Member of the Order of Portuguese Psychologists. Master's Degree in Clinical Psychology from ISPA — Instituto Universitário.",
+          "Associate Member of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
+          "Activity areas: Children, Adolescent and Adult Psychotherapy; Psychological Assessment.",
         ],
       },
       leonor: {
         role: "Clinical Psychologist",
-        specialty: "",
+        specialty: "Professional License Nº 31934",
         summary:
-          "Clinical Psychologist at Desassossego, supporting adolescents and adults in psychotherapeutic processes.",
+          "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
         bio: [
-          "Leonor is part of Desassossego's clinical team as a Clinical Psychologist.",
-          "Her work focuses on adolescents and adults, exploring the inner and relational dynamics that underlie psychological suffering.",
+          "Full Member of the Order of Portuguese Psychologists. Master's Degree in Clinical Psychology from ISPA — Instituto Universitário.",
+          "Activity areas: Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment.",
         ],
       },
     },
   },
   protocols: {
     title: "Partners & Insurers",
-    subtitle: "We work with the main insurers and health subsystems to make access to our services easier.",
-    footer: "Contact us to confirm coverage with your insurer or health subsystem.",
+    subtitle: "20% discount on all services, for all members and respective families.",
+    footer:
+      "Social Fund: 40€. Check your Health Insurance or Health Care System conditions for Mental Health services access.",
   },
   booking: {
     title: "Book a Session",
     subtitle: "Fill out the form and we will get back to you within 24 hours.",
-    name: "Full name",
+    name: "Name",
     namePlaceholder: "Your name",
     email: "Email",
-    phone: "Phone",
+    phone: "Phone (optional)",
     service: "Service",
     select: "Select...",
-    clinic: "Preferred clinic",
-    selectClinic: "Select clinic...",
-    clinicLisboa: "Lisbon — Av. António Serpa, 32",
-    clinicCascais: "Cascais — Av. 25 de Abril, 672",
+    location: "Location",
+    selectLocation: "Select location...",
+    locationLisboa: "Lisbon — Av. António Serpa, 32",
+    locationCascais: "Cascais — Av. 25 de Abril, 672",
+    locationOnline: "Online",
+    schedule: "Schedule",
+    selectSchedule: "Select schedule...",
+    scheduleMorning: "Morning (9:00 – 13:00)",
+    scheduleAfternoon: "Afternoon (13:00 – 18:00)",
+    scheduleEvening: "Evening (18:00 – 21:00)",
     message: "Message (optional)",
     messagePlaceholder: "Briefly describe the reason for the consultation...",
     submit: "Send Booking Request",
@@ -330,12 +352,12 @@ const en: typeof pt = {
     phone: "Phone",
     email: "Email",
     hours: "Hours",
-    hoursWeek: "Mon–Fri: 9:00 – 20:00",
-    hoursSat: "Sat: 9:00 – 14:00",
+    hoursWeek: "Mon–Fri: 9:00 – 21:00",
+    hoursSat: "Sat: 9:00 – 18:00",
   },
   footer: {
     rights:
-      "© 2026 Clínica Desassossego. All rights reserved. Professional License No. XXXXX of the Portuguese Psychologists Association.",
+      "© 2026 Clínica Desassossego. All rights reserved.",
     designedBy: "Designed by",
   },
 };
