@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
@@ -11,6 +11,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 const TeamMember = () => {
   const { slug = "" } = useParams();
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const member = getTeamMember(slug);
 
   useEffect(() => {
@@ -21,18 +22,28 @@ const TeamMember = () => {
 
   const info = t.about.team[member.slug];
 
+  const handleBack = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate("/");
+    requestAnimationFrame(() => {
+      const el = document.getElementById("quem-somos");
+      if (el) el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
+    });
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <main className="flex-1 section-padding pt-32">
         <article className="container mx-auto max-w-4xl">
-          <Link
-            to="/#quem-somos"
+          <a
+            href="/#quem-somos"
+            onClick={handleBack}
             className="inline-flex items-center gap-2 text-sm font-body font-medium text-primary hover:text-primary/80 transition-colors mb-10"
           >
             <ArrowLeft className="w-4 h-4" />
             {t.about.backToTeam}
-          </Link>
+          </a>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
