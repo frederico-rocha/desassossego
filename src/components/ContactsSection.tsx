@@ -65,7 +65,7 @@ const ContactsSection = () => {
             cols: "sm:grid-cols-2",
           },
         ].map((group) => (
-          <div key={group.row} className={`grid ${group.cols} gap-5 mb-5`}>
+          <div key={group.row} className={`grid ${group.cols} gap-6 mb-6 items-start`}>
             {group.items.map((item, i) => (
               <motion.div
                 key={item.title}
@@ -73,25 +73,30 @@ const ContactsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-card rounded-xl p-6 border border-border"
+                className="bg-card rounded-xl px-7 py-6 border border-border"
               >
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center mb-4">
-                  <item.icon className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h4 className="font-display text-base font-semibold text-foreground">
+                    {item.title}
+                  </h4>
                 </div>
-                <h4 className="font-display text-base font-semibold text-foreground mb-2">
-                  {item.title}
-                </h4>
-                {item.lines.map((line) => (
-                  <p key={line} className="text-sm text-muted-foreground font-body">
-                    {line}
-                  </p>
-                ))}
+                <div className="space-y-1">
+                  {item.lines.map((line) => (
+                    <p key={line} className="text-sm text-muted-foreground font-body leading-relaxed">
+                      {line}
+                    </p>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
         ))}
 
-        <div className="grid lg:grid-cols-2 gap-6 mt-12">
+        <div className="grid lg:grid-cols-2 gap-6 mt-10">
+
 
           {[
             {
