@@ -87,7 +87,6 @@ const BookingSection = () => {
                 </label>
                 <input
                   type="tel"
-                  required
                   placeholder="+351 912 345 678"
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
                 />
@@ -108,19 +107,37 @@ const BookingSection = () => {
               </div>
             </div>
 
-            <div className="mb-5">
-              <label className="block text-sm font-body font-medium text-foreground mb-2">
-                {t.booking.clinic}
-              </label>
-              <select
-                required
-                defaultValue=""
-                className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
-              >
-                <option value="" disabled>{t.booking.selectClinic}</option>
-                <option value="lisboa">{t.booking.clinicLisboa}</option>
-                <option value="cascais">{t.booking.clinicCascais}</option>
-              </select>
+            <div className="grid md:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label className="block text-sm font-body font-medium text-foreground mb-2">
+                  {t.booking.location}
+                </label>
+                <select
+                  required
+                  defaultValue=""
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
+                >
+                  <option value="" disabled>{t.booking.selectLocation}</option>
+                  <option value="lisboa">{t.booking.locationLisboa}</option>
+                  <option value="cascais">{t.booking.locationCascais}</option>
+                  <option value="online">{t.booking.locationOnline}</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-body font-medium text-foreground mb-2">
+                  {t.booking.schedule}
+                </label>
+                <select
+                  required
+                  defaultValue=""
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
+                >
+                  <option value="" disabled>{t.booking.selectSchedule}</option>
+                  <option value="manha">{t.booking.scheduleMorning}</option>
+                  <option value="tarde">{t.booking.scheduleAfternoon}</option>
+                  <option value="noite">{t.booking.scheduleEvening}</option>
+                </select>
+              </div>
             </div>
 
             <div className="mb-6">
