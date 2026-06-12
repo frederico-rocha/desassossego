@@ -3,11 +3,15 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string>("");
   const { lang, setLang, t } = useLanguage();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   const navItems = [
     { label: t.nav.services, href: "#servicos" },
@@ -21,6 +25,37 @@ const Header = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!isHome) {
+      setActiveId("");
+      return;
+    }
+    const ids = ["servicos", "quem-somos", "protocolos", "reservar", "contactos"];
+    const computeActive = () => {
+      const offset = 100;
+      let current = "";
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const top = el.getBoundingClientRect().top;
+        if (top - offset <= 0) current = id;
+      }
+      // bottom of page → last section
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) {
+        current = ids[ids.length - 1];
+      }
+      setActiveId(current);
+    };
+    computeActive();
+    window.addEventListener("scroll", computeActive, { passive: true });
+    window.addEventListener("resize", computeActive);
+    return () => {
+      window.removeEventListener("scroll", computeActive);
+      window.removeEventListener("resize", computeActive);
+    };
+  }, [isHome]);
+
 
   const handleClick = (href: string) => {
     setMobileOpen(false);
