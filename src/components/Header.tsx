@@ -3,11 +3,15 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string>("");
   const { lang, setLang, t } = useLanguage();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   const navItems = [
     { label: t.nav.services, href: "#servicos" },
@@ -21,6 +25,37 @@ const Header = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!isHome) {
+      setActiveId("");
+      return;
+    }
+    const ids = ["servicos", "quem-somos", "protocolos", "reservar", "contactos"];
+    const computeActive = () => {
+      const offset = 100;
+      let current = "";
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const top = el.getBoundingClientRect().top;
+        if (top - offset <= 0) current = id;
+      }
+      // bottom of page → last section
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) {
+        current = ids[ids.length - 1];
+      }
+      setActiveId(current);
+    };
+    computeActive();
+    window.addEventListener("scroll", computeActive, { passive: true });
+    window.addEventListener("resize", computeActive);
+    return () => {
+      window.removeEventListener("scroll", computeActive);
+      window.removeEventListener("resize", computeActive);
+    };
+  }, [isHome]);
+
 
   const handleClick = (href: string) => {
     setMobileOpen(false);
@@ -87,15 +122,31 @@ const Header = () => {
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
-          {navItems.map((item) => (
-            <button
-              key={item.href}
-              onClick={() => handleClick(item.href)}
-              className={`font-body text-sm font-medium transition-colors duration-300 ${scrolled ? "text-muted-foreground hover:text-primary" : "text-primary-foreground/80 hover:text-primary-foreground"}`}
-            >
-              {item.label}
-            </button>
-          ))}
+          {navItems.map((item) => {
+            const id = item.href.slice(1);
+            const isActive = activeId === id;
+            const base = scrolled
+              ? "text-muted-foreground hover:text-primary"
+              : "text-primary-foreground/80 hover:text-primary-foreground";
+            const active = scrolled ? "text-primary" : "text-primary-foreground";
+            return (
+              <button
+                key={item.href}
+                onClick={() => handleClick(item.href)}
+                aria-current={isActive ? "page" : undefined}
+                className={`relative font-body text-sm font-medium transition-colors duration-300 ${isActive ? active : base}`}
+              >
+                {item.label}
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-active-indicator"
+                    className={`absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full ${scrolled ? "bg-primary" : "bg-primary-foreground"}`}
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </button>
+            );
+          })}
           <LangSwitcher inverted={!scrolled} />
           <button
             onClick={() => handleClick("#reservar")}
@@ -127,15 +178,20 @@ const Header = () => {
             className="md:hidden bg-card border-b border-border overflow-hidden"
           >
             <div className="flex flex-col gap-4 px-6 py-6">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => handleClick(item.href)}
-                  className="text-left font-body text-base text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                const id = item.href.slice(1);
+                const isActive = activeId === id;
+                return (
+                  <button
+                    key={item.href}
+                    onClick={() => handleClick(item.href)}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`text-left font-body text-base transition-colors ${isActive ? "text-primary font-semibold" : "text-muted-foreground hover:text-primary"}`}
+                  >
+                    {item.label}
+                  </button>
+                );
+              })}
               <button
                 onClick={() => handleClick("#reservar")}
                 className="bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold mt-2"
