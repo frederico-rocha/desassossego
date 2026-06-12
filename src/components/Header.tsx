@@ -38,16 +38,15 @@ const Header = () => {
 
     if (elements.length === 0) return;
 
-    const visible = new Map<string, number>();
+    // Centered "trip line": rootMargin shrinks the root to a 1px band at the
+    // viewport center, so any section crossing that line becomes active.
+    const active = new Set<string>();
 
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) {
-            visible.set(entry.target.id, entry.intersectionRatio);
-          } else {
-            visible.delete(entry.target.id);
-          }
+          if (entry.isIntersecting) active.add(entry.target.id);
+          else active.delete(entry.target.id);
         }
 
         // bottom of page → force last section active
@@ -56,31 +55,33 @@ const Header = () => {
           return;
         }
 
-        if (visible.size === 0) {
-          setActiveId("");
-          return;
-        }
+        if (active.size === 0) return; // keep previous active id
 
-        // pick the section closest to the top of the viewport (below the header)
+        // If multiple sections cross the center line, pick the one whose
+        // center is closest to the viewport center.
+        const viewportCenter = window.innerHeight / 2;
         let bestId = "";
-        let bestTop = Infinity;
-        for (const id of visible.keys()) {
+        let bestDist = Infinity;
+        for (const id of active) {
           const el = document.getElementById(id);
           if (!el) continue;
-          const top = el.getBoundingClientRect().top;
-          const distance = Math.abs(top - 96); // header height ~80 + margin
-          if (distance < bestTop) {
-            bestTop = distance;
+          const rect = el.getBoundingClientRect();
+          const elCenter = rect.top + rect.height / 2;
+          const dist = Math.abs(elCenter - viewportCenter);
+          if (dist < bestDist) {
+            bestDist = dist;
             bestId = id;
           }
         }
-        setActiveId(bestId);
+        if (bestId) setActiveId(bestId);
       },
       {
-        rootMargin: "-80px 0px -55% 0px",
-        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+        // Shrink the root to a 1px band at the vertical center of the viewport.
+        rootMargin: "-50% 0px -50% 0px",
+        threshold: 0,
       }
     );
+
 
     elements.forEach((el) => observer.observe(el));
 
