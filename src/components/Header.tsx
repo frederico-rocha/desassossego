@@ -32,29 +32,71 @@ const Header = () => {
       return;
     }
     const ids = ["servicos", "quem-somos", "protocolos", "reservar", "contactos"];
-    const computeActive = () => {
-      const offset = 100;
-      let current = "";
-      for (const id of ids) {
-        const el = document.getElementById(id);
-        if (!el) continue;
-        const top = el.getBoundingClientRect().top;
-        if (top - offset <= 0) current = id;
+    const elements = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (elements.length === 0) return;
+
+    const visible = new Map<string, number>();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            visible.set(entry.target.id, entry.intersectionRatio);
+          } else {
+            visible.delete(entry.target.id);
+          }
+        }
+
+        // bottom of page → force last section active
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) {
+          setActiveId(ids[ids.length - 1]);
+          return;
+        }
+
+        if (visible.size === 0) {
+          setActiveId("");
+          return;
+        }
+
+        // pick the section closest to the top of the viewport (below the header)
+        let bestId = "";
+        let bestTop = Infinity;
+        for (const id of visible.keys()) {
+          const el = document.getElementById(id);
+          if (!el) continue;
+          const top = el.getBoundingClientRect().top;
+          const distance = Math.abs(top - 96); // header height ~80 + margin
+          if (distance < bestTop) {
+            bestTop = distance;
+            bestId = id;
+          }
+        }
+        setActiveId(bestId);
+      },
+      {
+        rootMargin: "-80px 0px -55% 0px",
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
       }
-      // bottom of page → last section
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    const onScrollBottom = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) {
-        current = ids[ids.length - 1];
+        setActiveId(ids[ids.length - 1]);
       }
-      setActiveId(current);
     };
-    computeActive();
-    window.addEventListener("scroll", computeActive, { passive: true });
-    window.addEventListener("resize", computeActive);
+    window.addEventListener("scroll", onScrollBottom, { passive: true });
+
     return () => {
-      window.removeEventListener("scroll", computeActive);
-      window.removeEventListener("resize", computeActive);
+      observer.disconnect();
+      window.removeEventListener("scroll", onScrollBottom);
     };
   }, [isHome]);
+
 
 
   const handleClick = (href: string) => {
