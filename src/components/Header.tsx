@@ -122,15 +122,31 @@ const Header = () => {
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
-          {navItems.map((item) => (
-            <button
-              key={item.href}
-              onClick={() => handleClick(item.href)}
-              className={`font-body text-sm font-medium transition-colors duration-300 ${scrolled ? "text-muted-foreground hover:text-primary" : "text-primary-foreground/80 hover:text-primary-foreground"}`}
-            >
-              {item.label}
-            </button>
-          ))}
+          {navItems.map((item) => {
+            const id = item.href.slice(1);
+            const isActive = activeId === id;
+            const base = scrolled
+              ? "text-muted-foreground hover:text-primary"
+              : "text-primary-foreground/80 hover:text-primary-foreground";
+            const active = scrolled ? "text-primary" : "text-primary-foreground";
+            return (
+              <button
+                key={item.href}
+                onClick={() => handleClick(item.href)}
+                aria-current={isActive ? "page" : undefined}
+                className={`relative font-body text-sm font-medium transition-colors duration-300 ${isActive ? active : base}`}
+              >
+                {item.label}
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-active-indicator"
+                    className={`absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full ${scrolled ? "bg-primary" : "bg-primary-foreground"}`}
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </button>
+            );
+          })}
           <LangSwitcher inverted={!scrolled} />
           <button
             onClick={() => handleClick("#reservar")}
