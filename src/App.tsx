@@ -15,7 +15,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       {/* <BrowserRouter basename="/desassossego"> */}
-      <BrowserRouter basename="/desassossego">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/equipa/:slug" element={<TeamMember />} />
