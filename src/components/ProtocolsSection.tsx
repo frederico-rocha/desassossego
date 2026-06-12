@@ -53,7 +53,7 @@ const ProtocolsSection = () => {
               className="bg-card rounded-xl p-6 md:p-8 border border-border flex items-center justify-center hover:shadow-md transition-shadow duration-300"
             >
               {protocol.logo ? (
-                <img src={protocol.logo} alt={protocol.name} className="h-10 md:h-12 w-full max-w-[160px] object-contain" />
+                <img src={protocol.logo} alt={protocol.name} loading="lazy" decoding="async" className="h-10 md:h-12 w-full max-w-[160px] object-contain" />
               ) : (
                 <Shield className="w-6 h-6 text-primary" />
               )}

@@ -76,6 +76,10 @@ const AboutSection = () => {
                       <img
                         src={member.image}
                         alt={member.name}
+                        loading="lazy"
+                        decoding="async"
+                        width={160}
+                        height={160}
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>

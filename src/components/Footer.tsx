@@ -28,6 +28,8 @@ const Footer = () => {
           <img
             src={logo}
             alt="Clínica Desassossego"
+            loading="lazy"
+            decoding="async"
             className="h-14 md:h-16 w-auto object-contain"
           />
         </div>

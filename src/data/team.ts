@@ -1,8 +1,8 @@
-import teamVera from "@/assets/team-vera.jpg";
-import teamDebora from "@/assets/team-debora.jpg";
-import teamInes from "@/assets/team-ines.jpg";
-import teamLeonor from "@/assets/team-leonor.jpg";
-import teamFrancis from "@/assets/team-francis.jpg";
+import teamVera from "@/assets/team-vera.webp";
+import teamDebora from "@/assets/team-debora.webp";
+import teamInes from "@/assets/team-ines.webp";
+import teamLeonor from "@/assets/team-leonor.webp";
+import teamFrancis from "@/assets/team-francis.webp";
 
 export type TeamSlug = "debora" | "francis" | "vera" | "ines" | "leonor";
 
