@@ -36,9 +36,13 @@ const Footer = () => {
           {navLabels.map((label, i) => (
             <button
               key={navIds[i]}
-              onClick={() =>
-                document.querySelector(`#${navIds[i]}`)?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => {
+                const el = document.querySelector(`#${navIds[i]}`);
+                if (el) {
+                  const top = el.getBoundingClientRect().top + window.scrollY - 80;
+                  window.scrollTo({ top, behavior: "smooth" });
+                }
+              }}
               className="text-sm text-primary-foreground/70 hover:text-primary-foreground font-body transition-colors duration-300"
             >
               {label}
