@@ -178,15 +178,20 @@ const Header = () => {
             className="md:hidden bg-card border-b border-border overflow-hidden"
           >
             <div className="flex flex-col gap-4 px-6 py-6">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => handleClick(item.href)}
-                  className="text-left font-body text-base text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                const id = item.href.slice(1);
+                const isActive = activeId === id;
+                return (
+                  <button
+                    key={item.href}
+                    onClick={() => handleClick(item.href)}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`text-left font-body text-base transition-colors ${isActive ? "text-primary font-semibold" : "text-muted-foreground hover:text-primary"}`}
+                  >
+                    {item.label}
+                  </button>
+                );
+              })}
               <button
                 onClick={() => handleClick("#reservar")}
                 className="bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold mt-2"
