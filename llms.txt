@@ -1,0 +1,17 @@
+# Clínica Desassossego
+
+> Clínica de Psicologia Clínica em Lisboa e Cascais. Acompanhamento psicológico para adultos e famílias.
+
+A Clínica Desassossego oferece consultas de psicologia clínica, terapia individual, terapia de casal e família, e psicologia infantojuvenil, com equipa especializada em ansiedade, depressão e desenvolvimento.
+
+## Pages
+
+- [Início](/): Apresentação da clínica, equipa, serviços, protocolos e contactos.
+
+## Optional
+
+- [Serviços](/#servicos): Áreas de intervenção e tipos de consulta.
+- [A Nossa Equipa](/#quem-somos): Psicólogas clínicas da Desassossego.
+- [Protocolos e Parcerias](/#protocolos): Seguradoras e subsistemas de saúde.
+- [Reservar Consulta](/#reservar): Formulário de marcação.
+- [Contactos](/#contactos): Moradas em Lisboa e Cascais, telefone e email.
