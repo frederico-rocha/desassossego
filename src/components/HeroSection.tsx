@@ -9,12 +9,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[85vh] md:min-h-screen flex items-end overflow-hidden pt-20 md:pt-0 pb-12 md:pb-24">
-      <img
-        src={heroBg}
-        alt=""
-        aria-hidden="true"
-        className="absolute left-0 right-0 top-20 bottom-auto h-auto w-full object-contain object-top bg-primary md:inset-0 md:top-0 md:h-full md:object-cover md:object-center"
+    <section className="relative min-h-screen flex items-end overflow-hidden pb-16 md:pb-24">
+      <div
+        className="absolute inset-0 bg-cover bg-[position:center_top] md:bg-center"
+        style={{ backgroundImage: `url(${heroBg})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/55 to-primary/30" />
 
