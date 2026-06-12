@@ -38,62 +38,79 @@ const Header = () => {
 
     if (elements.length === 0) return;
 
-    // Centered "trip line": rootMargin shrinks the root to a 1px band at the
-    // viewport center, so any section crossing that line becomes active.
     const active = new Set<string>();
+    let observer: IntersectionObserver | null = null;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) active.add(entry.target.id);
-          else active.delete(entry.target.id);
-        }
+    // Place the "active line" just below the fixed header, biased toward the
+    // upper third of the remaining viewport. Recomputed on resize so that
+    // mobile browser chrome (URL/tool bars) collapsing/expanding doesn't
+    // mis-trigger the active state.
+    const computeLine = () => {
+      const vh = window.innerHeight;
+      const isMobile = window.innerWidth < 768;
+      const headerH = isMobile ? 72 : 80;
+      const lineFromTop = headerH + (vh - headerH) * 0.35;
+      return { top: Math.round(lineFromTop), bottom: Math.max(0, Math.round(vh - lineFromTop - 1)), headerH };
+    };
 
-        // bottom of page → force last section active
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) {
-          setActiveId(ids[ids.length - 1]);
-          return;
-        }
+    let lastMargin = "";
 
-        if (active.size === 0) return; // keep previous active id
+    const build = () => {
+      const { top, bottom } = computeLine();
+      const margin = `-${top}px 0px -${bottom}px 0px`;
+      if (margin === lastMargin && observer) return;
+      lastMargin = margin;
+      observer?.disconnect();
+      active.clear();
 
-        // If multiple sections cross the center line, pick the one whose
-        // center is closest to the viewport center.
-        const viewportCenter = window.innerHeight / 2;
-        let bestId = "";
-        let bestDist = Infinity;
-        for (const id of active) {
-          const el = document.getElementById(id);
-          if (!el) continue;
-          const rect = el.getBoundingClientRect();
-          const elCenter = rect.top + rect.height / 2;
-          const dist = Math.abs(elCenter - viewportCenter);
-          if (dist < bestDist) {
-            bestDist = dist;
-            bestId = id;
+      observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) active.add(entry.target.id);
+            else active.delete(entry.target.id);
           }
-        }
-        if (bestId) setActiveId(bestId);
-      },
-      {
-        // Shrink the root to a 1px band at the vertical center of the viewport.
-        rootMargin: "-50% 0px -50% 0px",
-        threshold: 0,
-      }
-    );
 
+          if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) {
+            setActiveId(ids[ids.length - 1]);
+            return;
+          }
 
-    elements.forEach((el) => observer.observe(el));
+          if (active.size === 0) return; // keep previous active id
 
+          const { headerH } = computeLine();
+          let bestId = "";
+          let bestDist = Infinity;
+          for (const id of active) {
+            const el = document.getElementById(id);
+            if (!el) continue;
+            const dist = Math.abs(el.getBoundingClientRect().top - headerH);
+            if (dist < bestDist) {
+              bestDist = dist;
+              bestId = id;
+            }
+          }
+          if (bestId) setActiveId(bestId);
+        },
+        { rootMargin: margin, threshold: 0 }
+      );
+
+      elements.forEach((el) => observer!.observe(el));
+    };
+
+    build();
+
+    const onResize = () => build();
     const onScrollBottom = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) {
         setActiveId(ids[ids.length - 1]);
       }
     };
+    window.addEventListener("resize", onResize);
     window.addEventListener("scroll", onScrollBottom, { passive: true });
 
     return () => {
-      observer.disconnect();
+      observer?.disconnect();
+      window.removeEventListener("resize", onResize);
       window.removeEventListener("scroll", onScrollBottom);
     };
   }, [isHome]);
