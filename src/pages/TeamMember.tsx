@@ -27,7 +27,10 @@ const TeamMember = () => {
     navigate("/");
     requestAnimationFrame(() => {
       const el = document.getElementById("quem-somos");
-      if (el) el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
     });
   };
 
