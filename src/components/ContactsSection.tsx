@@ -41,17 +41,17 @@ const ContactsSection = () => {
             },
             {
               icon: MapPin,
+              title: "Lisboa",
+              lines: ["Av. António Serpa, 32, 8.º C", "1050-027 Lisboa"],
+            },
+            {
+              icon: MapPin,
               title: "Cascais",
               lines: [
                 "Av. 25 de Abril, Edif. Alvorada,",
                 "672, 5A, Sala 7",
                 "2750-512 Cascais",
               ],
-            },
-            {
-              icon: MapPin,
-              title: "Lisboa",
-              lines: ["Av. António Serpa, 32, 8.º C", "1050-027 Lisboa"],
             },
           ].map((item, i) => (
             <motion.div
