@@ -90,11 +90,24 @@ const AboutSection = () => {
                   <p className="text-sm text-primary font-body font-medium mt-1">
                     {info.role}
                   </p>
-                  <p className="text-sm text-muted-foreground font-body leading-relaxed mt-3 px-1">
-                    {info.summary
-                      .replace(/Presencial e /g, "")
-                      .replace(/In-person and /g, "")
-                      .replace(/\s*·\s*(Português|Inglês|Portuguese|English)(\s*·\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g, "")}
+                  <p className="text-sm text-muted-foreground font-body leading-relaxed mt-3 px-1 whitespace-pre-line">
+                    {(() => {
+                      const summary = info.summary
+                        .replace(/Presencial e /g, "")
+                        .replace(/In-person and /g, "")
+                        .replace(/\s*·\s*(Português|Inglês|Portuguese|English)(\s*·\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g, "");
+                      
+                      if (member.slug === "debora" || member.slug === "vera") {
+                        return summary.replace(". ", ".\u00a0\nLisboa, Cascais e\u00a0");
+                      }
+                      if (member.slug === "francis" || member.slug === "leonor") {
+                        return summary.replace(". ", ". Lisboa e ");
+                      }
+                      if (member.slug === "ines") {
+                        return summary.replace(". ", ".\u00a0\nLisboa e ");
+                      }
+                      return summary;
+                    })()}
                   </p>
                   <Link
                     to={`/equipa/${member.slug}`}
