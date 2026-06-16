@@ -82,7 +82,7 @@ const pt = {
         summary:
           "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
         bio: [
-          "Cofundadora da desasSossego. Membro Efectivo da Ordem dos Psicólogos Portugueses.",
+          "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário. Terapeuta Credenciado em Psicanálise e Psicoterapia Psicanalítica. Membro da APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
           "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica; Orientação Vocacional e Profissional.",
         ],
@@ -93,7 +93,7 @@ const pt = {
         summary:
           "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
         bio: [
-          "Cofundadora da desasSossego. Membro Efectivo da Ordem dos Psicólogos Portugueses.",
+          "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Doutorada em Psicologia Clínica pelo ISPA — Instituto Universitário. Mestre em Psicologia Clínica e Mestre em Psicologia da Saúde pelo ISPA. Pós-graduada em Intervenção Psicoterapêutica de Orientação Dinâmica pelo Instituto CRIAP. Professora Universitária no ISPA — Instituto Universitário.",
           "Membro do Conselho Fiscal da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
           "Áreas de atividade: Psicoterapia de Adolescentes e Adultos; Avaliação Psicológica.",
@@ -105,7 +105,7 @@ const pt = {
         summary:
           "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
         bio: [
-          "Cofundadora da desasSossego. Membro Efectivo da Ordem dos Psicólogos Portugueses.",
+          "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário. Membro Associado da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
           "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica; Aconselhamento Parental.",
           "Psicóloga com actividade privada em Lisboa e Cascais. Psicoterapia presencial e online. Sessões em português e inglês.",
@@ -262,7 +262,7 @@ const en: typeof pt = {
         summary:
           "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
         bio: [
-          "Co-founder of desasSossego. Full Member of the Order of Portuguese Psychologists.",
+          "Full Member of the Order of Portuguese Psychologists.",
           "Master's Degree in Clinical Psychology from ISPA — Instituto Universitário. Accredited Therapist in Psychoanalysis and Psychoanalytic Psychotherapy. Member of the APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
           "Activity areas: Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment; Career Guidance (only in Portuguese).",
         ],
@@ -273,7 +273,7 @@ const en: typeof pt = {
         summary:
           "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
         bio: [
-          "Co-founder of desasSossego. Full Member of the Order of Portuguese Psychologists.",
+          "Full Member of the Order of Portuguese Psychologists.",
           "PhD in Clinical Psychology from ISPA — Instituto Universitário. Master's Degree in Clinical Psychology and Master's Degree in Health Psychology from ISPA. Postgraduation in Dynamic Oriented Psychotherapeutic Intervention from Instituto CRIAP. University Professor at ISPA — Instituto Universitário.",
           "Member of the Supervisory Board of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
           "Activity areas: Adolescent and Adult Psychotherapy; Psychological Assessment.",
@@ -285,7 +285,7 @@ const en: typeof pt = {
         summary:
           "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
         bio: [
-          "Co-founder of desasSossego. Full Member of the Order of Portuguese Psychologists.",
+          "Full Member of the Order of Portuguese Psychologists.",
           "Master's Degree in Clinical Psychology from ISPA — Instituto Universitário. Member of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
           "Activity areas: Children, Adolescent and Adult Psychotherapy; Psychological Assessment; Parental Counseling.",
           "In private practice in Lisbon and Cascais. In-person and online psychotherapy. Sessions in Portuguese and English.",
