@@ -91,7 +91,10 @@ const AboutSection = () => {
                     {info.role}
                   </p>
                   <p className="text-sm text-muted-foreground font-body leading-relaxed mt-3 px-1">
-                    {info.summary}
+                    {info.summary
+                      .replace(/Presencial e /g, "")
+                      .replace(/In-person and /g, "")
+                      .replace(/\s*·\s*(Português|Inglês|Portuguese|English)(\s*·\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g, "")}
                   </p>
                   <Link
                     to={`/equipa/${member.slug}`}
