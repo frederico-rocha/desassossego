@@ -76,9 +76,17 @@ const TeamMember = () => {
                   {info.specialty}
                 </p>
               )}
-              <p className="font-body text-muted-foreground leading-relaxed mt-6 text-base">
-                {info.summary}
-              </p>
+              {(() => {
+                const idx = info.summary.indexOf(". ");
+                const first = idx >= 0 ? info.summary.slice(0, idx + 1) : info.summary;
+                const second = idx >= 0 ? info.summary.slice(idx + 2) : "";
+                return (
+                  <div className="font-body text-muted-foreground leading-relaxed mt-6 text-base space-y-1">
+                    <p>{first}</p>
+                    {second && <p>{second}</p>}
+                  </div>
+                );
+              })()}
             </div>
           </motion.div>
 
