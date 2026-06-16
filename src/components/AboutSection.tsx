@@ -90,13 +90,26 @@ const AboutSection = () => {
                   <p className="text-sm text-primary font-body font-medium mt-1">
                     {info.role}
                   </p>
-                  <p className="text-xs text-muted-foreground font-body leading-relaxed mt-3 px-1 whitespace-pre-line">
-                    {info.summary
-                      .replace(/Presencial e /g, "")
-                      .replace(/In-person and /g, "")
-                      .replace(/\s*·\s*(Português|Inglês|Portuguese|English)(\s*·\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g, "")
-                      .replace(". ", ".\u00a0\n")}
+                  <p className="text-xs text-muted-foreground font-body leading-relaxed mt-3 px-1">
+                    {(() => {
+                      const cleaned = info.summary
+                        .replace(/Presencial e /g, "")
+                        .replace(/In-person and /g, "")
+                        .replace(/\s*·\s*(Português|Inglês|Portuguese|English)(\s*·\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g, "");
+                      const idx = cleaned.indexOf(". ");
+                      if (idx === -1) return cleaned;
+                      const first = cleaned.slice(0, idx + 1);
+                      const second = cleaned.slice(idx + 2);
+                      return (
+                        <>
+                          <span className="whitespace-nowrap">{first}</span>
+                          <br />
+                          {second}
+                        </>
+                      );
+                    })()}
                   </p>
+
                   <Link
                     to={`/equipa/${member.slug}`}
                     className="inline-flex items-center gap-1 mt-4 text-sm font-body font-medium text-primary hover:text-primary/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-secondary rounded"
