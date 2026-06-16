@@ -347,6 +347,8 @@ const en: typeof pt = {
     rgpd: "Your data is treated with full confidentiality, in compliance with GDPR.",
     sentTitle: "Request Sent",
     sentBody: "Thank you for getting in touch. Our team will contact you shortly.",
+    errorRequired: "Please fill in this field.",
+    errorEmail: "Please enter a valid email.",
   },
   contacts: {
     title: "Contact",
