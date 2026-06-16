@@ -80,7 +80,7 @@ const pt = {
         role: "Psicóloga Clínica · Cofundadora",
         specialty: "Cédula Profissional nº 20310",
         summary:
-          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Presencial e Online · Português · Inglês.",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário. Terapeuta Credenciado em Psicanálise e Psicoterapia Psicanalítica. Membro da APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
@@ -262,7 +262,7 @@ const en: typeof pt = {
         role: "Clinical Psychologist · Co-founder",
         specialty: "Professional License Nº 20310",
         summary:
-          "Psychotherapist for Children, Adolescents and Adults. In-person and Online · Portuguese · English.",
+          "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "Master's Degree in Clinical Psychology from ISPA — Instituto Universitário. Accredited Therapist in Psychoanalysis and Psychoanalytic Psychotherapy. Member of the APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
