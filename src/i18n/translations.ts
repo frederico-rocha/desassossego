@@ -165,6 +165,8 @@ const pt = {
     rgpd: "Os seus dados são tratados com total confidencialidade, em conformidade com o RGPD.",
     sentTitle: "Pedido Enviado",
     sentBody: "Obrigado pelo seu contacto. A nossa equipa entrará em contacto consigo brevemente.",
+    errorRequired: "Preencha este campo.",
+    errorEmail: "Introduza um e-mail válido.",
   },
   contacts: {
     title: "Contactos",
