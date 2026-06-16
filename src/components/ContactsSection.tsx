@@ -22,74 +22,61 @@ const ContactsSection = () => {
           </p>
         </motion.div>
 
-        {[
-          {
-            row: 1,
-            items: [
-              {
-                icon: Phone,
-                title: t.contacts.phone,
-                lines: ["+351 910 786 339"],
-              },
-              {
-                icon: Mail,
-                title: t.contacts.email,
-                lines: ["clinicadesassossego@gmail.com"],
-              },
-              {
-                icon: Clock,
-                title: t.contacts.hours,
-                lines: [t.contacts.hoursWeek, t.contacts.hoursSat],
-              },
-            ],
-            cols: "sm:grid-cols-2 lg:grid-cols-3",
-          },
-          {
-            row: 2,
-            items: [
-              {
-                icon: MapPin,
-                title: "Cascais",
-                lines: [
-                  "Av. 25 de Abril, Edif. Alvorada,",
-                  "672, 5A, Sala 7",
-                  "2750-512 Cascais",
-                ],
-              },
-              {
-                icon: MapPin,
-                title: "Lisboa",
-                lines: ["Av. António Serpa, 32, 8.º C", "1050-027 Lisboa"],
-              },
-            ],
-            cols: "sm:grid-cols-2",
-          },
-        ].map((group) => (
-          <div key={group.row} className={`grid ${group.cols} gap-5 mb-5`}>
-            {group.items.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-card rounded-xl p-6 border border-border"
-              >
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center mb-4">
-                  <item.icon className="w-5 h-5 text-primary" />
-                </div>
-                <h4 className="font-display text-base font-semibold text-foreground mb-2">
-                  {item.title}
-                </h4>
-                {item.lines.map((line) => (
-                  <p key={line} className="text-sm text-muted-foreground font-body">
-                    {line}
-                  </p>
-                ))}
-              </motion.div>
-            ))}
-          </div>
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-5">
+          {[
+            {
+              icon: Phone,
+              title: t.contacts.phone,
+              lines: ["+351 910 786 339"],
+            },
+            {
+              icon: Mail,
+              title: t.contacts.email,
+              lines: ["clinicadesassossego@gmail.com"],
+            },
+            {
+              icon: Clock,
+              title: t.contacts.hours,
+              lines: [t.contacts.hoursWeek, t.contacts.hoursSat],
+            },
+            {
+              icon: MapPin,
+              title: "Cascais",
+              lines: [
+                "Av. 25 de Abril, Edif. Alvorada,",
+                "672, 5A, Sala 7",
+                "2750-512 Cascais",
+              ],
+            },
+            {
+              icon: MapPin,
+              title: "Lisboa",
+              lines: ["Av. António Serpa, 32, 8.º C", "1050-027 Lisboa"],
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="bg-card rounded-xl p-4 border border-border"
+            >
+              <div className="w-9 h-9 rounded-lg bg-accent flex items-center justify-center mb-3">
+                <item.icon className="w-4 h-4 text-primary" />
+              </div>
+              <h4 className="font-display text-sm font-semibold text-foreground mb-2">
+                {item.title}
+              </h4>
+              {item.lines.map((line) => (
+                <p key={line} className="text-xs text-muted-foreground font-body break-words">
+                  {line}
+                </p>
+              ))}
+            </motion.div>
+          ))}
+        </div>
+
 
         <div className="grid lg:grid-cols-2 gap-6 mt-12">
 
