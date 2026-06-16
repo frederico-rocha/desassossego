@@ -90,11 +90,6 @@ const AboutSection = () => {
                   <p className="text-sm text-primary font-body font-medium mt-1">
                     {info.role}
                   </p>
-                  {info.specialty && (
-                    <p className="text-sm text-muted-foreground font-body mt-1">
-                      {info.specialty}
-                    </p>
-                  )}
                   <p className="text-sm text-muted-foreground font-body leading-relaxed mt-3 px-1">
                     {info.summary}
                   </p>
