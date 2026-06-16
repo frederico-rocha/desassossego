@@ -90,11 +90,12 @@ const AboutSection = () => {
                   <p className="text-sm text-primary font-body font-medium mt-1">
                     {info.role}
                   </p>
-                  <p className="text-xs text-muted-foreground font-body leading-relaxed mt-3 px-1">
+                  <p className="text-xs text-muted-foreground font-body leading-relaxed mt-3 px-1 whitespace-pre-line">
                     {info.summary
                       .replace(/Presencial e /g, "")
                       .replace(/In-person and /g, "")
-                      .replace(/\s*·\s*(Português|Inglês|Portuguese|English)(\s*·\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g, "")}
+                      .replace(/\s*·\s*(Português|Inglês|Portuguese|English)(\s*·\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g, "")
+                      .replace(". ", ".\u00a0\n")}
                   </p>
                   <Link
                     to={`/equipa/${member.slug}`}
