@@ -318,7 +318,7 @@ const en: typeof pt = {
     title: "Partners & Insurers",
     subtitle: "20% discount on all services, for all members and respective families.",
     footer:
-      "Social Fund: 40€. Check your Health Insurance or Health Care System conditions for Mental Health services access.",
+      "Social Fund: 45€. Check your Health Insurance or Health Care System conditions for Mental Health services access.",
   },
   booking: {
     title: "Book a Session",
