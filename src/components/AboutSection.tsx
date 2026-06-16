@@ -101,10 +101,10 @@ const AboutSection = () => {
                         return summary.replace(". ", ".\u00a0\n");
                       }
                       if (member.slug === "francis" || member.slug === "leonor") {
-                        return summary.replace(". ", ". Lisboa e ");
+                        return summary.replace(". ", ".\u00a0\n");
                       }
                       if (member.slug === "ines") {
-                        return summary.replace(". ", ". Lisboa e ");
+                        return summary.replace(". ", ".\u00a0\n");
                       }
                       return summary;
                     })()}
