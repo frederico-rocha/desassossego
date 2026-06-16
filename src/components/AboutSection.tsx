@@ -51,7 +51,7 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        <div>
+        <div id="equipa" className="scroll-mt-24">
           <h3 className="text-2xl font-display font-semibold text-foreground mb-10 text-center">
             {t.about.teamTitle}
           </h3>
