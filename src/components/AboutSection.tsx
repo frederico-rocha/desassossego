@@ -104,7 +104,7 @@ const AboutSection = () => {
                         return summary.replace(". ", ". Lisboa e ");
                       }
                       if (member.slug === "ines") {
-                        return summary.replace(". ", ".\u00a0\nLisboa e ");
+                        return summary.replace(". ", ". Lisboa e ");
                       }
                       return summary;
                     })()}

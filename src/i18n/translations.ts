@@ -115,7 +115,7 @@ const pt = {
         role: "Psicóloga Clínica",
         specialty: "Cédula Profissional nº 27026",
         summary:
-          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa · Presencial e Online · Português · Inglês.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses. Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário.",
           "Membro Associado da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
@@ -297,7 +297,7 @@ const en: typeof pt = {
         role: "Clinical Psychologist",
         specialty: "Professional License Nº 27026",
         summary:
-          "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
+          "Psychotherapist for Children, Adolescents and Adults. Lisbon · In-person and Online · Portuguese · English.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists. Master's Degree in Clinical Psychology from ISPA — Instituto Universitário.",
           "Associate Member of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
