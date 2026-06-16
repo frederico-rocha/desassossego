@@ -24,9 +24,9 @@ const TeamMember = () => {
 
   const handleBack = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    navigate("/");
+    navigate("/#equipa");
     requestAnimationFrame(() => {
-      const el = document.getElementById("quem-somos");
+      const el = document.getElementById("equipa");
       if (el) {
         const top = el.getBoundingClientRect().top + window.scrollY - 80;
         window.scrollTo({ top, behavior: "smooth" });
@@ -40,13 +40,14 @@ const TeamMember = () => {
       <main className="flex-1 section-padding pt-32">
         <article className="container mx-auto max-w-4xl">
           <a
-            href="/#quem-somos"
+            href="/#equipa"
             onClick={handleBack}
             className="inline-flex items-center gap-2 text-sm font-body font-medium text-primary hover:text-primary/80 transition-colors mb-10"
           >
             <ArrowLeft className="w-4 h-4" />
             {t.about.backToTeam}
           </a>
+
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
