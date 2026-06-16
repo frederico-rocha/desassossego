@@ -80,7 +80,7 @@ const pt = {
         role: "Psicóloga Clínica · Cofundadora",
         specialty: "Cédula Profissional nº 20310",
         summary:
-          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Online",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Presencial e Online · Português · Inglês.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário. Terapeuta Credenciado em Psicanálise e Psicoterapia Psicanalítica. Membro da APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
@@ -91,7 +91,7 @@ const pt = {
         role: "Psicóloga Clínica e da Saúde · Cofundadora",
         specialty: "Cédula Profissional nº 22122",
         summary:
-          "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Online",
+          "Psicoterapeuta de Adolescentes e Adultos. Presencial e Online · Português.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Doutorada em Psicologia Clínica pelo ISPA — Instituto Universitário. Mestre em Psicologia Clínica e Mestre em Psicologia da Saúde pelo ISPA. Pós-graduada em Intervenção Psicoterapêutica de Orientação Dinâmica pelo Instituto CRIAP. Professora Universitária no ISPA — Instituto Universitário.",
@@ -103,7 +103,7 @@ const pt = {
         role: "Psicóloga Clínica · Cofundadora",
         specialty: "Cédula Profissional nº 23465",
         summary:
-          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Online",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Presencial e Online · Português · Inglês.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário. Membro Associado da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
@@ -115,7 +115,7 @@ const pt = {
         role: "Psicóloga Clínica",
         specialty: "Cédula Profissional nº 27026",
         summary:
-          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa · Online",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Presencial e Online · Português · Inglês.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses. Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário.",
           "Membro Associado da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
@@ -126,7 +126,7 @@ const pt = {
         role: "Psicóloga Clínica",
         specialty: "Cédula Profissional nº 31934",
         summary:
-          "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Online",
+          "Psicoterapeuta de Adolescentes e Adultos. Presencial e Online · Português.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses. Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário.",
           "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica.",
@@ -262,7 +262,7 @@ const en: typeof pt = {
         role: "Clinical Psychologist · Co-founder",
         specialty: "Professional License Nº 20310",
         summary:
-          "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · Online",
+          "Psychotherapist for Children, Adolescents and Adults. In-person and Online · Portuguese · English.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "Master's Degree in Clinical Psychology from ISPA — Instituto Universitário. Accredited Therapist in Psychoanalysis and Psychoanalytic Psychotherapy. Member of the APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
@@ -273,7 +273,7 @@ const en: typeof pt = {
         role: "Clinical and Health Psychologist · Co-founder",
         specialty: "Professional License Nº 22122",
         summary:
-          "Psychotherapist for Adolescents and Adults. Lisbon · Online",
+          "Psychotherapist for Adolescents and Adults. In-person and Online · Portuguese.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "PhD in Clinical Psychology from ISPA — Instituto Universitário. Master's Degree in Clinical Psychology and Master's Degree in Health Psychology from ISPA. Postgraduation in Dynamic Oriented Psychotherapeutic Intervention from Instituto CRIAP. University Professor at ISPA — Instituto Universitário.",
@@ -285,7 +285,7 @@ const en: typeof pt = {
         role: "Clinical Psychologist · Co-founder",
         specialty: "Professional License Nº 23465",
         summary:
-          "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · Online",
+          "Psychotherapist for Children, Adolescents and Adults. In-person and Online · Portuguese · English.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "Master's Degree in Clinical Psychology from ISPA — Instituto Universitário. Member of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
@@ -297,7 +297,7 @@ const en: typeof pt = {
         role: "Clinical Psychologist",
         specialty: "Professional License Nº 27026",
         summary:
-          "Psychotherapist for Children, Adolescents and Adults. Lisbon · Online",
+          "Psychotherapist for Children, Adolescents and Adults. In-person and Online · Portuguese · English.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists. Master's Degree in Clinical Psychology from ISPA — Instituto Universitário.",
           "Associate Member of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
@@ -308,7 +308,7 @@ const en: typeof pt = {
         role: "Clinical Psychologist",
         specialty: "Professional License Nº 31934",
         summary:
-          "Psychotherapist for Adolescents and Adults. Lisbon · Online",
+          "Psychotherapist for Adolescents and Adults. In-person and Online · Portuguese.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists. Master's Degree in Clinical Psychology from ISPA — Instituto Universitário.",
           "Activity areas: Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment.",
