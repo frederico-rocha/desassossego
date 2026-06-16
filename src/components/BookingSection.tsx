@@ -1,16 +1,84 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Send } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Send, AlertCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+
+type FormState = {
+  name: string;
+  email: string;
+  phone: string;
+  service: string;
+  location: string;
+  schedule: string;
+  message: string;
+};
+
+type Errors = Partial<Record<keyof FormState, string>>;
+
+const initial: FormState = {
+  name: "",
+  email: "",
+  phone: "",
+  service: "",
+  location: "",
+  schedule: "",
+  message: "",
+};
 
 const BookingSection = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [values, setValues] = useState<FormState>(initial);
+  const [errors, setErrors] = useState<Errors>({});
   const { t } = useLanguage();
+
+  const validate = (v: FormState): Errors => {
+    const e: Errors = {};
+    if (!v.name.trim()) e.name = t.booking.errorRequired;
+    if (!v.email.trim()) e.email = t.booking.errorRequired;
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email.trim()))
+      e.email = t.booking.errorEmail;
+    if (!v.location) e.location = t.booking.errorRequired;
+    if (!v.schedule) e.schedule = t.booking.errorRequired;
+    return e;
+  };
+
+  const update = <K extends keyof FormState>(key: K, value: FormState[K]) => {
+    setValues((prev) => ({ ...prev, [key]: value }));
+    if (errors[key]) setErrors((prev) => ({ ...prev, [key]: undefined }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const v = validate(values);
+    setErrors(v);
+    if (Object.keys(v).length === 0) setSubmitted(true);
   };
+
+  const inputBase =
+    "w-full px-4 py-3 rounded-lg border bg-background font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 transition-all";
+  const inputClass = (hasError?: boolean) =>
+    `${inputBase} ${
+      hasError
+        ? "border-destructive focus:ring-destructive/20"
+        : "border-input focus:ring-ring/20"
+    }`;
+
+  const FieldError = ({ message }: { message?: string }) => (
+    <AnimatePresence>
+      {message && (
+        <motion.p
+          initial={{ opacity: 0, y: -4 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -4 }}
+          transition={{ duration: 0.2 }}
+          className="flex items-center gap-1.5 mt-2 text-xs font-body text-destructive"
+        >
+          <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+          {message}
+        </motion.p>
+      )}
+    </AnimatePresence>
+  );
 
   return (
     <section id="reservar" className="section-padding bg-secondary">
@@ -53,6 +121,7 @@ const BookingSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             onSubmit={handleSubmit}
+            noValidate
             className="bg-card rounded-xl p-8 md:p-10 border border-border shadow-sm"
           >
             <div className="grid md:grid-cols-2 gap-5 mb-5">
@@ -62,10 +131,13 @@ const BookingSection = () => {
                 </label>
                 <input
                   type="text"
-                  required
+                  value={values.name}
+                  onChange={(e) => update("name", e.target.value)}
                   placeholder={t.booking.namePlaceholder}
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
+                  className={inputClass(!!errors.name)}
+                  aria-invalid={!!errors.name}
                 />
+                <FieldError message={errors.name} />
               </div>
               <div>
                 <label className="block text-sm font-body font-medium text-foreground mb-2">
@@ -73,10 +145,13 @@ const BookingSection = () => {
                 </label>
                 <input
                   type="email"
-                  required
+                  value={values.email}
+                  onChange={(e) => update("email", e.target.value)}
                   placeholder="email@exemplo.pt"
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
+                  className={inputClass(!!errors.email)}
+                  aria-invalid={!!errors.email}
                 />
+                <FieldError message={errors.email} />
               </div>
             </div>
 
@@ -87,8 +162,10 @@ const BookingSection = () => {
                 </label>
                 <input
                   type="tel"
+                  value={values.phone}
+                  onChange={(e) => update("phone", e.target.value)}
                   placeholder="+351 912 345 678"
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
+                  className={inputClass()}
                 />
               </div>
               <div>
@@ -96,8 +173,9 @@ const BookingSection = () => {
                   {t.booking.service}
                 </label>
                 <select
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
+                  value={values.service}
+                  onChange={(e) => update("service", e.target.value)}
+                  className={inputClass()}
                 >
                   <option value="">{t.booking.select}</option>
                   {t.services.items.map((s) => (
@@ -113,30 +191,34 @@ const BookingSection = () => {
                   {t.booking.location}
                 </label>
                 <select
-                  required
-                  defaultValue=""
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
+                  value={values.location}
+                  onChange={(e) => update("location", e.target.value)}
+                  className={inputClass(!!errors.location)}
+                  aria-invalid={!!errors.location}
                 >
                   <option value="" disabled>{t.booking.selectLocation}</option>
                   <option value="lisboa">{t.booking.locationLisboa}</option>
                   <option value="cascais">{t.booking.locationCascais}</option>
                   <option value="online">{t.booking.locationOnline}</option>
                 </select>
+                <FieldError message={errors.location} />
               </div>
               <div>
                 <label className="block text-sm font-body font-medium text-foreground mb-2">
                   {t.booking.schedule}
                 </label>
                 <select
-                  required
-                  defaultValue=""
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all"
+                  value={values.schedule}
+                  onChange={(e) => update("schedule", e.target.value)}
+                  className={inputClass(!!errors.schedule)}
+                  aria-invalid={!!errors.schedule}
                 >
                   <option value="" disabled>{t.booking.selectSchedule}</option>
                   <option value="manha">{t.booking.scheduleMorning}</option>
                   <option value="tarde">{t.booking.scheduleAfternoon}</option>
                   <option value="noite">{t.booking.scheduleEvening}</option>
                 </select>
+                <FieldError message={errors.schedule} />
               </div>
             </div>
 
@@ -146,8 +228,10 @@ const BookingSection = () => {
               </label>
               <textarea
                 rows={4}
+                value={values.message}
+                onChange={(e) => update("message", e.target.value)}
                 placeholder={t.booking.messagePlaceholder}
-                className="w-full px-4 py-3 rounded-lg border border-input bg-background font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all resize-none"
+                className={`${inputClass()} resize-none`}
               />
             </div>
 
