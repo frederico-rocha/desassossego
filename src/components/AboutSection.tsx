@@ -98,7 +98,7 @@ const AboutSection = () => {
                         .replace(/\s*·\s*(Português|Inglês|Portuguese|English)(\s*·\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g, "");
                       
                       if (member.slug === "debora" || member.slug === "vera") {
-                        return summary.replace(". ", ".\u00a0\nLisboa, Cascais e\u00a0");
+                        return summary.replace(". ", ".\u00a0\n");
                       }
                       if (member.slug === "francis" || member.slug === "leonor") {
                         return summary.replace(". ", ". Lisboa e ");
