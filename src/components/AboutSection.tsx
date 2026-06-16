@@ -65,7 +65,7 @@ const AboutSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="text-center group flex flex-col items-center w-[calc(50%-0.5rem)] sm:w-[calc(50%-1rem)] md:w-[calc(50%-1rem)] lg:w-[calc(50%-1rem)] lg:max-w-[420px]"
+                  className="text-center group flex flex-col items-center w-[calc(50%-0.5rem)] sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.34rem)] lg:w-[calc(33.333%-1.34rem)] lg:max-w-[260px]"
                 >
                   <Link
                     to={`/equipa/${member.slug}`}
