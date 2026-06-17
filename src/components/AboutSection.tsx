@@ -55,7 +55,7 @@ const AboutSection = () => {
           <h3 className="text-2xl font-display font-semibold text-foreground mb-10 text-center">
             {t.about.teamTitle}
           </h3>
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-10 sm:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-10 sm:gap-8 max-w-5xl mx-auto justify-items-center">
             {teamMembers.map((member, i) => {
               const info = t.about.team[member.slug];
               return (
@@ -65,7 +65,7 @@ const AboutSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="text-center group flex flex-col items-center w-[calc(50%-0.5rem)] sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.34rem)] lg:w-[calc(33.333%-1.34rem)] lg:max-w-[260px]"
+                  className="text-center group flex flex-col items-center w-full max-w-[260px]"
                 >
                   <Link
                     to={`/equipa/${member.slug}`}
