@@ -55,7 +55,7 @@ const AboutSection = () => {
           <h3 className="text-2xl font-display font-semibold text-foreground mb-10 text-center">
             {t.about.teamTitle}
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-10 sm:gap-8 max-w-5xl mx-auto justify-items-center">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-10 sm:gap-8 max-w-5xl mx-auto">
             {teamMembers.map((member, i) => {
               const info = t.about.team[member.slug];
               return (
