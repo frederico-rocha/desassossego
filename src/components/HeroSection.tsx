@@ -9,19 +9,25 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[780px] md:min-h-screen flex items-start md:items-end overflow-hidden pt-[370px] md:pt-0 pb-10 md:pb-24">
+    <section className="relative min-h-[780px] md:min-h-screen flex items-start md:items-end overflow-hidden pt-[340px] md:pt-0 pb-10 md:pb-24">
       <div
-        className="absolute inset-0 bg-contain bg-no-repeat bg-[position:center_5rem] md:bg-cover md:bg-center bg-secondary"
+        className="absolute inset-0 bg-cover bg-top md:bg-top bg-no-repeat bg-secondary"
         style={{ backgroundImage: `url(${heroBg.url})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/55 via-primary/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/25 via-transparent to-transparent" />
+
+
+
+
+
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-4xl"
+          className="max-w-4xl bg-primary/20 backdrop-blur-[3px] p-6 md:p-8 rounded-2xl"
         >
           <h1 className="sr-only">Desassossego — Clínica de Psicologia Clínica em Lisboa e Cascais</h1>
           <p className="text-2xl md:text-3xl lg:text-4xl font-display font-semibold leading-tight text-primary-foreground mb-6 text-balance">
