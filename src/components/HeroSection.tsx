@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[800px] md:min-h-screen flex items-start md:items-end overflow-hidden pt-[420px] md:pt-0 pb-10 md:pb-24">
       <div
-        className="absolute inset-0 bg-cover bg-top bg-no-repeat bg-secondary"
+        className="absolute inset-0 bg-contain lg:bg-cover bg-top bg-no-repeat bg-primary"
         style={{ backgroundImage: `url(${heroBg.url})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
