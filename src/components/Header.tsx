@@ -162,7 +162,7 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between h-20 px-6">
+      <div className="container mx-auto flex items-center justify-between h-20 px-6 md:px-8">
         <a href="#" className="flex items-center">
           <div
             aria-label="desassossego"
