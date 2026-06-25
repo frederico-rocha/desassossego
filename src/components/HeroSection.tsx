@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.webp";
+import heroBg from "@/assets/imagem_hero.jpeg.asset.json";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
@@ -11,10 +11,10 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[780px] md:min-h-screen flex items-start md:items-end overflow-hidden pt-[370px] md:pt-0 pb-10 md:pb-24">
       <div
-        className="absolute inset-0 bg-contain bg-no-repeat bg-[position:center_5rem] md:bg-cover md:bg-center bg-primary"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="absolute inset-0 bg-contain bg-no-repeat bg-[position:center_5rem] md:bg-cover md:bg-center bg-secondary"
+        style={{ backgroundImage: `url(${heroBg.url})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/55 to-primary/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
