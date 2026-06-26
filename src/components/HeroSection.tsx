@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/imagem_hero.jpeg.asset.json";
+import heroBg from "@/assets/imagem_hero.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
