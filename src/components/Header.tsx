@@ -216,7 +216,7 @@ const Header = () => {
           </button>
         </nav>
 
-        <div className="md:hidden flex items-center gap-4">
+        <div className="lg:hidden flex items-center gap-4">
           <LangSwitcher inverted={!scrolled} />
           <button
             className={scrolled ? "text-primary" : "text-primary-foreground"}
