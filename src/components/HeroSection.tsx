@@ -14,7 +14,7 @@ const HeroSection = () => {
         src={heroBg}
         alt=""
         aria-hidden="true"
-        className="absolute inset-x-0 top-20 h-[100vw] sm:h-[68vw] lg:inset-0 lg:top-0 lg:h-auto w-full object-cover object-[center_15%] scale-110 sm:scale-100 sm:object-center lg:scale-100 lg:object-center"
+        className="absolute inset-x-0 top-20 h-[100vw] sm:h-[68vw] lg:inset-0 lg:top-0 lg:h-auto w-full object-cover object-[center_10%] scale-[1.18] sm:scale-100 sm:object-center lg:scale-100 lg:object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
 
