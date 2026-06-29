@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/imagem_hero.jpeg";
+import heroBgDesktop from "@/assets/imagem_hero_desktop.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
@@ -11,8 +12,12 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[760px] lg:min-h-screen flex items-start lg:items-end overflow-hidden pt-[calc(88vw+5rem)] sm:pt-[calc(68vw+5rem)] lg:pt-0 pb-10 lg:pb-24">
       <div
-        className="absolute inset-x-0 top-20 h-[88vw] sm:h-[68vw] lg:inset-0 lg:top-0 lg:h-auto bg-contain lg:bg-cover bg-top bg-no-repeat bg-secondary"
+        className="absolute inset-x-0 top-20 h-[88vw] sm:h-[68vw] lg:inset-0 lg:top-0 lg:h-auto bg-cover bg-[position:center_15%] lg:bg-top bg-no-repeat bg-secondary lg:hidden"
         style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      <div
+        className="absolute inset-0 bg-cover bg-top bg-no-repeat bg-secondary hidden lg:block"
+        style={{ backgroundImage: `url(${heroBgDesktop})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
 
