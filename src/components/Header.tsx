@@ -181,7 +181,7 @@ const Header = () => {
           />
         </a>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-10">
           {navItems.map((item) => {
             const id = item.href.slice(1);
             const isActive = activeId === id;
@@ -216,7 +216,7 @@ const Header = () => {
           </button>
         </nav>
 
-        <div className="md:hidden flex items-center gap-4">
+        <div className="lg:hidden flex items-center gap-4">
           <LangSwitcher inverted={!scrolled} />
           <button
             className={scrolled ? "text-primary" : "text-primary-foreground"}
@@ -235,7 +235,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-card border-b border-border overflow-hidden"
+            className="lg:hidden bg-card border-b border-border overflow-hidden"
           >
             <div className="flex flex-col gap-4 px-6 py-6">
               {navItems.map((item) => {
