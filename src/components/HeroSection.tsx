@@ -9,7 +9,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[760px] lg:min-h-screen flex items-start lg:items-end overflow-hidden pt-[calc(100vw+6rem)] sm:pt-[calc(68vw+5rem)] lg:pt-0 pb-10 lg:pb-24">
+    <section className="relative min-h-[760px] lg:min-h-screen flex items-start lg:items-end overflow-hidden pt-[calc(100vw+6rem)] sm:pt-[calc(68vw+5rem)] md:pt-[calc(68vw+2rem)] lg:pt-0 pb-10 md:pb-6 lg:pb-24">
       <div
         className="absolute inset-x-0 top-20 h-[100vw] sm:h-[68vw] lg:inset-0 lg:top-0 lg:h-auto bg-cover bg-top sm:bg-contain lg:bg-cover bg-no-repeat bg-secondary"
         style={{ backgroundImage: `url(${heroBg})` }}
