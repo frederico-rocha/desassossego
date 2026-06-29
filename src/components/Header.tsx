@@ -235,7 +235,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-card border-b border-border overflow-hidden"
+            className="lg:hidden bg-card border-b border-border overflow-hidden"
           >
             <div className="flex flex-col gap-4 px-6 py-6">
               {navItems.map((item) => {
