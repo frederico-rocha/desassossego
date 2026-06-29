@@ -181,7 +181,7 @@ const Header = () => {
           />
         </a>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-10">
           {navItems.map((item) => {
             const id = item.href.slice(1);
             const isActive = activeId === id;
