@@ -9,9 +9,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[760px] lg:min-h-screen flex items-start lg:items-end overflow-hidden pt-[calc(60vw+5rem)] sm:pt-[calc(68vw+5rem)] md:pt-[calc(35vw+5rem)] lg:pt-0 pb-10 md:pb-6 lg:pb-24">
+    <section className="relative min-h-[760px] lg:min-h-screen flex items-start lg:items-end overflow-hidden pt-[calc(55vw+5rem)] sm:pt-[calc(68vw+5rem)] md:pt-[calc(35vw+5rem)] lg:pt-0 pb-10 md:pb-6 lg:pb-24">
       <div
-        className="absolute inset-x-0 top-20 h-[60vw] sm:h-[68vw] md:h-[35vw] lg:inset-0 lg:top-0 lg:h-auto bg-cover bg-top sm:bg-contain md:bg-cover bg-no-repeat bg-secondary"
+        className="absolute inset-x-0 top-20 h-[55vw] sm:h-[68vw] md:h-[35vw] lg:inset-0 lg:top-0 lg:h-auto bg-cover bg-top sm:bg-contain md:bg-cover bg-no-repeat bg-secondary"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
@@ -24,7 +24,7 @@ const HeroSection = () => {
           className="max-w-4xl lg:max-w-xl"
         >
           <h1 className="sr-only">Desassossego — Clínica de Psicologia Clínica em Lisboa e Cascais</h1>
-          <p className="text-xl md:text-3xl lg:text-[1.5rem] xl:text-[1.625rem] font-display font-semibold leading-tight text-primary-foreground mb-6 text-balance">
+          <p className="text-lg md:text-3xl lg:text-[1.5rem] xl:text-[1.625rem] font-display font-semibold leading-tight text-primary-foreground mb-6 text-balance">
             {t.hero.titleA}
             <span className="italic">{t.hero.titleB}</span>
           </p>
