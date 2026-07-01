@@ -21,10 +21,10 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-4xl"
+          className="max-w-4xl lg:max-w-3xl"
         >
           <h1 className="sr-only">Desassossego — Clínica de Psicologia Clínica em Lisboa e Cascais</h1>
-          <p className="text-2xl md:text-3xl lg:text-4xl font-display font-semibold leading-tight text-primary-foreground mb-6 text-balance">
+          <p className="text-2xl md:text-3xl lg:text-[1.75rem] xl:text-[2rem] font-display font-semibold leading-tight text-primary-foreground mb-6 text-balance">
             {t.hero.titleA}
             <span className="italic">{t.hero.titleB}</span>
           </p>
