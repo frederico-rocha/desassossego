@@ -9,7 +9,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[100svh] md:min-h-[760px] lg:min-h-screen flex items-start lg:items-end overflow-hidden pt-[calc(48vw+5rem)] sm:pt-[calc(54vw+5rem)] md:pt-[calc(35vw+5rem)] lg:pt-0 pb-8 md:pb-6 lg:pb-24">
+    <section className="relative min-h-[100svh] md:min-h-[760px] lg:min-h-screen flex items-start lg:items-end overflow-hidden pt-[calc(48vw+5rem)] sm:pt-[calc(54vw+5rem)] md:pt-[calc(35vw+5rem)] lg:pt-0 pb-8 md:pb-6 lg:pb-10">
       <div
         className="absolute inset-x-0 top-20 h-[48vw] sm:h-[54vw] md:h-[35vw] lg:inset-0 lg:top-0 lg:h-auto bg-cover bg-top sm:bg-contain md:bg-cover bg-no-repeat bg-secondary"
         style={{ backgroundImage: `url(${heroBg})` }}
@@ -24,14 +24,14 @@ const HeroSection = () => {
           className="max-w-4xl lg:max-w-xl mt-8 md:mt-0"
         >
           <h1 className="sr-only">Desassossego — Clínica de Psicologia Clínica em Lisboa e Cascais</h1>
-          <p className="text-lg md:text-3xl lg:text-[1.5rem] xl:text-[1.625rem] font-display font-semibold leading-tight text-primary-foreground mb-4 md:mb-6 text-balance">
+          <p className="text-lg md:text-3xl lg:text-[1.375rem] xl:text-[1.5rem] font-display font-semibold leading-tight text-primary-foreground mb-4 md:mb-6 lg:mb-3 text-balance">
             {t.hero.titleA}
             <span className="italic">{t.hero.titleB}</span>
           </p>
-          <p className="text-sm md:text-lg text-primary-foreground/85 font-body font-light leading-relaxed mb-3 md:mb-6 max-w-2xl">
+          <p className="text-sm md:text-lg lg:text-sm xl:text-base text-primary-foreground/85 font-body font-light leading-relaxed mb-3 md:mb-6 lg:mb-2 max-w-2xl">
             {t.hero.description}
           </p>
-          <p className="text-base md:text-xl text-primary-foreground/95 font-display italic mb-6 md:mb-8 max-w-2xl">
+          <p className="text-base md:text-xl lg:text-base xl:text-lg text-primary-foreground/95 font-display italic mb-6 md:mb-8 lg:mb-4 max-w-2xl">
             {t.hero.tagline}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
