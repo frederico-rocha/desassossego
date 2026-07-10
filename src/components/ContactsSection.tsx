@@ -87,7 +87,7 @@ const ContactsSection = () => {
             },
             {
               title: "Clínica Desassossego — Cascais",
-              query: "38.6995836,-9.4270721",
+              query: "38.6996166,-9.4271256",
             },
           ].map((map, i) => (
             <motion.div
