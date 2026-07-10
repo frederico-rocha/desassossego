@@ -87,8 +87,7 @@ const ContactsSection = () => {
             },
             {
               title: "Clínica Desassossego — Cascais",
-              query:
-                "Av. 25 de Abril, 672, Edif. Alvorada, 2750-512 Cascais",
+              query: "38.6995836,-9.4270721",
             },
           ].map((map, i) => (
             <motion.div
@@ -101,7 +100,7 @@ const ContactsSection = () => {
             >
               <iframe
                 title={map.title}
-                src={`https://www.google.com/maps?q=${encodeURIComponent(map.query)}&output=embed`}
+                src={`https://maps.google.com/maps?f=q&hl=pt-PT&q=${encodeURIComponent(map.query)}&z=17&iwloc=B&output=embed`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
