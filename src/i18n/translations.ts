@@ -138,11 +138,11 @@ const pt = {
           "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
-          "Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário. Membro Associado da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
-          "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica; Aconselhamento Parental.",
-          "Psicóloga com actividade privada em Lisboa e Cascais. Psicoterapia presencial e online. Sessões em português e inglês.",
+          "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
+          "Membro Associado da IA - Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
+          "<strong>Áreas de Atividade:</strong> Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica; Aconselhamento parental.",
         ],
-        linkedin: undefined,
+        linkedin: "https://pt.linkedin.com/in/vera-botelho-da-costa-1610695b",
       },
       ines: {
         role: "Psicóloga Clínica",
