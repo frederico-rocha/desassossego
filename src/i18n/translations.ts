@@ -21,44 +21,74 @@ const pt = {
     title: "Os Nossos Serviços",
     subtitle:
       "Psicoterapia psicanalítica ajustada a cada fase da vida.",
+    readMore: "Saber mais",
+    readLess: "Mostrar menos",
     items: [
       {
         title: "Psicoterapia de Crianças",
         description:
           "A relação terapêutica, através do jogo e do brincar, ajuda a criança a transformar as suas ansiedades e angústias e permite o alívio do seu sofrimento, facilitando o desenvolvimento saudável.",
+        expanded: [
+          "Fobias, insónias, pesadelos, medo de separação (dos pais), perturbações do desenvolvimento, distúrbios alimentares, entre outros, podem ser sintomas persistentes que traduzem o sofrimento psíquico da criança.",
+          "A psicoterapia realiza-se com a criança e implica sessões periódicas com os pais.",
+        ],
       },
       {
         title: "Psicoterapia de Adolescentes",
         description:
           "Na psicoterapia trabalha-se com base numa relação de confiança, criando um clima positivo que possibilite ao jovem expressar e elaborar pensamentos e emoções.",
+        expanded: [
+          "As vivências da adolescência suscitam conflitos internos e externos, dúvidas, hesitações e necessidade de integração. Por vezes este processo de transformação é vivido com sofrimento, pondo em causa o equilíbrio interno.",
+          "A terapia realiza-se com o adolescente, contudo, deverão ser realizadas sessões periódicas em conjunto com os pais.",
+        ],
       },
       {
         title: "Psicoterapia de Adultos",
         description:
           "A psicoterapia permite tomar consciência das causas do mal-estar de forma a minimizar as suas consequências e a evitar o seu retorno.",
+        expanded: [
+          "As mudanças operadas através da psicoterapia podem ajudá-lo a encontrar uma forma de sentir e de agir mais livre e criativa.",
+          "Há momentos difíceis da vida em que nos sentimos tristes, deprimidos e ansiosos ou sofremos com preocupações excessivas e pouco realistas, perturbações persistentes do sono, medos ou fobias, etc.. Por vezes, sentimentos negativos ou sintomas persistentes tornam-se incapacitantes, influenciando de forma determinante as nossas relações amorosas, familiares e profissionais.",
+        ],
       },
       {
         title: "Psicoterapia Online",
         description:
           "O contexto online permite o estabelecimento de uma relação terapêutica de confiança, obedecendo a critérios e regras próprias, nomeadamente, que seja assegurado um espaço que garanta a confidencialidade do processo.",
+        expanded: [
+          "Tem como vantagens uma maior flexibilidade de agenda, a possibilidade de poupar o tempo das deslocações e garantir o anonimato, permite ainda ultrapassar barreiras geográficas, a nível nacional e internacional, facilitando o acesso, por exemplo, às comunidades emigrantes. Os resultados do processo psicoterapêutico online estão cientificamente comprovados.",
+        ],
       },
       {
         title: "Avaliação Psicológica",
         description:
-          "Com o recurso a técnicas específicas e adaptadas à idade e fase de desenvolvimento da pessoa, a avaliação psicológica permite aceder ao modo de funcionamento mental.",
+          "Com o recurso a técnicas específicas e adaptadas à idade e fase de desenvolvimento da pessoa, a avaliação psicológica permite aceder ao modo de funcionamento mental…",
+        expanded: [
+          "… identificando pontos fortes, áreas a desenvolver e padrões de relacionamento ou, nalguns casos, diagnosticar perturbações mentais mais graves. Esta análise permite orientar a intervenção terapêutica às necessidades individuais.",
+          "A avaliação psicológica é realizada em várias sessões, definidas em função das provas a aplicar. Poderá solicitar a elaboração de relatório final.",
+        ],
       },
       {
         title: "Orientação Vocacional",
         description:
           "A avaliação psicológica na orientação vocacional de jovens e jovens adultos pretende promover a consciência sobre si próprio ao nível da motivação, interesses profissionais, aptidões, valores e autoconceito.",
+        expanded: [
+          "A utilização de técnicas e instrumentos de avaliação específicos permite ajudar os jovens e as suas famílias, no processo de tomada de decisão quanto ao futuro profissional.",
+          "A intervenção é realizada em 4/5 sessões. Poderá solicitar a elaboração de relatório de orientação vocacional.",
+        ],
       },
       {
         title: "Aconselhamento Parental",
         description:
-          "No Aconselhamento Parental realizam-se sessões de acompanhamento com os pais, onde se procura promover uma maior compreensão das necessidades emocionais dos filhos.",
+          "No Aconselhamento Parental realizam-se sessões de acompanhamento com os pais, onde se procura promover uma maior compreensão das necessidades emocionais dos filhos…",
+        expanded: [
+          "… reforçar competências parentais e encontrar estratégias de intervenção ajustadas a cada contexto familiar, contribuindo para relações mais seguras e saudáveis no seio da família.",
+          "Desafios relacionados com a parentalidade como dificuldades no estabelecimento de rotinas, questões relativas ao comportamento da criança ou do adolescente, momentos de transição (entrada na escola, adolescência, separação dos pais, entre outros) ou dificuldades na comunicação familiar, podem gerar insegurança ou desgaste emocional.",
+        ],
       },
     ],
   },
+
   about: {
     title: "Quem Somos",
     p1: "A desasSossego é um espaço dedicado à saúde mental, que nasce da vontade de facilitar o acesso à Psicologia Clínica. Disponibilizamos um conjunto de serviços, dos quais destacamos a Psicoterapia numa perspectiva psicanalítica.",
@@ -202,44 +232,74 @@ const en: typeof pt = {
   services: {
     title: "Our Services",
     subtitle: "Psychoanalytic psychotherapy tailored to every stage of life.",
+    readMore: "Read more",
+    readLess: "Show less",
     items: [
       {
         title: "Children Psychotherapy",
         description:
           "The therapeutic relationship — through play and symbolic expression — supports the child in processing anxiety and emotional distress, providing relief and promoting a healthy development.",
+        expanded: [
+          "Phobias, insomnia, nightmares, separation anxiety, developmental disorders, eating disorders, among others, can be persistent symptoms that reflect the child's psychological distress.",
+          "Psychotherapy is conducted with the child and involves periodic sessions with the parents.",
+        ],
       },
       {
         title: "Adolescent Psychotherapy",
         description:
           "Psychotherapy is based on a trusting therapeutic relationship, fostering a safe and supportive environment in which the adolescent can express and process thoughts and emotions.",
+        expanded: [
+          "The experiences of adolescence give rise to internal and external conflicts, doubts, hesitations and a need for integration. At times, this transformation is lived with suffering, challenging inner balance.",
+          "Therapy is carried out with the adolescent; however, periodic sessions should also be held together with the parents.",
+        ],
       },
       {
         title: "Adult Psychotherapy",
         description:
           "Psychotherapy offers the opportunity to gain insight into the underlying causes of emotional distress, helping to reduce its impact and prevent its recurrence.",
+        expanded: [
+          "The changes brought about through psychotherapy can help you find a freer and more creative way of feeling and acting.",
+          "There are difficult moments in life when we feel sad, depressed and anxious, or suffer from excessive and unrealistic worries, persistent sleep disturbances, fears or phobias, etc. At times, negative feelings or persistent symptoms become disabling, decisively influencing our romantic, family and professional relationships.",
+        ],
       },
       {
         title: "Online Psychotherapy",
         description:
           "The online setting allows for the establishment of a trusting therapeutic relationship, following its own specific guidelines — particularly the need to ensure a confidential and private space for sessions.",
+        expanded: [
+          "Its advantages include greater scheduling flexibility, saving time on travel and ensuring anonymity, as well as overcoming geographical barriers nationally and internationally — facilitating access, for example, for emigrant communities. The results of online psychotherapy are scientifically proven.",
+        ],
       },
       {
         title: "Psychological Assessment",
         description:
-          "Using specific techniques tailored to the individual's age and stage of development, psychological assessment provides insight into mental functioning.",
+          "Using specific techniques tailored to the individual's age and stage of development, psychological assessment provides insight into mental functioning…",
+        expanded: [
+          "… identifying strengths, areas for development and relational patterns or, in some cases, diagnosing more serious mental disorders. This analysis helps guide therapeutic intervention to individual needs.",
+          "The psychological assessment is carried out over several sessions, defined according to the tests to be applied. A final report may be requested.",
+        ],
       },
       {
         title: "Career Guidance",
         description:
           "Psychological assessment in career guidance for adolescents and young adults aims to promote self-awareness in motivation, professional interests, aptitudes, values, and self-concept.",
+        expanded: [
+          "The use of specific assessment techniques and instruments helps young people and their families in the decision-making process regarding their professional future.",
+          "The intervention is carried out over 4/5 sessions. A career guidance report may be requested.",
+        ],
       },
       {
         title: "Parental Counseling",
         description:
-          "In Parental Counseling, monitoring sessions are held with parents, seeking to promote a greater understanding of their children's emotional needs and reinforce parental skills.",
+          "In Parental Counseling, monitoring sessions are held with parents, seeking to promote a greater understanding of their children's emotional needs…",
+        expanded: [
+          "… reinforce parental skills and find intervention strategies tailored to each family context, contributing to safer and healthier relationships within the family.",
+          "Parenting challenges such as difficulties establishing routines, issues related to the child's or adolescent's behaviour, transition moments (starting school, adolescence, parental separation, among others) or difficulties in family communication can generate insecurity or emotional strain.",
+        ],
       },
     ],
   },
+
   about: {
     title: "About Us",
     p1: "desaSossego is a space dedicated to mental health, created with the purpose of making Clinical Psychology more accessible. We provide a range of services, with a special focus on Psychotherapy from a psychoanalytic perspective.",
