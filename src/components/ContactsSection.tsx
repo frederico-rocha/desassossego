@@ -83,11 +83,11 @@ const ContactsSection = () => {
           {[
             {
               title: "Clínica Desassossego — Lisboa",
-              query: "38.7432794,-9.1484744",
+              query: "desassossego - Psicologia Clínica, Lisboa",
             },
             {
               title: "Clínica Desassossego — Cascais",
-              query: "38.6996166,-9.4271256",
+              query: "desassossego - Psicologia Clínica, Cascais",
             },
           ].map((map, i) => (
             <motion.div
