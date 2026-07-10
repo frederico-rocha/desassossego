@@ -125,11 +125,11 @@ const pt = {
           "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
-          "Doutorada em Psicologia Clínica pelo ISPA — Instituto Universitário. Mestre em Psicologia Clínica e Mestre em Psicologia da Saúde pelo ISPA. Pós-graduada em Intervenção Psicoterapêutica de Orientação Dinâmica pelo Instituto CRIAP. Professora Universitária no ISPA — Instituto Universitário.",
-          "Membro do Conselho Fiscal da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
-          "Áreas de atividade: Psicoterapia de Adolescentes e Adultos; Avaliação Psicológica.",
+          "Doutorada em Psicologia Clínica, Mestre em Psicologia Clínica e Mestre em Psicologia da Saúde pelo ISPA - Instituto Universitário. Pós-graduada em Intervenção Psicoterapêutica de Orientação Dinâmica pelo Instituto CRIAP.",
+          "Professora Universitária no ISPA - Instituto Universitário. Membro do Conselho Fiscal da IA - Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
+          "<strong>Áreas de Atividade:</strong> Psicoterapia de Adolescentes e Adultos; Avaliação Psicológica.",
         ],
-        linkedin: undefined,
+        linkedin: "https://pt.linkedin.com/in/francis-teplitzky-822b866b",
       },
       vera: {
         role: "Psicóloga Clínica · Cofundadora",
@@ -342,11 +342,11 @@ const en: typeof pt = {
           "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
-          "PhD in Clinical Psychology from ISPA — Instituto Universitário. Master's Degree in Clinical Psychology and Master's Degree in Health Psychology from ISPA. Postgraduation in Dynamic Oriented Psychotherapeutic Intervention from Instituto CRIAP. University Professor at ISPA — Instituto Universitário.",
-          "Member of the Supervisory Board of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
-          "Activity areas: Adolescent and Adult Psychotherapy; Psychological Assessment.",
+          "PhD in Clinical Psychology, Master's Degree in Clinical Psychology and Master's Degree in Health Psychology from ISPA - Instituto Universitário. Postgraduation in Dynamic Oriented Psychotherapeutic Intervention from Instituto CRIAP.",
+          "University Professor at ISPA - Instituto Universitário. Member of the Supervisory Board of IA - Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
+          "<strong>Activity areas:</strong> Adolescent and Adult Psychotherapy; Psychological Assessment.",
         ],
-        linkedin: undefined,
+        linkedin: "https://pt.linkedin.com/in/francis-teplitzky-822b866b",
       },
       vera: {
         role: "Clinical Psychologist · Co-founder",
