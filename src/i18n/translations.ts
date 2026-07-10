@@ -150,11 +150,12 @@ const pt = {
         summary:
           "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa · Presencial e Online · Português · Inglês.",
         bio: [
-          "Membro Efectivo da Ordem dos Psicólogos Portugueses. Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário.",
-          "Membro Associado da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
-          "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica.",
+          "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
+          "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
+          "Membro Associado da IA - Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares Avaliação Psicológica.",
+          "<strong>Áreas de Atividade:</strong> Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica.",
         ],
-        linkedin: undefined,
+        linkedin: "https://pt.linkedin.com/in/in%C3%AAs-barreira-6761b973",
       },
       leonor: {
         role: "Psicóloga Clínica",
@@ -367,11 +368,12 @@ const en: typeof pt = {
         summary:
           "Psychotherapist for Children, Adolescents and Adults. Lisbon · In-person and Online · Portuguese · English.",
         bio: [
-          "Full Member of the Order of Portuguese Psychologists. Master's Degree in Clinical Psychology from ISPA — Instituto Universitário.",
-          "Associate Member of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
-          "Activity areas: Children, Adolescent and Adult Psychotherapy; Psychological Assessment.",
+          "Full Member of the Order of Portuguese Psychologists.",
+          "Master's Degree in Clinical Psychology from ISPA - Instituto Universitário.",
+          "Associate Member of IA - Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families Psychological Assessment.",
+          "<strong>Activity areas:</strong> Children, Adolescent and Adult Psychotherapy; Psychological Assessment.",
         ],
-        linkedin: undefined,
+        linkedin: "https://pt.linkedin.com/in/in%C3%AAs-barreira-6761b973",
       },
       leonor: {
         role: "Clinical Psychologist",
