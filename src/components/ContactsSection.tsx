@@ -83,7 +83,7 @@ const ContactsSection = () => {
           {[
             {
               title: "Clínica Desassossego — Lisboa",
-              query: "Avenida António Serpa 32, 1050-027 Lisboa",
+              query: "38.7432794,-9.1484744",
             },
             {
               title: "Clínica Desassossego — Cascais",
