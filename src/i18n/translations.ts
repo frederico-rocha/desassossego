@@ -112,9 +112,11 @@ const pt = {
           "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
-          "Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário. Terapeuta Credenciado em Psicanálise e Psicoterapia Psicanalítica. Membro da APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
-          "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica; Orientação Vocacional e Profissional.",
+          "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
+          "Terapeuta Credenciado em Psicanálise e Psicoterapia Psicanalítica pela APPPP - Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
+          "<strong>Áreas de Atividade:</strong> Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica; Orientação Vocacional e Profissional.",
         ],
+        linkedin: "https://www.linkedin.com/in/d%C3%A9bora-macedo-224a2257",
       },
       francis: {
         role: "Psicóloga Clínica e da Saúde · Cofundadora",
