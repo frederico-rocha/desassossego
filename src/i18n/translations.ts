@@ -239,7 +239,7 @@ const en: typeof pt = {
   },
   services: {
     title: "Our Services",
-    subtitle: "Psychoanalytic psychotherapy tailored to every stage of life.",
+    subtitle: "Psychoanalytic psychotherapy adjusted to each stage of life.",
     readMore: "Read more",
     readLess: "Show less",
     items: [
