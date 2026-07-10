@@ -100,7 +100,7 @@ const ContactsSection = () => {
             >
               <iframe
                 title={map.title}
-                src={`https://maps.google.com/maps?f=q&hl=pt-PT&q=${encodeURIComponent(map.query)}&z=17&iwloc=B&output=embed`}
+                src={`https://www.google.com/maps?hl=pt-PT&q=${encodeURIComponent(map.query)}&z=17&output=embed`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
