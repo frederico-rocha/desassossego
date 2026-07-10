@@ -20,7 +20,7 @@ const pt = {
   services: {
     title: "Os Nossos Serviços",
     subtitle:
-      "Psicologia Clínica numa perspectiva psicanalítica, com acompanhamento adaptado a cada fase da vida.",
+      "Psicoterapia psicanalítica ajustada a cada fase da vida.",
     items: [
       {
         title: "Psicoterapia de Crianças",
@@ -201,7 +201,7 @@ const en: typeof pt = {
   },
   services: {
     title: "Our Services",
-    subtitle: "Clinical Psychology from a psychoanalytic perspective, with care tailored to every stage of life.",
+    subtitle: "Psychoanalytic psychotherapy tailored to every stage of life.",
     items: [
       {
         title: "Children Psychotherapy",
