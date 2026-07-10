@@ -213,6 +213,7 @@ const pt = {
     hours: "Horário",
     hoursWeek: "Seg–Sex: 09h00 – 21h00",
     hoursSat: "Sáb: 09h00 – 18h00",
+    openMaps: "Abrir no Google Maps",
   },
   footer: {
     rights: "© 2026 Clínica Desassossego. Todos os direitos reservados.",
