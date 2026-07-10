@@ -329,9 +329,11 @@ const en: typeof pt = {
           "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
-          "Master's Degree in Clinical Psychology from ISPA — Instituto Universitário. Accredited Therapist in Psychoanalysis and Psychoanalytic Psychotherapy. Member of the APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
-          "Activity areas: Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment; Career Guidance (only in Portuguese).",
+          "Master's Degree in Clinical Psychology from ISPA - Instituto Universitário.",
+          "Accredited Therapist in Psychoanalysis and Psychoanalytic Psychotherapy by the APPPP — Portuguese Association for Psychoanalysis and Psychoanalytic Psychotherapy.",
+          "<strong>Activity areas:</strong> Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment; Career Guidance (only in Portuguese).",
         ],
+        linkedin: "https://www.linkedin.com/in/d%C3%A9bora-macedo-224a2257",
       },
       francis: {
         role: "Clinical and Health Psychologist · Co-founder",
