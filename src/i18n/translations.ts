@@ -142,6 +142,7 @@ const pt = {
           "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica; Aconselhamento Parental.",
           "Psicóloga com actividade privada em Lisboa e Cascais. Psicoterapia presencial e online. Sessões em português e inglês.",
         ],
+        linkedin: undefined,
       },
       ines: {
         role: "Psicóloga Clínica",
@@ -153,6 +154,7 @@ const pt = {
           "Membro Associado da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
           "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica.",
         ],
+        linkedin: undefined,
       },
       leonor: {
         role: "Psicóloga Clínica",
@@ -163,6 +165,7 @@ const pt = {
           "Membro Efectivo da Ordem dos Psicólogos Portugueses. Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário.",
           "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica.",
         ],
+        linkedin: undefined,
       },
     },
   },
