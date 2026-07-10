@@ -102,8 +102,20 @@ const TeamMember = () => {
             </h2>
             <div className="space-y-5 font-body text-muted-foreground leading-relaxed text-base">
               {info.bio.map((p, i) => (
-                <p key={i}>{p}</p>
+                <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
               ))}
+              {info.linkedin && (
+                <p>
+                  <a
+                    href={info.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
+                  >
+                    LinkedIn
+                  </a>
+                </p>
+              )}
             </div>
           </motion.section>
         </article>

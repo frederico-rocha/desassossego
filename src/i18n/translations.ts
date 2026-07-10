@@ -112,9 +112,11 @@ const pt = {
           "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
-          "Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário. Terapeuta Credenciado em Psicanálise e Psicoterapia Psicanalítica. Membro da APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
-          "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica; Orientação Vocacional e Profissional.",
+          "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
+          "Terapeuta Credenciado em Psicanálise e Psicoterapia Psicanalítica pela APPPP - Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
+          "<strong>Áreas de Atividade:</strong> Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica; Orientação Vocacional e Profissional.",
         ],
+        linkedin: "https://www.linkedin.com/in/d%C3%A9bora-macedo-224a2257",
       },
       francis: {
         role: "Psicóloga Clínica e da Saúde · Cofundadora",
@@ -127,6 +129,7 @@ const pt = {
           "Membro do Conselho Fiscal da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
           "Áreas de atividade: Psicoterapia de Adolescentes e Adultos; Avaliação Psicológica.",
         ],
+        linkedin: undefined,
       },
       vera: {
         role: "Psicóloga Clínica · Cofundadora",
@@ -139,6 +142,7 @@ const pt = {
           "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica; Aconselhamento Parental.",
           "Psicóloga com actividade privada em Lisboa e Cascais. Psicoterapia presencial e online. Sessões em português e inglês.",
         ],
+        linkedin: undefined,
       },
       ines: {
         role: "Psicóloga Clínica",
@@ -150,6 +154,7 @@ const pt = {
           "Membro Associado da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
           "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica.",
         ],
+        linkedin: undefined,
       },
       leonor: {
         role: "Psicóloga Clínica",
@@ -160,6 +165,7 @@ const pt = {
           "Membro Efectivo da Ordem dos Psicólogos Portugueses. Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário.",
           "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica.",
         ],
+        linkedin: undefined,
       },
     },
   },
@@ -323,9 +329,11 @@ const en: typeof pt = {
           "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
-          "Master's Degree in Clinical Psychology from ISPA — Instituto Universitário. Accredited Therapist in Psychoanalysis and Psychoanalytic Psychotherapy. Member of the APPPP — Associação Portuguesa de Psicanálise e Psicoterapia Psicanalítica.",
-          "Activity areas: Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment; Career Guidance (only in Portuguese).",
+          "Master's Degree in Clinical Psychology from ISPA - Instituto Universitário.",
+          "Accredited Therapist in Psychoanalysis and Psychoanalytic Psychotherapy by the APPPP — Portuguese Association for Psychoanalysis and Psychoanalytic Psychotherapy.",
+          "<strong>Activity areas:</strong> Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment; Career Guidance (only in Portuguese).",
         ],
+        linkedin: "https://www.linkedin.com/in/d%C3%A9bora-macedo-224a2257",
       },
       francis: {
         role: "Clinical and Health Psychologist · Co-founder",
@@ -338,6 +346,7 @@ const en: typeof pt = {
           "Member of the Supervisory Board of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
           "Activity areas: Adolescent and Adult Psychotherapy; Psychological Assessment.",
         ],
+        linkedin: undefined,
       },
       vera: {
         role: "Clinical Psychologist · Co-founder",
@@ -350,6 +359,7 @@ const en: typeof pt = {
           "Activity areas: Children, Adolescent and Adult Psychotherapy; Psychological Assessment; Parental Counseling.",
           "In private practice in Lisbon and Cascais. In-person and online psychotherapy. Sessions in Portuguese and English.",
         ],
+        linkedin: undefined,
       },
       ines: {
         role: "Clinical Psychologist",
@@ -361,6 +371,7 @@ const en: typeof pt = {
           "Associate Member of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
           "Activity areas: Children, Adolescent and Adult Psychotherapy; Psychological Assessment.",
         ],
+        linkedin: undefined,
       },
       leonor: {
         role: "Clinical Psychologist",
@@ -371,6 +382,7 @@ const en: typeof pt = {
           "Full Member of the Order of Portuguese Psychologists. Master's Degree in Clinical Psychology from ISPA — Instituto Universitário.",
           "Activity areas: Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment.",
         ],
+        linkedin: undefined,
       },
     },
   },
