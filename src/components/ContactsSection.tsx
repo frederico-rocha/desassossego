@@ -83,11 +83,13 @@ const ContactsSection = () => {
           {[
             {
               title: "Clínica Desassossego — Lisboa",
-              query: "desassossego - Psicologia Clínica, Lisboa",
+              embedUrl:
+                "https://www.google.com/maps/place/desasSossego+-+Psicologia+Cl%C3%ADnica/@38.7432835,-9.1533453,17z/data=!3m1!4b1!4m6!3m5!1s0xd19330887997bb7:0xbc3a6fe36ac30408!8m2!3d38.7432794!4d-9.1484744!16s%2Fg%2F11c5_54sj3?hl=pt-PT&output=embed",
             },
             {
               title: "Clínica Desassossego — Cascais",
-              query: "desassossego - Psicologia Clínica, Cascais",
+              embedUrl:
+                "https://www.google.com/maps/place/desassossego+-+Psicologia+Cl%C3%ADnica/@38.6995918,-9.4297038,17z/data=!4m10!1m2!2m1!1sAv.+25+de+Abril+672+desassossego!3m6!1s0xd1ec500738dbd51:0x5bd6f8895a1a2854!8m2!3d38.6996166!4d-9.4271256!15sCiBBdi4gMjUgZGUgQWJyaWwgNjcyIGRlc2Fzc29zc2Vnb5IBD3BzeWNob3RoZXJhcGlzdOABAA!16s%2Fg%2F11mdwv4mcv?hl=pt-PT&output=embed",
             },
           ].map((map, i) => (
             <motion.div
@@ -100,7 +102,7 @@ const ContactsSection = () => {
             >
               <iframe
                 title={map.title}
-                src={`https://www.google.com/maps?hl=pt-PT&q=${encodeURIComponent(map.query)}&z=17&output=embed`}
+                src={map.embedUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
