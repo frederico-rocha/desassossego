@@ -129,6 +129,7 @@ const pt = {
           "Membro do Conselho Fiscal da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
           "Áreas de atividade: Psicoterapia de Adolescentes e Adultos; Avaliação Psicológica.",
         ],
+        linkedin: undefined,
       },
       vera: {
         role: "Psicóloga Clínica · Cofundadora",
