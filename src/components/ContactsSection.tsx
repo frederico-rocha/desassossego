@@ -88,7 +88,7 @@ const ContactsSection = () => {
             {
               title: "Clínica Desassossego — Cascais",
               query:
-                "Av. 25 de Abril, 672, Edif. Alvorada, 2750-512 Cascais",
+                "GTMMI - Gabinete de Terapias Médicas Integradas, Avenida 25 de Abril 672, Edifício Alvorada, 2750-512 Cascais, Portugal",
             },
           ].map((map, i) => (
             <motion.div
