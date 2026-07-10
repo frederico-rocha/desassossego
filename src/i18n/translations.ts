@@ -433,6 +433,7 @@ const en: typeof pt = {
     hours: "Hours",
     hoursWeek: "Mon–Fri: 9:00 – 21:00",
     hoursSat: "Sat: 9:00 – 18:00",
+    openMaps: "Open in Google Maps",
   },
   footer: {
     rights:
