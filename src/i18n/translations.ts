@@ -63,7 +63,6 @@ const pt = {
     title: "Quem Somos",
     p1: "A desasSossego é um espaço dedicado à saúde mental, que nasce da vontade de facilitar o acesso à Psicologia Clínica. Disponibilizamos um conjunto de serviços, dos quais destacamos a Psicoterapia numa perspectiva psicanalítica.",
     p2: "O processo psicanalítico, pelo recurso à associação livre, permite elaborar as dificuldades da pessoa através da compreensão da origem dos seus problemas e insatisfações.",
-    p3: "Acreditamos que o desassossego — aquela inquietação interior que nos leva a procurar ajuda — é, na verdade, o primeiro passo para uma mudança genuína e duradoura.",
     stats: {
       years: "Anos de experiência",
       psychologists: "Psicólogas especializadas",
@@ -245,7 +244,6 @@ const en: typeof pt = {
     title: "About Us",
     p1: "desaSossego is a space dedicated to mental health, created with the purpose of making Clinical Psychology more accessible. We provide a range of services, with a special focus on Psychotherapy from a psychoanalytic perspective.",
     p2: "The psychoanalytic process, through the method of free association, facilitates the exploration and elaboration of personal difficulties by uncovering the underlying origins of emotional conflicts and dissatisfaction.",
-    p3: "We believe that desassossego — that inner restlessness that leads us to seek help — is, in fact, the first step toward genuine and lasting change.",
     stats: {
       years: "Years of experience",
       psychologists: "Specialised psychologists",

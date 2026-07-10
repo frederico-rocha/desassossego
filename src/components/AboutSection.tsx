@@ -22,7 +22,6 @@ const AboutSection = () => {
             <div className="space-y-5 font-body text-muted-foreground leading-relaxed text-base">
               <p>{t.about.p1}</p>
               <p>{t.about.p2}</p>
-              <p>{t.about.p3}</p>
             </div>
           </motion.div>
 
