@@ -346,6 +346,7 @@ const en: typeof pt = {
           "Member of the Supervisory Board of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
           "Activity areas: Adolescent and Adult Psychotherapy; Psychological Assessment.",
         ],
+        linkedin: undefined,
       },
       vera: {
         role: "Clinical Psychologist · Co-founder",
@@ -358,6 +359,7 @@ const en: typeof pt = {
           "Activity areas: Children, Adolescent and Adult Psychotherapy; Psychological Assessment; Parental Counseling.",
           "In private practice in Lisbon and Cascais. In-person and online psychotherapy. Sessions in Portuguese and English.",
         ],
+        linkedin: undefined,
       },
       ines: {
         role: "Clinical Psychologist",
@@ -369,6 +371,7 @@ const en: typeof pt = {
           "Associate Member of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
           "Activity areas: Children, Adolescent and Adult Psychotherapy; Psychological Assessment.",
         ],
+        linkedin: undefined,
       },
       leonor: {
         role: "Clinical Psychologist",
@@ -379,6 +382,7 @@ const en: typeof pt = {
           "Full Member of the Order of Portuguese Psychologists. Master's Degree in Clinical Psychology from ISPA — Instituto Universitário.",
           "Activity areas: Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment.",
         ],
+        linkedin: undefined,
       },
     },
   },
