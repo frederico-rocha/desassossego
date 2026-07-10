@@ -355,11 +355,11 @@ const en: typeof pt = {
           "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
-          "Master's Degree in Clinical Psychology from ISPA — Instituto Universitário. Member of IA — Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
-          "Activity areas: Children, Adolescent and Adult Psychotherapy; Psychological Assessment; Parental Counseling.",
-          "In private practice in Lisbon and Cascais. In-person and online psychotherapy. Sessions in Portuguese and English.",
+          "Master's Degree in Clinical Psychology from ISPA - Instituto Universitário.",
+          "Associate Member of IA - Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
+          "<strong>Activity areas:</strong> Children, Adolescent and Adult Psychotherapy; Psychological Assessment; Parental Counseling.",
         ],
-        linkedin: undefined,
+        linkedin: "https://pt.linkedin.com/in/vera-botelho-da-costa-1610695b",
       },
       ines: {
         role: "Clinical Psychologist",
