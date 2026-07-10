@@ -163,8 +163,9 @@ const pt = {
         summary:
           "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
         bio: [
-          "Membro Efectivo da Ordem dos Psicólogos Portugueses. Mestre em Psicologia Clínica pelo ISPA — Instituto Universitário.",
-          "Áreas de atividade: Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica.",
+          "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
+          "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
+          "<strong>Áreas de Atividade:</strong> Psicoterapia de Crianças, Adolescentes e Adultos; Intervenção na Crise; Avaliação Psicológica.",
         ],
         linkedin: undefined,
       },
@@ -381,8 +382,9 @@ const en: typeof pt = {
         summary:
           "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
         bio: [
-          "Full Member of the Order of Portuguese Psychologists. Master's Degree in Clinical Psychology from ISPA — Instituto Universitário.",
-          "Activity areas: Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment.",
+          "Full Member of the Order of Portuguese Psychologists.",
+          "Master's Degree in Clinical Psychology from ISPA - Instituto Universitário.",
+          "<strong>Activity areas:</strong> Children, Adolescent and Adult Psychotherapy; Crisis Intervention; Psychological Assessment.",
         ],
         linkedin: undefined,
       },
