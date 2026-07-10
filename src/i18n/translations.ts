@@ -125,11 +125,11 @@ const pt = {
           "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
-          "Doutorada em Psicologia Clínica pelo ISPA — Instituto Universitário. Mestre em Psicologia Clínica e Mestre em Psicologia da Saúde pelo ISPA. Pós-graduada em Intervenção Psicoterapêutica de Orientação Dinâmica pelo Instituto CRIAP. Professora Universitária no ISPA — Instituto Universitário.",
-          "Membro do Conselho Fiscal da IA — Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
-          "Áreas de atividade: Psicoterapia de Adolescentes e Adultos; Avaliação Psicológica.",
+          "Doutorada em Psicologia Clínica, Mestre em Psicologia Clínica e Mestre em Psicologia da Saúde pelo ISPA - Instituto Universitário. Pós-graduada em Intervenção Psicoterapêutica de Orientação Dinâmica pelo Instituto CRIAP.",
+          "Professora Universitária no ISPA - Instituto Universitário. Membro do Conselho Fiscal da IA - Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
+          "<strong>Áreas de Atividade:</strong> Psicoterapia de Adolescentes e Adultos; Avaliação Psicológica.",
         ],
-        linkedin: undefined,
+        linkedin: "https://pt.linkedin.com/in/francis-teplitzky-822b866b",
       },
       vera: {
         role: "Psicóloga Clínica · Cofundadora",
