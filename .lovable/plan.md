@@ -1,26 +1,29 @@
-## Plano: Testes na secção Hero
+# Plano: Novo teste na secção Hero
 
-### Contexto
-A secção hero atual tem um degradé sobreposto à imagem de fundo, definido em `src/components/HeroSection.tsx`:
-```
-bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40
-```
-Este degradé vai da esquerda para a direita e ajuda a garantir a legibilidade do texto e botões.
+## Contexto
+A secção hero já tem um controlo temporário que alterna entre três variantes de degradé. O utilizador quer agora um novo conjunto de testes:
 
-### Testes propostos
+1. **Degradé atual** — o degradé original da esquerda para a direita (`bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40`).
+2. **Sem degradé, mas com azul claro uniforme** — uma sobreposição uniforme de `primary/40` (a cor mais clara do degradé atual) sobre toda a imagem.
+3. **Degradé de baixo para cima** — o degradé inverte a direção, começando mais escuro em baixo e clareando para cima (`bg-gradient-to-t from-primary/85 via-primary/70 to-primary/40`).
 
-#### Teste 1 — Remover o degradé
-- Remover completamente a `<div>` do degradé sobreposto.
-- Resultado: imagem de fundo aparece sem qualquer escurecimento.
+## Alterações propostas
 
-#### Teste 2 — Degradé de cima para baixo
-- Manter a `<div>` do degradé, mas alterar a direção de `bg-gradient-to-r` para `bg-gradient-to-b`.
-- Manter as mesmas cores e opacidades (`from-primary/85 via-primary/70 to-primary/40`).
-- Resultado: escurecimento começa no topo e desvanece-se para a base.
+### 1. Atualizar as variantes em `src/components/HeroSection.tsx`
+- Substituir o tipo `GradientVariant` e o objeto `gradientClasses` pelas novas três variantes:
+  - `original`: `bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40`
+  - `uniform`: `bg-primary/40`
+  - `bottom-top`: `bg-gradient-to-t from-primary/85 via-primary/70 to-primary/40`
+- Atualizar a função `cycleGradient` para percorrer as novas variantes.
+- Atualizar os rótulos do botão flutuante para refletir os novos testes.
 
-### Como validar
+### 2. Manter o controlo temporário
+- O botão flutuante no canto inferior direito continua a permitir alternar entre as três variantes durante o teste.
+- Quando o utilizador escolher a variante final, remove-se o controlo temporário e deixa-se apenas a opção selecionada.
+
+## Validação
 - Compilar o projeto para garantir que não há erros.
-- Visualizar a preview em desktop e mobile para confirmar o impacto na legibilidade do texto.
+- Verificar no preview desktop e mobile que as três variantes são visíveis e que o texto mantém legibilidade.
 
-### Nota
-São alterações rápidas e reversíveis. Posso aplicar primeiro um teste, depois o outro, ou criar uma forma simples de alternar entre eles se quiseres comparar lado a lado.
+## Nota
+São alterações rápidas e reversíveis. O controlo temporário é apenas para comparação e será removido após decisão final.
