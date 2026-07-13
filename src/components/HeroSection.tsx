@@ -1,12 +1,37 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/imagem_hero.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useState } from "react";
+
+type GradientVariant = "original" | "none" | "top-bottom";
+
+const gradientClasses: Record<GradientVariant, string> = {
+  original: "bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40",
+  none: "",
+  "top-bottom": "bg-gradient-to-b from-primary/85 via-primary/70 to-primary/40",
+};
 
 const HeroSection = () => {
   const { t } = useLanguage();
+  const [gradient, setGradient] = useState<GradientVariant>("original");
+
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const cycleGradient = () => {
+    setGradient((prev) => {
+      if (prev === "original") return "none";
+      if (prev === "none") return "top-bottom";
+      return "original";
+    });
+  };
+
+  const gradientLabel = {
+    original: "Degradé atual",
+    none: "Sem degradé",
+    "top-bottom": "Degradé cima-baixo",
+  }[gradient];
 
   return (
     <section className="relative min-h-[100svh] md:min-h-[760px] lg:min-h-screen flex items-start lg:items-end overflow-hidden pt-[calc(48vw+5rem)] sm:pt-[calc(54vw+5rem)] md:pt-[calc(35vw+5rem)] lg:pt-0 pb-8 md:pb-6 lg:pb-10">
@@ -14,7 +39,9 @@ const HeroSection = () => {
         className="absolute inset-x-0 top-20 h-[48vw] sm:h-[54vw] md:h-[35vw] lg:inset-0 lg:top-0 lg:h-auto bg-cover bg-top sm:bg-contain md:bg-cover bg-no-repeat bg-secondary"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
+      {gradient !== "none" && (
+        <div className={`absolute inset-0 ${gradientClasses[gradient]}`} />
+      )}
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -52,6 +79,16 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Controlo temporário para testar variantes do degradé */}
+      <button
+        type="button"
+        onClick={cycleGradient}
+        className="fixed bottom-4 right-4 z-50 bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg text-sm font-medium hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        aria-label="Alternar variante do degradé"
+      >
+        {gradientLabel}
+      </button>
     </section>
   );
 };
