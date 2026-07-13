@@ -79,6 +79,16 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Controlo temporário para testar variantes do degradé */}
+      <button
+        type="button"
+        onClick={cycleGradient}
+        className="fixed bottom-4 right-4 z-50 bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg text-sm font-medium hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        aria-label="Alternar variante do degradé"
+      >
+        {gradientLabel}
+      </button>
     </section>
   );
 };
