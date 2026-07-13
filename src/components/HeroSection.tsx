@@ -39,7 +39,9 @@ const HeroSection = () => {
         className="absolute inset-x-0 top-20 h-[48vw] sm:h-[54vw] md:h-[35vw] lg:inset-0 lg:top-0 lg:h-auto bg-cover bg-top sm:bg-contain md:bg-cover bg-no-repeat bg-secondary"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
+      {gradient !== "none" && (
+        <div className={`absolute inset-0 ${gradientClasses[gradient]}`} />
+      )}
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
