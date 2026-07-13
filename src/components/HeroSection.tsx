@@ -3,12 +3,12 @@ import heroBg from "@/assets/imagem_hero.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useState } from "react";
 
-type GradientVariant = "original" | "none" | "top-bottom";
+type GradientVariant = "original" | "uniform" | "bottom-top";
 
 const gradientClasses: Record<GradientVariant, string> = {
   original: "bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40",
-  none: "",
-  "top-bottom": "bg-gradient-to-b from-primary/85 via-primary/70 to-primary/40",
+  uniform: "bg-primary/40",
+  "bottom-top": "bg-gradient-to-t from-primary/85 via-primary/70 to-primary/40",
 };
 
 const HeroSection = () => {
@@ -21,16 +21,16 @@ const HeroSection = () => {
 
   const cycleGradient = () => {
     setGradient((prev) => {
-      if (prev === "original") return "none";
-      if (prev === "none") return "top-bottom";
+      if (prev === "original") return "uniform";
+      if (prev === "uniform") return "bottom-top";
       return "original";
     });
   };
 
   const gradientLabel = {
     original: "Degradé atual",
-    none: "Sem degradé",
-    "top-bottom": "Degradé cima-baixo",
+    uniform: "Azul uniforme",
+    "bottom-top": "Degradé baixo-cima",
   }[gradient];
 
   return (
@@ -39,9 +39,7 @@ const HeroSection = () => {
         className="absolute inset-x-0 top-20 h-[48vw] sm:h-[54vw] md:h-[35vw] lg:inset-0 lg:top-0 lg:h-auto bg-cover bg-top sm:bg-contain md:bg-cover bg-no-repeat bg-secondary"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {gradient !== "none" && (
-        <div className={`absolute inset-0 ${gradientClasses[gradient]}`} />
-      )}
+      <div className={`absolute inset-0 ${gradientClasses[gradient]}`} />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
