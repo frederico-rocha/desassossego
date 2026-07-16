@@ -89,6 +89,10 @@ const AboutSection = () => {
                         .replace(
                           /\s*·\s*(Português|Inglês|Portuguese|English)(\s*e\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g,
                           "",
+                        )
+                        .replace(
+                          /\s*·\s*(Português|Inglês|Portuguese|English)(\s*and\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g,
+                          "",
                         );
                       const idx = cleaned.indexOf(". ");
                       if (idx === -1) return cleaned;
