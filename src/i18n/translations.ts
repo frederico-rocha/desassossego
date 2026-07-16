@@ -325,7 +325,7 @@ const en: typeof pt = {
         role: "Clinical Psychologist · Co-founder",
         specialty: "Professional License Nº 20310",
         summary:
-          "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
+          "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese and English",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "Master's Degree in Clinical Psychology from ISPA - Instituto Universitário.",
@@ -350,7 +350,7 @@ const en: typeof pt = {
         role: "Clinical Psychologist · Co-founder",
         specialty: "Professional License Nº 23465",
         summary:
-          "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese · English.",
+          "Psychotherapist for Children, Adolescents and Adults. Lisbon and Cascais · In-person and Online · Portuguese and English",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "Master's Degree in Clinical Psychology from ISPA - Instituto Universitário.",
@@ -363,7 +363,7 @@ const en: typeof pt = {
         role: "Clinical Psychologist",
         specialty: "Professional License Nº 27026",
         summary:
-          "Psychotherapist for Children, Adolescents and Adults. Lisbon · In-person and Online · Portuguese · English.",
+          "Psychotherapist for Children, Adolescents and Adults. Lisbon · In-person and Online · Portuguese and English",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "Master's Degree in Clinical Psychology from ISPA - Instituto Universitário.",
