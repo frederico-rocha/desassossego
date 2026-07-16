@@ -341,7 +341,7 @@ const en: typeof pt = {
         role: "Clinical and Health Psychologist · Co-founder",
         specialty: "Professional License Nº 22122",
         summary:
-          "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
+          "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "PhD in Clinical Psychology, Master's Degree in Clinical Psychology and Master's Degree in Health Psychology from ISPA - Instituto Universitário. Postgraduation in Dynamic Oriented Psychotherapeutic Intervention from Instituto CRIAP.",
@@ -380,7 +380,7 @@ const en: typeof pt = {
         role: "Clinical Psychologist",
         specialty: "Professional License Nº 31934",
         summary:
-          "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
+          "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "Master's Degree in Clinical Psychology from ISPA - Instituto Universitário.",
