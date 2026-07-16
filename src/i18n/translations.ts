@@ -19,8 +19,7 @@ const pt = {
   },
   services: {
     title: "Os Nossos Serviços",
-    subtitle:
-      "Psicoterapia psicanalítica ajustada a cada fase da vida.",
+    subtitle: "Psicoterapia psicanalítica ajustada a cada fase da vida.",
     readMore: "Saber mais",
     readLess: "Mostrar menos",
     items: [
@@ -109,7 +108,7 @@ const pt = {
         role: "Psicóloga Clínica · Cofundadora",
         specialty: "Cédula Profissional nº 20310",
         summary:
-          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português e Inglês",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
@@ -121,8 +120,7 @@ const pt = {
       francis: {
         role: "Psicóloga Clínica e da Saúde · Cofundadora",
         specialty: "Cédula Profissional nº 22122",
-        summary:
-          "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
+        summary: "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Doutorada em Psicologia Clínica, Mestre em Psicologia Clínica e Mestre em Psicologia da Saúde pelo ISPA - Instituto Universitário. Pós-graduada em Intervenção Psicoterapêutica de Orientação Dinâmica pelo Instituto CRIAP.",
@@ -135,7 +133,7 @@ const pt = {
         role: "Psicóloga Clínica · Cofundadora",
         specialty: "Cédula Profissional nº 23465",
         summary:
-          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português · Inglês.",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa e Cascais · Presencial e Online · Português e Inglês",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
@@ -148,7 +146,7 @@ const pt = {
         role: "Psicóloga Clínica",
         specialty: "Cédula Profissional nº 27026",
         summary:
-          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa · Presencial e Online · Português · Inglês.",
+          "Psicoterapeuta de Crianças, Adolescentes e Adultos. Lisboa · Presencial e Online · Português e Inglês",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
@@ -160,8 +158,7 @@ const pt = {
       leonor: {
         role: "Psicóloga Clínica",
         specialty: "Cédula Profissional nº 31934",
-        summary:
-          "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
+        summary: "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
@@ -340,8 +337,7 @@ const en: typeof pt = {
       francis: {
         role: "Clinical and Health Psychologist · Co-founder",
         specialty: "Professional License Nº 22122",
-        summary:
-          "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
+        summary: "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "PhD in Clinical Psychology, Master's Degree in Clinical Psychology and Master's Degree in Health Psychology from ISPA - Instituto Universitário. Postgraduation in Dynamic Oriented Psychotherapeutic Intervention from Instituto CRIAP.",
@@ -379,8 +375,7 @@ const en: typeof pt = {
       leonor: {
         role: "Clinical Psychologist",
         specialty: "Professional License Nº 31934",
-        summary:
-          "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
+        summary: "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese.",
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "Master's Degree in Clinical Psychology from ISPA - Instituto Universitário.",
@@ -434,8 +429,7 @@ const en: typeof pt = {
     hoursSat: "Sat: 9:00 – 18:00",
   },
   footer: {
-    rights:
-      "© 2026 Clínica Desassossego. All rights reserved.",
+    rights: "© 2026 Clínica Desassossego. All rights reserved.",
     designedBy: "Designed by",
   },
 };
