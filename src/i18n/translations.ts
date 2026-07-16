@@ -120,7 +120,7 @@ const pt = {
       francis: {
         role: "Psicóloga Clínica e da Saúde · Cofundadora",
         specialty: "Cédula Profissional nº 22122",
-        summary: "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
+        summary: "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Doutorada em Psicologia Clínica, Mestre em Psicologia Clínica e Mestre em Psicologia da Saúde pelo ISPA - Instituto Universitário. Pós-graduada em Intervenção Psicoterapêutica de Orientação Dinâmica pelo Instituto CRIAP.",
@@ -158,7 +158,7 @@ const pt = {
       leonor: {
         role: "Psicóloga Clínica",
         specialty: "Cédula Profissional nº 31934",
-        summary: "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português.",
+        summary: "Psicoterapeuta de Adolescentes e Adultos. Lisboa · Presencial e Online · Português",
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
