@@ -16,9 +16,7 @@ const AboutSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-6">
-              {t.about.title}
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-6">{t.about.title}</h2>
             <div className="space-y-5 font-body text-muted-foreground leading-relaxed text-base">
               <p>{t.about.p1}</p>
               <p>{t.about.p2}</p>
@@ -51,9 +49,7 @@ const AboutSection = () => {
         </div>
 
         <div id="equipa" className="scroll-mt-24">
-          <h3 className="text-2xl font-display font-semibold text-foreground mb-10 text-center">
-            {t.about.teamTitle}
-          </h3>
+          <h3 className="text-2xl font-display font-semibold text-foreground mb-10 text-center">{t.about.teamTitle}</h3>
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-10 sm:gap-8 max-w-5xl mx-auto">
             {teamMembers.map((member, i) => {
               const info = t.about.team[member.slug];
@@ -83,18 +79,17 @@ const AboutSection = () => {
                       />
                     </div>
                   </Link>
-                  <h4 className="font-display text-lg font-semibold text-foreground">
-                    {member.name}
-                  </h4>
-                  <p className="text-sm text-primary font-body font-medium mt-1">
-                    {info.role}
-                  </p>
+                  <h4 className="font-display text-lg font-semibold text-foreground">{member.name}</h4>
+                  <p className="text-sm text-primary font-body font-medium mt-1">{info.role}</p>
                   <p className="text-xs text-muted-foreground font-body leading-relaxed mt-3 px-1">
                     {(() => {
                       const cleaned = info.summary
                         .replace(/Presencial e /g, "")
                         .replace(/In-person and /g, "")
-                        .replace(/\s*·\s*(Português|Inglês|Portuguese|English)(\s*·\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g, "");
+                        .replace(
+                          /\s*·\s*(Português|Inglês|Portuguese|English)(\s*e\s*(Português|Inglês|Portuguese|English))*\.?\s*$/g,
+                          "",
+                        );
                       const idx = cleaned.indexOf(". ");
                       if (idx === -1) return cleaned;
                       const first = cleaned.slice(0, idx + 1);
@@ -121,7 +116,6 @@ const AboutSection = () => {
             })}
           </div>
         </div>
-
       </div>
     </section>
   );
