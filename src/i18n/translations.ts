@@ -292,8 +292,8 @@ const en: typeof pt = {
         description:
           "Psychological assessment in career guidance for adolescents and young adults aims to promote self-awareness in motivation, professional interests, aptitudes, values, and self-concept.",
         expanded: [
-          "The use of specific assessment techniques and instruments helps young people and their families in the decision-making process regarding their professional future.",
-          "The intervention is carried out over 4/5 sessions. A career guidance report may be requested.",
+          "Psychological assessment in career guidance for adolescents and young adults aims to promote self-awareness in areas such as motivation, professional interests, aptitudes, values, and self-concept. The use of specific assessment tools and techniques helps support young people and their families in the decision-making process regarding future academic and professional paths.",
+          "The process is typically carried out over 4 to 5 sessions. A career guidance report can be provided upon request.",
         ],
       },
       {
@@ -301,8 +301,8 @@ const en: typeof pt = {
         description:
           "In Parental Counseling, monitoring sessions are held with parents, seeking to promote a greater understanding of their children's emotional needs…",
         expanded: [
-          "… reinforce parental skills and find intervention strategies tailored to each family context, contributing to safer and healthier relationships within the family.",
-          "Parenting challenges such as difficulties establishing routines, issues related to the child's or adolescent's behaviour, transition moments (starting school, adolescence, parental separation, among others) or difficulties in family communication can generate insecurity or emotional strain.",
+          "Challenges related to parenthood, such as difficulties in establishing routines, behavior issues in children or adolescents, transitional periods (starting school, adolescence, parental separation, among others), or communication difficulties within the family can often lead to insecurity or emotional strain.",
+          "In Parental Counseling, monitoring sessions are held with parents, which seek to promote a greater understanding of their children's emotional needs, reinforce parental skills and find intervention strategies adjusted to each family context, contributing to safer and healthier relationships within the family.",
         ],
       },
     ],
