@@ -335,7 +335,7 @@ const en: typeof pt = {
         linkedin: "https://www.linkedin.com/in/d%C3%A9bora-macedo-224a2257",
       },
       francis: {
-        role: "Clinical and Health Psychologist · \n Co-founder",
+        role: "Clinical and Health Psychologist · Co-founder",
         specialty: "Professional License Nº 22122",
         summary: "Psychotherapist for Adolescents and Adults. Lisbon · In-person and Online · Portuguese",
         bio: [
