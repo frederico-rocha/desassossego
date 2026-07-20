@@ -254,8 +254,8 @@ const en: typeof pt = {
         description:
           "Psychotherapy is based on a trusting therapeutic relationship, fostering a safe and supportive environment in which the adolescent can express and process thoughts and emotions.",
         expanded: [
-          "The experiences of adolescence give rise to internal and external conflicts, doubts, hesitations and a need for integration. At times, this transformation is lived with suffering, challenging inner balance.",
-          "Therapy is carried out with the adolescent; however, periodic sessions should also be held together with the parents.",
+          "The experiences of adolescence often give rise to internal and external conflicts, doubts, hesitations, and a need for personal integration. At times, this transformative period can be accompanied by emotional distress, challenging the adolescent's internal balance. Psychotherapy is based on a trusting therapeutic relationship, fostering a safe and supportive environment in which the adolescent can express and process thoughts and emotions.",
+          "While therapy is conducted primarily with the adolescent, regular joint sessions with the parents are also an integral part of the therapeutic process.",
         ],
       },
       {
