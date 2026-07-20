@@ -80,7 +80,7 @@ const AboutSection = () => {
                     </div>
                   </Link>
                   <h4 className="font-display text-lg font-semibold text-foreground">{member.name}</h4>
-                  <p className="text-sm text-primary font-body font-medium mt-1">{info.role}</p>
+                  <p className="text-sm text-primary font-body font-medium mt-1 whitespace-pre-line">{info.role}</p>
                   <p className="text-xs text-muted-foreground font-body leading-relaxed mt-3 px-1">
                     {(() => {
                       const cleaned = info.summary
