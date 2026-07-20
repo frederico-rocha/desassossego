@@ -254,7 +254,8 @@ const en: typeof pt = {
         description:
           "Psychotherapy is based on a trusting therapeutic relationship, fostering a safe and supportive environment in which the adolescent can express and process thoughts and emotions.",
         expanded: [
-          "The experiences of adolescence often give rise to internal and external conflicts, doubts, hesitations, and a need for personal integration. At times, this transformative period can be accompanied by emotional distress, challenging the adolescent's internal balance. Psychotherapy is based on a trusting therapeutic relationship, fostering a safe and supportive environment in which the adolescent can express and process thoughts and emotions.",
+          "The experiences of adolescence often give rise to internal and external conflicts, doubts, hesitations, and a need for personal integration. At times, this transformative period can be accompanied by emotional distress, challenging the adolescent's internal balance.",
+          "Psychotherapy is based on a trusting therapeutic relationship, fostering a safe and supportive environment in which the adolescent can express and process thoughts and emotions.",
           "While therapy is conducted primarily with the adolescent, regular joint sessions with the parents are also an integral part of the therapeutic process.",
         ],
       },
@@ -263,8 +264,8 @@ const en: typeof pt = {
         description:
           "Psychotherapy offers the opportunity to gain insight into the underlying causes of emotional distress, helping to reduce its impact and prevent its recurrence.",
         expanded: [
-          "The changes brought about through psychotherapy can help you find a freer and more creative way of feeling and acting.",
-          "There are difficult moments in life when we feel sad, depressed and anxious, or suffer from excessive and unrealistic worries, persistent sleep disturbances, fears or phobias, etc. At times, negative feelings or persistent symptoms become disabling, decisively influencing our romantic, family and professional relationships.",
+          "There are challenging moments in life when we may feel sad, depressed, or anxious, or struggle with excessive and unrealistic worries, persistent sleep disturbances, fears, or phobias. At times, negative feelings or ongoing symptoms can become debilitating, significantly affecting our romantic, family, and professional relationships.",
+          "Psychotherapy offers the opportunity to gain insight into the underlying causes of emotional distress, helping to reduce its impact and prevent its recurrence. The changes made possible through the therapeutic process can support a freer and more creative way of feeling and acting.",
         ],
       },
       {
@@ -272,7 +273,9 @@ const en: typeof pt = {
         description:
           "The online setting allows for the establishment of a trusting therapeutic relationship, following its own specific guidelines — particularly the need to ensure a confidential and private space for sessions.",
         expanded: [
-          "Its advantages include greater scheduling flexibility, saving time on travel and ensuring anonymity, as well as overcoming geographical barriers nationally and internationally — facilitating access, for example, for emigrant communities. The results of online psychotherapy are scientifically proven.",
+          "The online setting allows for the establishment of a trusting therapeutic relationship, following its own specific guidelines and requirements — particularly the need to ensure a confidential and private space for sessions.",
+          "Online psychotherapy offers several advantages: greater scheduling flexibility, time saved on travel, and increased anonymity. It also helps overcome geographical barriers, both nationally and internationally, making access easier — for example, for members of expatriate communities.",
+          "The effectiveness of online psychotherapy is scientifically supported and well-documented.",
         ],
       },
       {
@@ -280,8 +283,8 @@ const en: typeof pt = {
         description:
           "Using specific techniques tailored to the individual's age and stage of development, psychological assessment provides insight into mental functioning…",
         expanded: [
-          "… identifying strengths, areas for development and relational patterns or, in some cases, diagnosing more serious mental disorders. This analysis helps guide therapeutic intervention to individual needs.",
-          "The psychological assessment is carried out over several sessions, defined according to the tests to be applied. A final report may be requested.",
+          "Using specific techniques tailored to the individual's age and stage of development, psychological assessment provides insight into mental functioning by identifying strengths, areas for growth, relational patterns, or, in some cases, diagnosing more severe mental health conditions. This analysis helps to guide therapeutic intervention according to each person’s individual needs.",
+          "The assessment is carried out over several sessions, depending on the types of tests to be administered. A final written report can be provided upon request.",
         ],
       },
       {
