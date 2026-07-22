@@ -245,8 +245,8 @@ const en: typeof pt = {
         description:
           "The therapeutic relationship — through play and symbolic expression — supports the child in processing anxiety and emotional distress, providing relief and promoting a healthy development.",
         expanded: [
-          "Phobias, insomnia, nightmares, separation anxiety (from parents), developmental disorders, eating disturbances, among others, may be persistent symptoms that reflect a child's psychological pain. The therapeutic relationship — through play and symbolic expression — supports the child in processing anxiety and emotional distress, providing relief and promoting a healthy development.",
-          "Psychotherapy is conducted with the child and includes regular sessions with the parents as part of the therapeutic process.",
+          "Phobias, insomnia, nightmares, separation anxiety, developmental disorders, eating disorders, among others, can be persistent symptoms that reflect the child's psychological distress.",
+          "Psychotherapy is conducted with the child and involves periodic sessions with the parents.",
         ],
       },
       {
@@ -254,9 +254,8 @@ const en: typeof pt = {
         description:
           "Psychotherapy is based on a trusting therapeutic relationship, fostering a safe and supportive environment in which the adolescent can express and process thoughts and emotions.",
         expanded: [
-          "The experiences of adolescence often give rise to internal and external conflicts, doubts, hesitations, and a need for personal integration. At times, this transformative period can be accompanied by emotional distress, challenging the adolescent's internal balance.",
-          "Psychotherapy is based on a trusting therapeutic relationship, fostering a safe and supportive environment in which the adolescent can express and process thoughts and emotions.",
-          "While therapy is conducted primarily with the adolescent, regular joint sessions with the parents are also an integral part of the therapeutic process.",
+          "The experiences of adolescence give rise to internal and external conflicts, doubts, hesitations and a need for integration. At times, this transformation is lived with suffering, challenging inner balance.",
+          "Therapy is carried out with the adolescent; however, periodic sessions should also be held together with the parents.",
         ],
       },
       {
@@ -264,8 +263,8 @@ const en: typeof pt = {
         description:
           "Psychotherapy offers the opportunity to gain insight into the underlying causes of emotional distress, helping to reduce its impact and prevent its recurrence.",
         expanded: [
-          "There are challenging moments in life when we may feel sad, depressed, or anxious, or struggle with excessive and unrealistic worries, persistent sleep disturbances, fears, or phobias. At times, negative feelings or ongoing symptoms can become debilitating, significantly affecting our romantic, family, and professional relationships.",
-          "Psychotherapy offers the opportunity to gain insight into the underlying causes of emotional distress, helping to reduce its impact and prevent its recurrence. The changes made possible through the therapeutic process can support a freer and more creative way of feeling and acting.",
+          "The changes brought about through psychotherapy can help you find a freer and more creative way of feeling and acting.",
+          "There are difficult moments in life when we feel sad, depressed and anxious, or suffer from excessive and unrealistic worries, persistent sleep disturbances, fears or phobias, etc. At times, negative feelings or persistent symptoms become disabling, decisively influencing our romantic, family and professional relationships.",
         ],
       },
       {
@@ -273,9 +272,7 @@ const en: typeof pt = {
         description:
           "The online setting allows for the establishment of a trusting therapeutic relationship, following its own specific guidelines — particularly the need to ensure a confidential and private space for sessions.",
         expanded: [
-          "The online setting allows for the establishment of a trusting therapeutic relationship, following its own specific guidelines and requirements — particularly the need to ensure a confidential and private space for sessions.",
-          "Online psychotherapy offers several advantages: greater scheduling flexibility, time saved on travel, and increased anonymity. It also helps overcome geographical barriers, both nationally and internationally, making access easier — for example, for members of expatriate communities.",
-          "The effectiveness of online psychotherapy is scientifically supported and well-documented.",
+          "Its advantages include greater scheduling flexibility, saving time on travel and ensuring anonymity, as well as overcoming geographical barriers nationally and internationally — facilitating access, for example, for emigrant communities. The results of online psychotherapy are scientifically proven.",
         ],
       },
       {
@@ -283,8 +280,8 @@ const en: typeof pt = {
         description:
           "Using specific techniques tailored to the individual's age and stage of development, psychological assessment provides insight into mental functioning…",
         expanded: [
-          "Using specific techniques tailored to the individual's age and stage of development, psychological assessment provides insight into mental functioning by identifying strengths, areas for growth, relational patterns, or, in some cases, diagnosing more severe mental health conditions. This analysis helps to guide therapeutic intervention according to each person’s individual needs.",
-          "The assessment is carried out over several sessions, depending on the types of tests to be administered. A final written report can be provided upon request.",
+          "… identifying strengths, areas for development and relational patterns or, in some cases, diagnosing more serious mental disorders. This analysis helps guide therapeutic intervention to individual needs.",
+          "The psychological assessment is carried out over several sessions, defined according to the tests to be applied. A final report may be requested.",
         ],
       },
       {
@@ -292,8 +289,8 @@ const en: typeof pt = {
         description:
           "Psychological assessment in career guidance for adolescents and young adults aims to promote self-awareness in motivation, professional interests, aptitudes, values, and self-concept.",
         expanded: [
-          "Psychological assessment in career guidance for adolescents and young adults aims to promote self-awareness in areas such as motivation, professional interests, aptitudes, values, and self-concept. The use of specific assessment tools and techniques helps support young people and their families in the decision-making process regarding future academic and professional paths.",
-          "The process is typically carried out over 4 to 5 sessions. A career guidance report can be provided upon request.",
+          "The use of specific assessment techniques and instruments helps young people and their families in the decision-making process regarding their professional future.",
+          "The intervention is carried out over 4/5 sessions. A career guidance report may be requested.",
         ],
       },
       {
@@ -301,8 +298,8 @@ const en: typeof pt = {
         description:
           "In Parental Counseling, monitoring sessions are held with parents, seeking to promote a greater understanding of their children's emotional needs…",
         expanded: [
-          "Challenges related to parenthood, such as difficulties in establishing routines, behavior issues in children or adolescents, transitional periods (starting school, adolescence, parental separation, among others), or communication difficulties within the family can often lead to insecurity or emotional strain.",
-          "In Parental Counseling, monitoring sessions are held with parents, which seek to promote a greater understanding of their children's emotional needs, reinforce parental skills and find intervention strategies adjusted to each family context, contributing to safer and healthier relationships within the family.",
+          "… reinforce parental skills and find intervention strategies tailored to each family context, contributing to safer and healthier relationships within the family.",
+          "Parenting challenges such as difficulties establishing routines, issues related to the child's or adolescent's behaviour, transition moments (starting school, adolescence, parental separation, among others) or difficulties in family communication can generate insecurity or emotional strain.",
         ],
       },
     ],
