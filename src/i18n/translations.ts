@@ -245,8 +245,8 @@ const en: typeof pt = {
         description:
           "The therapeutic relationship — through play and symbolic expression — supports the child in processing anxiety and emotional distress, providing relief and promoting a healthy development.",
         expanded: [
-          "Phobias, insomnia, nightmares, separation anxiety, developmental disorders, eating disorders, among others, can be persistent symptoms that reflect the child's psychological distress.",
-          "Psychotherapy is conducted with the child and involves periodic sessions with the parents.",
+          "Phobias, insomnia, nightmares, separation anxiety (from parents), developmental disorders, eating disturbances, among others, may be persistent symptoms that reflect a child's psychological pain.",
+          "Psychotherapy is conducted with the child and includes regular sessions with the parents as part of the therapeutic process.",
         ],
       },
       {
