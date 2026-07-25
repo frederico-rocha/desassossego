@@ -78,7 +78,17 @@ const Footer = () => {
           >
             <InstagramIcon className="w-5 h-5" />
           </a>
+          <a
+            href="https://www.linkedin.com/company/desassossego-psicologiacl%C3%ADnica/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center text-primary-foreground transition-colors duration-300"
+          >
+            <LinkedInIcon className="w-5 h-5" />
+          </a>
         </div>
+
       </div>
 
       <div className="border-t border-primary-foreground/15 mt-8 pt-8 text-center">
