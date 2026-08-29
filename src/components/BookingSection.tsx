@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, AlertCircle } from "lucide-react";
+import { Send, AlertCircle, Loader2 } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
 
 type FormState = {
   name: string;
@@ -27,9 +28,11 @@ const initial: FormState = {
 
 const BookingSection = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
   const [values, setValues] = useState<FormState>(initial);
   const [errors, setErrors] = useState<Errors>({});
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const validate = (v: FormState): Errors => {
     const e: Errors = {};
@@ -47,11 +50,45 @@ const BookingSection = () => {
     if (errors[key]) setErrors((prev) => ({ ...prev, [key]: undefined }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const v = validate(values);
     setErrors(v);
-    if (Object.keys(v).length === 0) setSubmitted(true);
+    if (Object.keys(v).length > 0) return;
+
+    setSending(true);
+    setSendError(false);
+
+    const locationLabels: Record<string, string> = {
+      lisboa: t.booking.locationLisboa,
+      cascais: t.booking.locationCascais,
+      online: t.booking.locationOnline,
+    };
+    const scheduleLabels: Record<string, string> = {
+      manha: t.booking.scheduleMorning,
+      tarde: t.booking.scheduleAfternoon,
+      noite: t.booking.scheduleEvening,
+    };
+
+    const { error } = await supabase.functions.invoke("send-booking-email", {
+      body: {
+        name: values.name.trim(),
+        email: values.email.trim(),
+        phone: values.phone.trim(),
+        service: values.service,
+        location: locationLabels[values.location] ?? values.location,
+        schedule: scheduleLabels[values.schedule] ?? values.schedule,
+        message: values.message.trim(),
+        lang,
+      },
+    });
+
+    setSending(false);
+    if (error) {
+      setSendError(true);
+    } else {
+      setSubmitted(true);
+    }
   };
 
   const inputBase =
@@ -235,12 +272,24 @@ const BookingSection = () => {
               />
             </div>
 
+            {sendError && (
+              <p className="flex items-center gap-1.5 mb-4 text-sm font-body text-destructive">
+                <AlertCircle className="w-4 h-4 shrink-0" />
+                {t.booking.errorSend}
+              </p>
+            )}
+
             <button
               type="submit"
-              className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold text-base hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-2"
+              disabled={sending}
+              className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold text-base hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              <Send className="w-4 h-4" />
-              {t.booking.submit}
+              {sending ? (
+                <Loader2 className="w-4 h-4 animate-spin" />
+              ) : (
+                <Send className="w-4 h-4" />
+              )}
+              {sending ? t.booking.submitting : t.booking.submit}
             </button>
 
             <p className="text-xs text-muted-foreground font-body mt-4 text-center">
