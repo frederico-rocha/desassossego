@@ -341,7 +341,7 @@ const en: typeof pt = {
         bio: [
           "Full Member of the Order of Portuguese Psychologists.",
           "PhD in Clinical Psychology, Master's Degree in Clinical Psychology and Master's Degree in Health Psychology from ISPA - Instituto Universitário. Postgraduation in Dynamic Oriented Psychotherapeutic Intervention from Instituto CRIAP.",
-          "Assistant Professor at the European University - Instituto Universitário. Member of the Supervisory Board of IA - Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
+          "Assistant Professor at the Universidade Europeia - Instituto Universitário. Professor at the ISAP - Instituto Universitário (2018-2026). Member of the Supervisory Board of IA - Identidades e Afectos, Associação. Psychotherapy for LGBTQIA+ people and their families.",
           "<strong>Activity areas:</strong> Adolescent and Adult Psychotherapy; Psychological Assessment.",
         ],
         linkedin: "https://pt.linkedin.com/in/francis-teplitzky-822b866b",
