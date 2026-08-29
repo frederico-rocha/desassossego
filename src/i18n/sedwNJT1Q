@@ -152,7 +152,7 @@ const pt = {
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Mestre em Psicologia Clínica pelo ISPA - Instituto Universitário.",
-          "Membro Associado da IA - Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares Avaliação Psicológica.",
+          "Membro Associado da IA - Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
           "<strong>Áreas de Atividade:</strong> Psicoterapia de Crianças, Adolescentes e Adultos; Avaliação Psicológica.",
         ],
         linkedin: "https://pt.linkedin.com/in/in%C3%AAs-barreira-6761b973",
