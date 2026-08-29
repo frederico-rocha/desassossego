@@ -124,7 +124,7 @@ const pt = {
         bio: [
           "Membro Efectivo da Ordem dos Psicólogos Portugueses.",
           "Doutorada em Psicologia Clínica, Mestre em Psicologia Clínica e Mestre em Psicologia da Saúde pelo ISPA - Instituto Universitário. Pós-graduada em Intervenção Psicoterapêutica de Orientação Dinâmica pelo Instituto CRIAP.",
-          "Professora Auxiliar na Universidade Europeia - Instituto Universitário. Membro do Conselho Fiscal da IA - Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
+          "Professora Auxiliar na Universidade Europeia - Instituto Universitário. Professora Universitária no ISPA - Instituto Universitário (2018-2026). Membro do Conselho Fiscal da IA - Identidades e Afectos, Associação. Psicoterapia a pessoas LGBTQIA+ e familiares.",
           "<strong>Áreas de Atividade:</strong> Psicoterapia de Adolescentes e Adultos; Avaliação Psicológica.",
         ],
         linkedin: "https://pt.linkedin.com/in/francis-teplitzky-822b866b",
