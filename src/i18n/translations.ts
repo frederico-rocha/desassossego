@@ -55,7 +55,7 @@ const pt = {
         description:
           "O contexto online permite o estabelecimento de uma relação terapêutica de confiança, obedecendo a critérios e regras próprias, nomeadamente, que seja assegurado um espaço que garanta a confidencialidade do processo.",
         expanded: [
-          "Tem como vantagens uma maior flexibilidade de agenda, a possibilidade de poupar o tempo das deslocações e garantir o anonimato, permite ainda ultrapassar barreiras geográficas, a nível nacional e internacional, facilitando o acesso, por exemplo, às comunidades emigrantes. Os resultados do processo psicoterapêutico online estão cientificamente comprovados.",
+          "Tem como vantagens uma maior flexibilidade de agenda, a possibilidade de poupar o tempo das deslocações e garantir o anonimato. Permite ainda ultrapassar barreiras geográficas, a nível nacional e internacional, facilitando o acesso, por exemplo, às comunidades emigrantes. Os resultados do processo psicoterapêutico online estão cientificamente comprovados.",
         ],
       },
       {
