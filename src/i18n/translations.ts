@@ -12,7 +12,7 @@ const pt = {
     titleA:
       "“Há sensações que são sonos, que ocupam como uma névoa toda a extensão do espírito, que não deixam agir, que não deixam claramente",
     titleB: " ser.”",
-    description: "— Bernardo Soares, “O Livro do Desassossego”",
+    description: "— Bernardo Soares, “Livro do Desassossego”",
     tagline: "Cuidar de si pode começar aqui…",
     ctaBook: "Marcar Consulta",
     ctaServices: "Conhecer os Serviços",
@@ -198,7 +198,8 @@ const pt = {
     submit: "Enviar Pedido de Consulta",
     rgpd: "Os seus dados são tratados com total confidencialidade, em conformidade com o RGPD.",
     sentTitle: "Pedido Enviado",
-    sentBody: "Obrigado pelo seu contacto. Receberá um e-mail de confirmação e a nossa equipa entrará em contacto consigo brevemente.",
+    sentBody:
+      "Obrigado pelo seu contacto. Receberá um e-mail de confirmação e a nossa equipa entrará em contacto consigo brevemente.",
     errorRequired: "Preencha este campo.",
     errorEmail: "Introduza um e-mail válido.",
     errorSend: "Ocorreu um erro ao enviar o pedido. Tente novamente mais tarde.",
@@ -417,7 +418,8 @@ const en: typeof pt = {
     submit: "Send Booking Request",
     rgpd: "Your data is treated with full confidentiality, in compliance with GDPR.",
     sentTitle: "Request Sent",
-    sentBody: "Thank you for getting in touch. You will receive a confirmation email and our team will contact you shortly.",
+    sentBody:
+      "Thank you for getting in touch. You will receive a confirmation email and our team will contact you shortly.",
     errorRequired: "Please fill in this field.",
     errorEmail: "Please enter a valid email.",
     errorSend: "An error occurred while sending your request. Please try again later.",
