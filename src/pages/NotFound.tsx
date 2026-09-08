@@ -29,7 +29,7 @@ const NotFound = () => {
       'meta[name="description"]',
       "name",
       "description",
-      "A página que procura não existe. Volte à página inicial da Clínica Desassossego.",
+      "A página que procura não existe. Volte à página inicial da Clínica desasSossego.",
     );
     const restoreOgTitle = setMeta(
       'meta[property="og:title"]',
