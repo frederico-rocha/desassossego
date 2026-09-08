@@ -70,12 +70,12 @@ const ContactsSection = () => {
         <div className="grid lg:grid-cols-2 gap-6 mt-12">
           {[
             {
-              title: "Clínica Desassossego — Lisboa",
-              query: "desassossego - Psicologia Clínica, Lisboa",
+              title: "Clínica desasSossego — Lisboa",
+              query: "desasSossego - Psicologia Clínica, Lisboa",
             },
             {
-              title: "Clínica Desassossego — Cascais",
-              query: "desassossego - Psicologia Clínica, Cascais",
+              title: "Clínica desasSossego — Cascais",
+              query: "desasSossego - Psicologia Clínica, Cascais",
             },
           ].map((map, i) => (
             <motion.div
