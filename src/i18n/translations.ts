@@ -215,7 +215,7 @@ const pt = {
     hoursSat: "Sáb: 09h00 – 18h00",
   },
   footer: {
-    rights: "© 2026 Clínica Desassossego. Todos os direitos reservados.",
+    rights: "© 2026 Clínica desasSossego. Todos os direitos reservados.",
     designedBy: "Designed by",
   },
 };
@@ -435,7 +435,7 @@ const en: typeof pt = {
     hoursSat: "Sat: 9:00 – 18:00",
   },
   footer: {
-    rights: "© 2026 Clínica Desassossego. All rights reserved.",
+    rights: "© 2026 Clínica desasSossego. All rights reserved.",
     designedBy: "Designed by",
   },
 };
