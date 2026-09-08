@@ -29,19 +29,19 @@ const NotFound = () => {
       'meta[name="description"]',
       "name",
       "description",
-      "A página que procura não existe. Volte à página inicial da Clínica Desassossego."
+      "A página que procura não existe. Volte à página inicial da Clínica Desassossego.",
     );
     const restoreOgTitle = setMeta(
       'meta[property="og:title"]',
       "property",
       "og:title",
-      "Página não encontrada — Desassossego"
+      "Página não encontrada — desasSossego",
     );
     const restoreOgDesc = setMeta(
       'meta[property="og:description"]',
       "property",
       "og:description",
-      "A página que procura não existe."
+      "A página que procura não existe.",
     );
 
     let robots = document.head.querySelector<HTMLMetaElement>('meta[name="robots"]');
