@@ -24,7 +24,7 @@ const HeroSection = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-4xl lg:max-w-xl mt-8 md:mt-0"
         >
-          <h1 className="sr-only">Desassossego — Clínica de Psicologia Clínica em Lisboa e Cascais</h1>
+          <h1 className="sr-only">desasSossego — Clínica de Psicologia Clínica em Lisboa e Cascais</h1>
           <p className="text-lg md:text-3xl lg:text-[1.375rem] xl:text-[1.5rem] font-display font-semibold leading-tight text-primary-foreground mb-4 md:mb-6 lg:mb-3 text-balance">
             {t.hero.titleA}
             <span className="italic">{t.hero.titleB}</span>
