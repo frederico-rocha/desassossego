@@ -196,6 +196,8 @@ const pt = {
     message: "Mensagem (opcional)",
     messagePlaceholder: "Descreva brevemente o motivo da consulta...",
     submit: "Enviar Pedido de Consulta",
+    whatsapp: "Contactar por WhatsApp",
+    whatsappIntro: "Olá, gostaria de fazer um pedido de consulta.",
     rgpd: "Os seus dados são tratados com total confidencialidade, em conformidade com o RGPD.",
     sentTitle: "Pedido Enviado",
     sentBody:
@@ -416,6 +418,8 @@ const en: typeof pt = {
     message: "Message (optional)",
     messagePlaceholder: "Briefly describe the reason for the consultation...",
     submit: "Send Booking Request",
+    whatsapp: "Contact via WhatsApp",
+    whatsappIntro: "Hello, I would like to request a consultation.",
     rgpd: "Your data is treated with full confidentiality, in compliance with GDPR.",
     sentTitle: "Request Sent",
     sentBody:

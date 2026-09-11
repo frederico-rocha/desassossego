@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, AlertCircle, Loader2 } from "lucide-react";
+import { Send, AlertCircle, Loader2, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
 
 type FormState = {
   name: string;
@@ -89,6 +90,41 @@ const BookingSection = () => {
     } else {
       setSubmitted(true);
     }
+  };
+
+  const handleWhatsApp = () => {
+    const validationErrors = validate(values);
+    setErrors(validationErrors);
+    if (Object.keys(validationErrors).length > 0) return;
+
+    const locationLabels: Record<string, string> = {
+      lisboa: t.booking.locationLisboa,
+      cascais: t.booking.locationCascais,
+      online: t.booking.locationOnline,
+    };
+    const scheduleLabels: Record<string, string> = {
+      manha: t.booking.scheduleMorning,
+      tarde: t.booking.scheduleAfternoon,
+      noite: t.booking.scheduleEvening,
+    };
+
+    const lines = [
+      t.booking.whatsappIntro,
+      "",
+      `*${t.booking.name}:* ${values.name.trim()}`,
+      `*${t.booking.email}:* ${values.email.trim()}`,
+      values.phone.trim() ? `*${t.booking.phone.replace(" (opcional)", "").replace(" (optional)", "")}:* ${values.phone.trim()}` : "",
+      values.service ? `*${t.booking.service.replace(" (opcional)", "").replace(" (optional)", "")}:* ${values.service}` : "",
+      `*${t.booking.location}:* ${locationLabels[values.location] ?? values.location}`,
+      `*${t.booking.schedule}:* ${scheduleLabels[values.schedule] ?? values.schedule}`,
+      values.message.trim() ? `*${t.booking.message.replace(" (opcional)", "").replace(" (optional)", "")}:* ${values.message.trim()}` : "",
+    ].filter(Boolean);
+
+    window.open(
+      `https://wa.me/351910786339?text=${encodeURIComponent(lines.join("\n"))}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
   };
 
   const inputBase =
@@ -279,18 +315,29 @@ const BookingSection = () => {
               </p>
             )}
 
-            <button
-              type="submit"
-              disabled={sending}
-              className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold text-base hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
-            >
-              {sending ? (
-                <Loader2 className="w-4 h-4 animate-spin" />
-              ) : (
-                <Send className="w-4 h-4" />
-              )}
-              {sending ? t.booking.submitting : t.booking.submit}
-            </button>
+            <div className="grid gap-3 md:grid-cols-2">
+              <Button
+                type="submit"
+                disabled={sending}
+                className="h-auto w-full rounded-lg py-4 text-base font-semibold"
+              >
+                {sending ? (
+                  <Loader2 className="animate-spin" />
+                ) : (
+                  <Send />
+                )}
+                {sending ? t.booking.submitting : t.booking.submit}
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={handleWhatsApp}
+                className="h-auto w-full rounded-lg border-primary py-4 text-base font-semibold text-primary hover:bg-primary/10 hover:text-primary"
+              >
+                <MessageCircle />
+                {t.booking.whatsapp}
+              </Button>
+            </div>
 
             <p className="text-xs text-muted-foreground font-body mt-4 text-center">
               {t.booking.rgpd}
