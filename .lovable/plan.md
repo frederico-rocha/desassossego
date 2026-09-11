@@ -1,17 +1,15 @@
 ## Objetivo
-Eliminar o espaço vazio entre o botão "Conhecer os Serviços" e a próxima secção, apenas em mobile.
+Adicionar ao formulário de pedido de consulta uma alternativa de contacto por WhatsApp.
 
-## Causa
-Em `src/components/HeroSection.tsx`, a secção usa `min-h-[100svh]` em mobile. Como o conteúdo (imagem + texto + botões) ocupa menos que a altura total do ecrã, sobra espaço em branco no fundo antes da secção seguinte.
-
-## Alteração
-No `<section>` de `HeroSection.tsx`:
-- Remover `min-h-[100svh]` do mobile e manter apenas nas breakpoints maiores.
-- Antes: `min-h-[100svh] md:min-h-[760px] lg:min-h-screen`
-- Depois: `md:min-h-[760px] lg:min-h-screen`
-
-Assim, em mobile a secção passa a ter a altura natural do seu conteúdo (imagem + texto + botões + paddings existentes), eliminando o espaço morto. Desktop e tablet ficam inalterados.
+## Alterações
+- Manter o atual botão de envio por e-mail.
+- Adicionar um botão “Contactar por WhatsApp” junto ao botão atual.
+- Validar os mesmos campos obrigatórios antes de abrir o WhatsApp.
+- Criar uma mensagem em português ou inglês com todos os dados preenchidos no formulário.
+- Abrir a conversa com o número +351 910 786 339 numa nova janela.
+- Adicionar os novos textos às traduções portuguesa e inglesa.
 
 ## Validação
-- Preview mobile (390×844): confirmar que a próxima secção surge logo a seguir aos botões.
-- Preview tablet e desktop: confirmar que nada mudou.
+- Confirmar que campos inválidos continuam a apresentar os respetivos avisos.
+- Confirmar que o botão abre o WhatsApp com o número e a mensagem corretamente preenchidos.
+- Confirmar o funcionamento em computador e telemóvel.
