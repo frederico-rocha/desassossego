@@ -9,6 +9,7 @@ const pt = {
     book: "Marcar Consulta",
   },
   hero: {
+    heading: "desasSossego — Clínica de Psicologia Clínica em Lisboa e Cascais",
     titleA:
       "“Há sensações que são sonos, que ocupam como uma névoa toda a extensão do espírito, que não deixam agir, que não deixam claramente",
     titleB: " ser.”",
@@ -231,6 +232,7 @@ const en: typeof pt = {
     book: "Book a Session",
   },
   hero: {
+    heading: "desasSossego — Clinical Psychology Clinic in Lisbon and Cascais",
     titleA:
       "“Certain sensations are slumbers that fill up our mind like a fog and prevent us from thinking, from acting, from clearly and simply",
     titleB: " being.”",
