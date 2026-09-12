@@ -44,6 +44,15 @@ const TeamMember = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:type" content="profile" />
+      </Helmet>
       <Header />
       <main className="flex-1 section-padding pt-32">
         <article className="container mx-auto max-w-4xl">
