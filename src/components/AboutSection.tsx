@@ -70,7 +70,7 @@ const AboutSection = () => {
                     <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-5 rounded-full overflow-hidden border-4 border-card shadow-lg">
                       <img
                         src={member.image}
-                        alt={`${member.name}, ${info.role.replace(/\n/g, " ")} — desasSossego`}
+                        alt={member.name}
                         loading="lazy"
                         decoding="async"
                         width={160}

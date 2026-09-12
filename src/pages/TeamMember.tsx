@@ -2,7 +2,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NotFound from "@/pages/NotFound";
@@ -23,13 +22,6 @@ const TeamMember = () => {
 
   const info = t.about.team[member.slug];
 
-  const pageUrl = `https://clinicadesassossego.pt/equipa/${member.slug}`;
-  const firstSentence = info.summary.includes(". ")
-    ? info.summary.slice(0, info.summary.indexOf(". ") + 1)
-    : info.summary;
-  const pageTitle = `${member.name} — ${info.role} | desasSossego`;
-  const pageDescription = `${member.name}, ${info.role} na Clínica desasSossego. ${firstSentence}`;
-
   const handleBack = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     navigate("/#equipa");
@@ -44,15 +36,6 @@ const TeamMember = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:type" content="profile" />
-      </Helmet>
       <Header />
       <main className="flex-1 section-padding pt-32">
         <article className="container mx-auto max-w-4xl">
@@ -75,7 +58,7 @@ const TeamMember = () => {
             <div className="w-52 h-52 md:w-64 md:h-64 mx-auto md:mx-0 rounded-full overflow-hidden border-4 border-card shadow-lg">
               <img
                 src={member.image}
-                alt={`${member.name}, ${info.role.replace(/\n/g, " ")} — desasSossego`}
+                alt={member.name}
                 decoding="async"
                 fetchPriority="high"
                 className="w-full h-full object-cover object-top"

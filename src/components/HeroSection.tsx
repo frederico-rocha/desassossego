@@ -12,8 +12,6 @@ const HeroSection = () => {
   return (
     <section className="relative md:min-h-[760px] lg:min-h-screen flex items-start lg:items-end overflow-hidden pt-[calc(48vw+5rem)] sm:pt-[calc(54vw+5rem)] md:pt-[calc(35vw+5rem)] lg:pt-0 pb-8 md:pb-6 lg:pb-10">
       <div
-        role="img"
-        aria-label={t.hero.imageAlt}
         className="absolute inset-x-0 top-20 h-[48vw] sm:h-[54vw] md:h-[35vw] lg:inset-0 lg:top-0 lg:h-auto bg-cover bg-top sm:bg-contain md:bg-cover bg-no-repeat bg-secondary"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
@@ -26,9 +24,7 @@ const HeroSection = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-4xl lg:max-w-xl mt-8 md:mt-0"
         >
-          <h1 className="text-sm md:text-base lg:text-sm font-body font-medium tracking-wide text-primary-foreground/90 uppercase mb-3 md:mb-4">
-            {t.hero.heading}
-          </h1>
+          <h1 className="sr-only">desasSossego — Clínica de Psicologia Clínica em Lisboa e Cascais</h1>
           <p className="text-lg md:text-3xl lg:text-[1.375rem] xl:text-[1.5rem] font-display font-semibold leading-tight text-primary-foreground mb-4 md:mb-6 lg:mb-3 text-balance">
             {t.hero.titleA}
             <span className="italic">{t.hero.titleB}</span>
