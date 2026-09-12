@@ -23,6 +23,13 @@ const TeamMember = () => {
 
   const info = t.about.team[member.slug];
 
+  const pageUrl = `https://clinicadesassossego.pt/equipa/${member.slug}`;
+  const firstSentence = info.summary.includes(". ")
+    ? info.summary.slice(0, info.summary.indexOf(". ") + 1)
+    : info.summary;
+  const pageTitle = `${member.name} — ${info.role} | desasSossego`;
+  const pageDescription = `${member.name}, ${info.role} na Clínica desasSossego. ${firstSentence}`;
+
   const handleBack = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     navigate("/#equipa");
