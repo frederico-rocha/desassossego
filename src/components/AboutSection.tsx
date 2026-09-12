@@ -28,22 +28,22 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-3 sm:gap-4"
           >
-            <div className="bg-card rounded-xl p-8 text-center border border-border">
+            <div className="min-w-0 bg-card rounded-xl px-3 py-8 sm:p-8 text-center border border-border">
               <p className="text-4xl font-display font-bold text-primary mb-2">10+</p>
-              <p className="text-sm text-muted-foreground font-body">{t.about.stats.years}</p>
+              <p className="text-sm text-muted-foreground font-body break-words">{t.about.stats.years}</p>
             </div>
-            <div className="bg-card rounded-xl p-8 text-center border border-border">
+            <div className="min-w-0 bg-card rounded-xl px-3 py-8 sm:p-8 text-center border border-border">
               <p className="text-4xl font-display font-bold text-primary mb-2">5</p>
-              <p className="text-sm text-muted-foreground font-body">{t.about.stats.psychologists}</p>
+              <p className="text-sm text-muted-foreground font-body break-words">{t.about.stats.psychologists}</p>
             </div>
-            <div className="bg-card rounded-xl p-8 text-center border border-border">
+            <div className="min-w-0 bg-card rounded-xl px-3 py-8 sm:p-8 text-center border border-border">
               <p className="text-4xl font-display font-bold text-primary mb-2">2</p>
-              <p className="text-sm text-muted-foreground font-body">{t.about.stats.offices}</p>
+              <p className="text-sm text-muted-foreground font-body break-words">{t.about.stats.offices}</p>
             </div>
-            <div className="bg-card rounded-xl p-8 text-center border border-border flex flex-col justify-center">
-              <p className="text-sm text-primary font-display font-semibold">{t.about.stats.modality}</p>
+            <div className="min-w-0 bg-card rounded-xl px-3 py-8 sm:p-8 text-center border border-border flex flex-col justify-center">
+              <p className="text-sm text-primary font-display font-semibold break-words">{t.about.stats.modality}</p>
             </div>
           </motion.div>
         </div>
