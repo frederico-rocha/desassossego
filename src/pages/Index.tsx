@@ -11,7 +11,17 @@ import Footer from "@/components/Footer";
 const Index = () => (
   <div className="min-h-screen">
     <Helmet>
+      <title>desasSossego — Clínica de Psicologia em Lisboa</title>
+      <meta
+        name="description"
+        content="Clínica desasSossego — Psicologia Clínica em Lisboa. Acompanhamento psicológico para adultos e famílias."
+      />
       <link rel="canonical" href="https://clinicadesassossego.pt/" />
+      <meta property="og:title" content="desasSossego — Clínica de Psicologia" />
+      <meta
+        property="og:description"
+        content="Acompanhamento psicológico para adultos e famílias em Lisboa e Cascais."
+      />
       <meta property="og:url" content="https://clinicadesassossego.pt/" />
     </Helmet>
     <Header />
