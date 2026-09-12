@@ -17,6 +17,8 @@ const pt = {
     tagline: "Cuidar de si pode começar aqui…",
     ctaBook: "Marcar Consulta",
     ctaServices: "Conhecer os Serviços",
+    imageAlt:
+      "Equipa da Clínica desasSossego — psicólogas clínicas em Lisboa e Cascais",
   },
   services: {
     title: "Os Nossos Serviços",
@@ -240,6 +242,8 @@ const en: typeof pt = {
     tagline: "Taking care of yourself can begin here…",
     ctaBook: "Book a Session",
     ctaServices: "Explore our Services",
+    imageAlt:
+      "The desasSossego Clinic team — clinical psychologists in Lisbon and Cascais",
   },
   services: {
     title: "Our Services",

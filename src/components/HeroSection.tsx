@@ -12,6 +12,8 @@ const HeroSection = () => {
   return (
     <section className="relative md:min-h-[760px] lg:min-h-screen flex items-start lg:items-end overflow-hidden pt-[calc(48vw+5rem)] sm:pt-[calc(54vw+5rem)] md:pt-[calc(35vw+5rem)] lg:pt-0 pb-8 md:pb-6 lg:pb-10">
       <div
+        role="img"
+        aria-label={t.hero.imageAlt}
         className="absolute inset-x-0 top-20 h-[48vw] sm:h-[54vw] md:h-[35vw] lg:inset-0 lg:top-0 lg:h-auto bg-cover bg-top sm:bg-contain md:bg-cover bg-no-repeat bg-secondary"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
