@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NotFound from "@/pages/NotFound";
@@ -34,8 +35,19 @@ const TeamMember = () => {
     });
   };
 
+  const pageUrl = `https://clinicadesassossego.pt/equipa/${member.slug}`;
+  const pageTitle = `${member.name} — ${info.role} | desasSossego`;
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={info.summary} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:type" content="profile" />
+        <link rel="canonical" href={pageUrl} />
+      </Helmet>
       <Header />
       <main className="flex-1 section-padding pt-32">
         <article className="container mx-auto max-w-4xl">
