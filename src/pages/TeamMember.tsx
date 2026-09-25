@@ -9,13 +9,24 @@ import NotFound from "@/pages/NotFound";
 import { getTeamMember } from "@/data/team";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-// Keep meta descriptions within the length search engines display (~155-160 chars).
-const clampDescription = (text: string, max = 158) => {
-  if (text.length <= max) return text;
-  const cut = text.slice(0, max);
-  const end = Math.max(cut.lastIndexOf(" "), cut.lastIndexOf("·"));
-  return cut.slice(0, end > max - 30 ? end : max).trim().replace(/[,.·]+$/, "");
+// Meta descriptions should stay within the length search engines display (~155 chars).
+// When a profile is longer, the least specific detail (rightmost segment) is dropped.
+const clampDescription = (
+  name: string,
+  role: string,
+  summary: string,
+  max = 158
+) => {
+  const [head, ...tail] = summary.split(" · ").map((s) => s.trim());
+  const build = (parts: string[]) =>
+    `${name}, ${role}. ${[head, ...parts].join(" · ")}`;
+  const parts = [...tail];
+  while (parts.length > 1 && build(parts).length > max) parts.pop();
+  return build(parts);
 };
+
+const SITE_DESCRIPTION =
+  "Clínica desasSossego — Psicologia Clínica em Lisboa. Acompanhamento psicológico para adultos e famílias.";
 
 const TeamMember = () => {
   const { slug = "" } = useParams();
