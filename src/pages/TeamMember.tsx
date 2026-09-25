@@ -9,6 +9,14 @@ import NotFound from "@/pages/NotFound";
 import { getTeamMember } from "@/data/team";
 import { useLanguage } from "@/i18n/LanguageContext";
 
+// Keep meta descriptions within the length search engines display (~155-160 chars).
+const clampDescription = (text: string, max = 158) => {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const end = Math.max(cut.lastIndexOf(" "), cut.lastIndexOf("·"));
+  return cut.slice(0, end > max - 30 ? end : max).trim().replace(/[,.·]+$/, "");
+};
+
 const TeamMember = () => {
   const { slug = "" } = useParams();
   const { t } = useLanguage();
