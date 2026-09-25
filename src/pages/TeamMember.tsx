@@ -9,6 +9,25 @@ import NotFound from "@/pages/NotFound";
 import { getTeamMember } from "@/data/team";
 import { useLanguage } from "@/i18n/LanguageContext";
 
+// Meta descriptions should stay within the length search engines display (~155 chars).
+// When a profile is longer, the least specific detail (rightmost segment) is dropped.
+const clampDescription = (
+  name: string,
+  role: string,
+  summary: string,
+  max = 158
+) => {
+  const [head, ...tail] = summary.split(" · ").map((s) => s.trim());
+  const build = (parts: string[]) =>
+    `${name}, ${role}. ${[head, ...parts].join(" · ")}`;
+  const parts = [...tail];
+  while (parts.length > 1 && build(parts).length > max) parts.pop();
+  return build(parts);
+};
+
+const SITE_DESCRIPTION =
+  "Clínica desasSossego — Psicologia Clínica em Lisboa. Acompanhamento psicológico para adultos e famílias.";
+
 const TeamMember = () => {
   const { slug = "" } = useParams();
   const { t } = useLanguage();
@@ -18,6 +37,22 @@ const TeamMember = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
   }, [slug]);
+
+  // The static description in index.html is not managed by Helmet, so it would
+  // ship next to the profile one. Drop it while a profile is open.
+  useEffect(() => {
+    const staticTags = document.head.querySelectorAll(
+      'meta[name="description"]:not([data-rh])'
+    );
+    staticTags.forEach((tag) => tag.parentNode?.removeChild(tag));
+    return () => {
+      if (document.head.querySelector('meta[name="description"]')) return;
+      const meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      meta.setAttribute("content", SITE_DESCRIPTION);
+      document.head.appendChild(meta);
+    };
+  }, []);
 
   if (!member) return <NotFound />;
 
@@ -37,13 +72,15 @@ const TeamMember = () => {
 
   const pageUrl = `https://clinicadesassossego.pt/equipa/${member.slug}`;
   const pageTitle = `${member.name} — ${info.role} | desasSossego`;
+  const metaDescription = clampDescription(member.name, info.role, info.summary);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
         <title>{pageTitle}</title>
+        <meta name="description" content={metaDescription} />
         <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={info.summary} />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:type" content="profile" />
         <link rel="canonical" href={pageUrl} />
