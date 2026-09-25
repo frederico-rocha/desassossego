@@ -38,6 +38,22 @@ const TeamMember = () => {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
   }, [slug]);
 
+  // The static description in index.html is not managed by Helmet, so it would
+  // ship next to the profile one. Drop it while a profile is open.
+  useEffect(() => {
+    const staticTags = document.head.querySelectorAll(
+      'meta[name="description"]:not([data-rh])'
+    );
+    staticTags.forEach((tag) => tag.parentNode?.removeChild(tag));
+    return () => {
+      if (document.head.querySelector('meta[name="description"]')) return;
+      const meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      meta.setAttribute("content", SITE_DESCRIPTION);
+      document.head.appendChild(meta);
+    };
+  }, []);
+
   if (!member) return <NotFound />;
 
   const info = t.about.team[member.slug];
@@ -56,9 +72,7 @@ const TeamMember = () => {
 
   const pageUrl = `https://clinicadesassossego.pt/equipa/${member.slug}`;
   const pageTitle = `${member.name} — ${info.role} | desasSossego`;
-  const metaDescription = clampDescription(
-    `${member.name}, ${info.role}. ${info.summary}`
-  );
+  const metaDescription = clampDescription(member.name, info.role, info.summary);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
