@@ -45,13 +45,17 @@ const TeamMember = () => {
 
   const pageUrl = `https://clinicadesassossego.pt/equipa/${member.slug}`;
   const pageTitle = `${member.name} — ${info.role} | desasSossego`;
+  const metaDescription = clampDescription(
+    `${member.name}, ${info.role}. ${info.summary}`
+  );
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
         <title>{pageTitle}</title>
+        <meta name="description" content={metaDescription} />
         <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={info.summary} />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:type" content="profile" />
         <link rel="canonical" href={pageUrl} />
