@@ -11,6 +11,7 @@ const Header = () => {
   const [activeId, setActiveId] = useState<string>("");
   const { lang, setLang, t } = useLanguage();
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === "/";
   // Pages without the dark hero (clinic pages, team profiles) start on a light
   // background, so the header must use its solid dark-on-light treatment there.
