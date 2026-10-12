@@ -12,6 +12,9 @@ const Header = () => {
   const { lang, setLang, t } = useLanguage();
   const location = useLocation();
   const isHome = location.pathname === "/";
+  // Pages without the dark hero (clinic pages, team profiles) start on a light
+  // background, so the header must use its solid dark-on-light treatment there.
+  const solid = scrolled || !isHome;
 
   const navItems = [
     { label: t.nav.services, href: "#servicos" },
@@ -157,7 +160,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+        solid
           ? "bg-card/95 backdrop-blur-md shadow-sm border-b border-border"
           : "bg-transparent"
       }`}
@@ -167,7 +170,7 @@ const Header = () => {
           <div
             aria-label="desassossego"
             role="img"
-            className={`h-12 md:h-14 w-40 md:w-48 transition-colors duration-300 ${scrolled ? "bg-primary" : "bg-primary-foreground"}`}
+            className={`h-12 md:h-14 w-40 md:w-48 transition-colors duration-300 ${solid ? "bg-primary" : "bg-primary-foreground"}`}
             style={{
               WebkitMaskImage: `url(${logo})`,
               maskImage: `url(${logo})`,
@@ -185,10 +188,10 @@ const Header = () => {
           {navItems.map((item) => {
             const id = item.href.slice(1);
             const isActive = activeId === id;
-            const base = scrolled
+            const base = solid
               ? "text-muted-foreground hover:text-primary"
               : "text-primary-foreground/80 hover:text-primary-foreground";
-            const active = scrolled ? "text-primary" : "text-primary-foreground";
+            const active = solid ? "text-primary" : "text-primary-foreground";
             return (
               <button
                 key={item.href}
@@ -200,14 +203,14 @@ const Header = () => {
                 {isActive && (
                   <motion.span
                     layoutId="nav-active-indicator"
-                    className={`absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full ${scrolled ? "bg-primary" : "bg-primary-foreground"}`}
+                    className={`absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full ${solid ? "bg-primary" : "bg-primary-foreground"}`}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
               </button>
             );
           })}
-          <LangSwitcher inverted={!scrolled} />
+          <LangSwitcher inverted={!solid} />
           <button
             onClick={() => handleClick("#reservar")}
             className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity duration-300"
@@ -217,9 +220,9 @@ const Header = () => {
         </nav>
 
         <div className="lg:hidden flex items-center gap-4">
-          <LangSwitcher inverted={!scrolled} />
+          <LangSwitcher inverted={!solid} />
           <button
-            className={scrolled ? "text-primary" : "text-primary-foreground"}
+            className={solid ? "text-primary" : "text-primary-foreground"}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={mobileOpen}
