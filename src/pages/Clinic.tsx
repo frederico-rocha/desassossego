@@ -105,7 +105,6 @@ const Clinic = ({ clinic }: { clinic: ClinicKey }) => {
   const c = CLINICS[clinic];
   const copy = c[lang];
   const common = COMMON[lang];
-  const other = CLINICS[c.other];
   const url = `https://clinicadesassossego.pt${c.path}`;
 
   useEffect(() => {
