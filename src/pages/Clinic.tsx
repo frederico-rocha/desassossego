@@ -151,10 +151,18 @@ const Clinic = ({ clinic }: { clinic: ClinicKey }) => {
       <Header />
       <main className="flex-1 section-padding pt-32">
         <article className="container mx-auto max-w-4xl">
-          <Link to="/" className="inline-flex items-center gap-2 text-sm font-body font-medium text-primary hover:text-primary/80 transition-colors mb-10">
-            <ArrowLeft className="w-4 h-4" />
-            {common.back}
-          </Link>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
+            <Link to="/" className="inline-flex items-center gap-2 text-sm font-body font-medium text-primary hover:text-primary/80 transition-colors">
+              <ArrowLeft className="w-4 h-4" />
+              {common.back}
+            </Link>
+            <a
+              href="#reservar"
+              className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
+            >
+              {common.book}
+            </a>
+          </div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="text-3xl md:text-4xl font-display font-semibold text-foreground">{copy.h1}</h1>
@@ -195,15 +203,6 @@ const Clinic = ({ clinic }: { clinic: ClinicKey }) => {
             />
           </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6">
-            <a href="#reservar" className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold text-sm text-center hover:opacity-90 transition-opacity">
-              {common.book}
-            </a>
-            <p className="font-body text-sm text-muted-foreground">
-              {common.otherLabel}{" "}
-              <Link to={other.path} className="text-primary font-medium hover:underline">{other.city}</Link>
-            </p>
-          </div>
         </article>
       </main>
       <BookingSection defaultLocation={clinic} />
