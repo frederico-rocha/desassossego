@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -120,15 +120,24 @@ const Header = () => {
 
 
 
+  const scrollToTarget = (href: string) => {
+    const el = document.querySelector(href);
+    if (!el) return false;
+    const top = el.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top, behavior: "smooth" });
+    return true;
+  };
+
   const handleClick = (href: string) => {
     setMobileOpen(false);
-    setTimeout(() => {
-      const el = document.querySelector(href);
-      if (el) {
-        const top = el.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({ top, behavior: "smooth" });
-      }
-    }, 50);
+    // On pages without the homepage sections, go home first — but only when the
+    // target really isn't on the current page (e.g. #reservar is on clinic pages).
+    if (!isHome && !document.querySelector(href)) navigate("/");
+    let tries = 0;
+    const iv = setInterval(() => {
+      tries += 1;
+      if (scrollToTarget(href) || tries > 25) clearInterval(iv);
+    }, 60);
   };
 
   const LangSwitcher = ({ inverted = false }: { inverted?: boolean }) => {
