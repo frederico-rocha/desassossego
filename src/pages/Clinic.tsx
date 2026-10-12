@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, MapPin, Phone, Mail, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BookingSection from "@/components/BookingSection";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 type ClinicKey = "lisboa" | "cascais";
@@ -195,9 +196,9 @@ const Clinic = ({ clinic }: { clinic: ClinicKey }) => {
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6">
-            <Link to="/#reservar" className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold text-sm text-center hover:opacity-90 transition-opacity">
+            <a href="#reservar" className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold text-sm text-center hover:opacity-90 transition-opacity">
               {common.book}
-            </Link>
+            </a>
             <p className="font-body text-sm text-muted-foreground">
               {common.otherLabel}{" "}
               <Link to={other.path} className="text-primary font-medium hover:underline">{other.city}</Link>
@@ -205,6 +206,7 @@ const Clinic = ({ clinic }: { clinic: ClinicKey }) => {
           </div>
         </article>
       </main>
+      <BookingSection defaultLocation={clinic} />
       <Footer />
     </div>
   );
