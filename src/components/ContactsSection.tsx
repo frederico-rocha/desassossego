@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const ContactsSection = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   return (
     <section id="contactos" className="section-padding bg-background">
       <div className="container mx-auto">
@@ -69,7 +69,7 @@ const ContactsSection = () => {
                   to={item.title === "Lisboa" ? "/psicologia-lisboa" : "/psicologia-cascais"}
                   className="inline-block mt-2 text-xs font-body font-medium text-primary hover:underline"
                 >
-                  {t.services?.learnMore ?? "Saber mais"} →
+                  {lang === "en" ? "Learn more" : "Saber mais"} →
                 </Link>
               )}
             </motion.div>
