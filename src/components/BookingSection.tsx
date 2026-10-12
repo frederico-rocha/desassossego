@@ -27,11 +27,11 @@ const initial: FormState = {
   message: "",
 };
 
-const BookingSection = () => {
+const BookingSection = ({ defaultLocation = "" }: { defaultLocation?: string }) => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState(false);
-  const [values, setValues] = useState<FormState>(initial);
+  const [values, setValues] = useState<FormState>({ ...initial, location: defaultLocation });
   const [errors, setErrors] = useState<Errors>({});
   const { t, lang } = useLanguage();
 
