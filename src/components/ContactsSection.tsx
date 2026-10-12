@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const ContactsSection = () => {
@@ -63,6 +64,14 @@ const ContactsSection = () => {
                   {line}
                 </p>
               ))}
+              {(item.title === "Lisboa" || item.title === "Cascais") && (
+                <Link
+                  to={item.title === "Lisboa" ? "/psicologia-lisboa" : "/psicologia-cascais"}
+                  className="inline-block mt-2 text-xs font-body font-medium text-primary hover:underline"
+                >
+                  {t.services?.learnMore ?? "Saber mais"} →
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>
