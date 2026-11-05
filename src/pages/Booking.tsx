@@ -20,11 +20,18 @@ const Booking = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-    // The static description in index.html is not managed by Helmet, so it
-    // would ship next to this page's own one.
-    document.head
-      .querySelectorAll('meta[name="description"]:not([data-rh])')
-      .forEach((tag) => tag.parentNode?.removeChild(tag));
+    // The static tags in index.html are not managed by Helmet, so they would
+    // ship next to this page's own ones (and win, being first in the head).
+    // Drop them while this page is open, put them back on leaving.
+    const staticTags = document.head.querySelectorAll(
+      'meta[name="description"]:not([data-rh]), meta[property^="og:"]:not([data-rh])'
+    );
+    const removed: Element[] = [];
+    staticTags.forEach((tag) => {
+      removed.push(tag);
+      tag.parentNode?.removeChild(tag);
+    });
+    return () => removed.forEach((tag) => document.head.appendChild(tag));
   }, []);
 
   return (
