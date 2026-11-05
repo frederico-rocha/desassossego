@@ -207,6 +207,12 @@ const pt = {
     errorSend: "Ocorreu um erro ao enviar o pedido. Tente novamente mais tarde.",
     submitting: "A enviar...",
   },
+  bookingPage: {
+    title: "Marcar Consulta — Clínica desasSossego | Lisboa e Cascais",
+    description:
+      "Marque uma consulta de psicologia e psicoterapia psicanalítica em Lisboa ou Cascais, presencial ou online. Resposta em menos de 24 horas.",
+    h1: "Marcar consulta de psicologia em Lisboa e Cascais",
+  },
   contacts: {
     title: "Contactos",
     subtitle: "Estamos disponíveis para esclarecer qualquer dúvida.",
@@ -428,6 +434,12 @@ const en: typeof pt = {
     errorEmail: "Please enter a valid email.",
     errorSend: "An error occurred while sending your request. Please try again later.",
     submitting: "Sending...",
+  },
+  bookingPage: {
+    title: "Book a Session — desasSossego Clinic | Lisbon and Cascais",
+    description:
+      "Book a psychology and psychoanalytic psychotherapy session in Lisbon or Cascais, in person or online. We reply within 24 hours.",
+    h1: "Book a psychology session in Lisbon and Cascais",
   },
   contacts: {
     title: "Contact",
