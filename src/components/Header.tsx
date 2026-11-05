@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -176,7 +176,14 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-20 px-6 md:px-8">
-        <a href="#" className="flex items-center">
+        <Link
+          to="/"
+          className="flex items-center"
+          onClick={() => {
+            // Already home: a route change would not move the page, so scroll up.
+            if (isHome) window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           <div
             aria-label="desassossego"
             role="img"
@@ -192,7 +199,7 @@ const Header = () => {
               maskSize: "contain",
             }}
           />
-        </a>
+        </Link>
 
         <nav className="hidden lg:flex items-center gap-10">
           {navItems.map((item) => {
@@ -222,7 +229,7 @@ const Header = () => {
           })}
           <LangSwitcher inverted={!solid} />
           <button
-            onClick={() => handleClick("#reservar")}
+            onClick={() => navigate("/marcar-consulta")}
             className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity duration-300"
           >
             {t.nav.book}
@@ -266,7 +273,10 @@ const Header = () => {
                 );
               })}
               <button
-                onClick={() => handleClick("#reservar")}
+                onClick={() => {
+                  setMobileOpen(false);
+                  navigate("/marcar-consulta");
+                }}
                 className="bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold mt-2"
               >
                 {t.nav.book}
