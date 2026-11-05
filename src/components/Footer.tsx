@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -31,8 +32,31 @@ const LinkedInIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 const Footer = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
   const navLabels = [t.nav.services, t.nav.about, t.nav.protocols, t.nav.contacts];
   const navIds = ["servicos", "quem-somos", "protocolos", "contactos"];
+
+  // The homepage sections are not on clinic, profile or booking pages, so go
+  // home first and keep looking for the section until it is rendered.
+  const goToSection = (id: string) => {
+    const scrollTo = () => {
+      const el = document.getElementById(id);
+      if (!el) return false;
+      const top = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: "smooth" });
+      return true;
+    };
+    if (scrollTo()) return;
+    if (!isHome) navigate("/");
+    let tries = 0;
+    const iv = setInterval(() => {
+      tries += 1;
+      if (scrollTo() || tries > 25) clearInterval(iv);
+    }, 60);
+  };
+
   return (
     <footer className="bg-primary py-12 px-6">
       <div className="container mx-auto">
@@ -51,13 +75,7 @@ const Footer = () => {
             {navLabels.map((label, i) => (
               <button
                 key={navIds[i]}
-                onClick={() => {
-                  const el = document.querySelector(`#${navIds[i]}`);
-                  if (el) {
-                    const top = el.getBoundingClientRect().top + window.scrollY - 80;
-                    window.scrollTo({ top, behavior: "smooth" });
-                  }
-                }}
+                onClick={() => goToSection(navIds[i])}
                 className="text-sm text-primary-foreground/70 hover:text-primary-foreground font-body transition-colors duration-300"
               >
                 {label}
