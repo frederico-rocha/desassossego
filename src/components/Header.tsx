@@ -21,6 +21,7 @@ const Header = () => {
     { label: t.nav.services, href: "#servicos" },
     { label: t.nav.about, href: "#quem-somos" },
     { label: t.nav.protocols, href: "#protocolos" },
+    { label: t.nav.book, href: "#reservar" },
     { label: t.nav.contacts, href: "#contactos" },
   ];
 
@@ -201,7 +202,7 @@ const Header = () => {
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-7 xl:gap-10">
           {navItems.map((item) => {
             const id = item.href.slice(1);
             const isActive = activeId === id;
