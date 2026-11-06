@@ -21,6 +21,7 @@ const Header = () => {
     { label: t.nav.services, href: "#servicos" },
     { label: t.nav.about, href: "#quem-somos" },
     { label: t.nav.protocols, href: "#protocolos" },
+    { label: t.nav.book, href: "#reservar" },
     { label: t.nav.contacts, href: "#contactos" },
   ];
 
