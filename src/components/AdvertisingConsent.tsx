@@ -12,7 +12,11 @@ export default function AdvertisingConsent() {
     void syncAdvertising();
     const settings = () => setOpen(true);
     const sync = () => { void syncAdvertising(); };
-    const storage = (event: StorageEvent) => { if (event.key === CONSENT_KEY) sync(); };
+    const storage = (event: StorageEvent) => {
+      if (event.key !== CONSENT_KEY) return;
+      sync();
+      if (readChoice() === "denied" && document.querySelector("script[data-google-ads]")) window.location.reload();
+    };
     window.addEventListener("open-cookie-settings", settings);
     window.addEventListener("ad-consent-changed", sync);
     window.addEventListener("storage", storage);
