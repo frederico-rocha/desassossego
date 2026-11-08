@@ -4,6 +4,7 @@ import { Send, AlertCircle, Loader2, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
+import { reportBookingConversion } from "@/lib/ad-consent";
 
 type FormState = {
   name: string;
@@ -89,6 +90,8 @@ const BookingSection = ({ defaultLocation = "" }: { defaultLocation?: string }) 
       setSendError(true);
     } else {
       setSubmitted(true);
+      // Measurement must never delay or prevent the visitor's confirmation.
+      void reportBookingConversion(true).catch(() => undefined);
     }
   };
 
