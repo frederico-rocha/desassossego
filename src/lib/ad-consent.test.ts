@@ -13,6 +13,7 @@ describe("booking conversion", () => {
     document.querySelectorAll("script[data-google-ads], script[data-google-manager]").forEach(script => script.remove());
     delete window.gtag;
     vi.restoreAllMocks();
+    vi.unstubAllGlobals();
   });
   it("reports the exact provided destination only on success, without customer fields", async () => {
     saveChoice("granted");
@@ -39,7 +40,7 @@ describe("booking conversion", () => {
   });
   it("honors Global Privacy Control over acceptance", async () => {
     saveChoice("granted");
-    vi.spyOn(navigator, "globalPrivacyControl", "get").mockReturnValue(true);
+    vi.stubGlobal("navigator", { globalPrivacyControl: true });
     const gtag = vi.fn();
     window.gtag = gtag;
     await reportBookingConversion(true);
