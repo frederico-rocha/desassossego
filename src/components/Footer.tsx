@@ -1,6 +1,8 @@
 import logo from "@/assets/logo.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -115,6 +117,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/15 mt-8 pt-8 text-center">
+          <div className="mb-4 flex flex-wrap items-center justify-center gap-4 text-sm text-primary-foreground">
+            <Link to="/privacidade" className="underline">Privacidade e cookies</Link>
+            <Button variant="link" className="text-primary-foreground" onClick={() => window.dispatchEvent(new Event("open-cookie-settings"))}>Definições de cookies</Button>
+          </div>
           <p className="text-xs text-primary-foreground/50 font-body">{t.footer.rights}</p>
           <p className="text-xs text-primary-foreground/50 font-body mt-2">
             {t.footer.designedBy}{" "}

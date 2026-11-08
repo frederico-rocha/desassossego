@@ -13,6 +13,15 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  // Prebundle React and the root providers together so adding a UI primitive
+  // cannot leave an open preview mixing old and newly optimized React chunks.
+  optimizeDeps: {
+    include: [
+      "react", "react-dom", "react-dom/client", "react/jsx-runtime",
+      "@radix-ui/react-tooltip", "@radix-ui/react-dialog",
+      "@radix-ui/react-toast", "@radix-ui/react-slot",
+    ],
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

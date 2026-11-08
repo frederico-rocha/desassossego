@@ -8,6 +8,8 @@ import TeamMember from "./pages/TeamMember.tsx";
 import Clinic from "./pages/Clinic.tsx";
 import Booking from "./pages/Booking.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Privacy from "./pages/Privacy";
+import AdvertisingConsent from "./components/AdvertisingConsent";
 
 const queryClient = new QueryClient();
 
@@ -18,7 +20,9 @@ const App = () => (
       <Sonner />
       {/* <BrowserRouter basename="/desassossego"> */}
       <BrowserRouter>
+        <AdvertisingConsent />
         <Routes>
+          <Route path="/privacidade" element={<Privacy />} />
           <Route path="/" element={<Index />} />
           <Route path="/equipa/:slug" element={<TeamMember />} />
           <Route path="/psicologia-lisboa" element={<Clinic clinic="lisboa" />} />
