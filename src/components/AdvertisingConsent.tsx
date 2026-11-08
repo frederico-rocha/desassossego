@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { CONSENT_KEY, NOTICE_TEXT, consentRequired, readChoice, saveChoice, syncAdvertising } from "@/lib/ad-consent";
 
 export default function AdvertisingConsent() {
@@ -33,11 +32,17 @@ export default function AdvertisingConsent() {
     // A loaded tag manager can keep third-party tags alive; reload on withdrawal.
     if (choice === "denied" && document.querySelector("script[data-google-ads]")) window.location.reload();
   };
-  return <Dialog open={open} onOpenChange={setOpen}>
-    <DialogContent className="w-[calc(100%-2rem)] max-w-lg rounded-lg">
-      <DialogHeader><DialogTitle>Preferências de cookies</DialogTitle><DialogDescription className="pt-3 leading-relaxed">{NOTICE_TEXT}</DialogDescription></DialogHeader>
-      <Link to="/privacidade" onClick={() => setOpen(false)} className="text-primary underline">Política de privacidade</Link>
-      <div className="grid grid-cols-2 gap-3"><Button variant="outline" size="lg" onClick={() => choose("denied")}>Recusar</Button><Button size="lg" onClick={() => choose("granted")}>Aceitar</Button></div>
-    </DialogContent>
-  </Dialog>;
+  if (!open) return null;
+  return <section aria-label="Preferências de cookies" className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background text-foreground">
+    <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:gap-8">
+      <p className="min-w-0 flex-1 text-sm leading-relaxed text-muted-foreground">
+        {NOTICE_TEXT}{" "}
+        <Link to="/privacidade" className="text-primary underline underline-offset-2">Política de privacidade</Link>
+      </p>
+      <div className="grid shrink-0 grid-cols-2 gap-3 lg:w-56">
+        <Button variant="outline" onClick={() => choose("denied")}>Recusar</Button>
+        <Button onClick={() => choose("granted")}>Aceitar</Button>
+      </div>
+    </div>
+  </section>;
 }
