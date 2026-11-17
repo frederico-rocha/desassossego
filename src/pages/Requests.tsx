@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Loader2, LockKeyhole, Mail } from "lucide-react";
-import { LovableMark } from "@lovable.dev/cloud-auth-js/react";
 import { useQuery } from "@tanstack/react-query";
 import type { User } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -70,7 +69,7 @@ export default function Requests() {
     setEmailSent(true);
   };
 
-  const socialSignIn = async (provider: "google" | "lovable") => {
+  const socialSignIn = async (provider: "google") => {
     setError("");
     setPending(provider);
     window.sessionStorage.setItem("auth-return-to", "/gestao");
@@ -127,7 +126,6 @@ export default function Requests() {
             <div className="my-6 flex items-center gap-3 text-xs text-muted-foreground"><span className="h-px flex-1 bg-border" />ou<span className="h-px flex-1 bg-border" /></div>
             <div className="grid gap-3">
               <Button type="button" variant="outline" className="w-full border-[hsl(var(--google-border))] bg-[hsl(var(--google-background))] font-medium text-[hsl(var(--google-foreground))] hover:opacity-90" onClick={() => void socialSignIn("google")} disabled={Boolean(pending)}>{pending === "google" ? <Loader2 className="animate-spin" /> : <GoogleLogo />}Entrar com Google</Button>
-              <Button type="button" variant="outline" className="w-full" onClick={() => void socialSignIn("lovable")} disabled={Boolean(pending)}>{pending === "lovable" ? <Loader2 className="animate-spin" /> : <LovableMark className="h-[18px] w-[18px]" />}Entrar com Lovable</Button>
             </div>
             {error && <p role="alert" className="mt-4 text-center text-sm text-destructive">{error}</p>}
             <p className="mt-6 text-center text-xs text-muted-foreground">Se a sua conta não tiver autorização, os pedidos permanecem inacessíveis.</p>
