@@ -4,4 +4,4 @@
 - [x] Verify consent behavior and request publication.
 - [x] Store website, telephone and WhatsApp requests securely.
 - [x] Add a protected clinic requests dashboard with manual contact logging.
-- [ ] Test permissions, submission logging and the dashboard on desktop and mobile.
+- [x] Test permissions, submission logging and the dashboard on desktop and mobile.

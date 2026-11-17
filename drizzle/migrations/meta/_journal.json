@@ -15,6 +15,13 @@
       "when": 1794910093772,
       "tag": "0001_restrict_internal_auth_functions",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794910673530,
+      "tag": "0002_make_role_check_security_invoker",
+      "breakpoints": true
     }
   ]
 }

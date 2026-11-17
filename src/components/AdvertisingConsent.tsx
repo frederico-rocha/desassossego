@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CONSENT_KEY, NOTICE_TEXT, consentRequired, readChoice, saveChoice, syncAdvertising } from "@/lib/ad-consent";
 
 export default function AdvertisingConsent() {
+  const { pathname } = useLocation();
+  const internalPage = pathname === "/gestao" || pathname === "/auth/callback";
   const [open, setOpen] = useState(false);
   useEffect(() => {
+    if (internalPage) {
+      setOpen(false);
+      return;
+    }
     let active = true;
     void consentRequired().then(required => { if (active && required && readChoice() === null) setOpen(true); });
     void syncAdvertising();
@@ -25,14 +31,14 @@ export default function AdvertisingConsent() {
       window.removeEventListener("ad-consent-changed", sync);
       window.removeEventListener("storage", storage);
     };
-  }, []);
+  }, [internalPage]);
   const choose = (choice: "granted" | "denied") => {
     saveChoice(choice);
     setOpen(false);
     // A loaded tag manager can keep third-party tags alive; reload on withdrawal.
     if (choice === "denied" && document.querySelector("script[data-google-ads]")) window.location.reload();
   };
-  if (!open) return null;
+  if (internalPage || !open) return null;
   return <section aria-label="Preferências de cookies" className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background text-foreground">
     <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:gap-8">
       <p className="min-w-0 flex-1 text-sm leading-relaxed text-muted-foreground">
