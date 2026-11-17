@@ -101,6 +101,7 @@ export default function Requests() {
                 <input id="staff-email" type="email" required autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="o.seu@email.pt" className="mt-1.5 h-11 w-full rounded-md border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring/20" />
                 <Button type="submit" className="mt-3 w-full" disabled={Boolean(pending)}>{pending === "email" ? <Loader2 className="animate-spin" /> : <Mail />}Enviar ligação de acesso</Button>
               </form>
+            )}
             {error && <p role="alert" className="mt-4 text-center text-sm text-destructive">{error}</p>}
             <p className="mt-6 text-center text-xs text-muted-foreground">Se a sua conta não tiver autorização, os pedidos permanecem inacessíveis.</p>
           </section>
