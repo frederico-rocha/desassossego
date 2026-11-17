@@ -1,4 +1,5 @@
 # Tasks
+- [x] Repair and validate reserved-area verification email sending.
 - [x] Add advertising consent and Google Ads base tag.
 - [x] Link privacy information and cookie settings.
 - [x] Verify consent behavior and request publication.
