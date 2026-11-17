@@ -9,6 +9,8 @@ import Clinic from "./pages/Clinic.tsx";
 import Booking from "./pages/Booking.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Privacy from "./pages/Privacy";
+import Requests from "./pages/Requests";
+import AuthCallback from "./pages/AuthCallback";
 import AdvertisingConsent from "./components/AdvertisingConsent";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/psicologia-lisboa" element={<Clinic clinic="lisboa" />} />
           <Route path="/psicologia-cascais" element={<Clinic clinic="cascais" />} />
           <Route path="/marcar-consulta" element={<Booking />} />
+          <Route path="/gestao" element={<Requests />} />
+          <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

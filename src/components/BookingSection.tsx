@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, AlertCircle, Loader2, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -34,6 +34,7 @@ const BookingSection = ({ defaultLocation = "" }: { defaultLocation?: string }) 
   const [sendError, setSendError] = useState(false);
   const [values, setValues] = useState<FormState>({ ...initial, location: defaultLocation });
   const [errors, setErrors] = useState<Errors>({});
+  const submissionId = useRef(crypto.randomUUID());
   const { t, lang } = useLanguage();
 
   const validate = (v: FormState): Errors => {
@@ -50,6 +51,10 @@ const BookingSection = ({ defaultLocation = "" }: { defaultLocation?: string }) 
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) => {
     setValues((prev) => ({ ...prev, [key]: value }));
     if (errors[key]) setErrors((prev) => ({ ...prev, [key]: undefined }));
+    if (sendError) {
+      submissionId.current = crypto.randomUUID();
+      setSendError(false);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -74,6 +79,7 @@ const BookingSection = ({ defaultLocation = "" }: { defaultLocation?: string }) 
 
     const { error } = await supabase.functions.invoke("send-booking-email", {
       body: {
+        submissionId: submissionId.current,
         name: values.name.trim(),
         email: values.email.trim(),
         phone: values.phone.trim(),
@@ -89,6 +95,7 @@ const BookingSection = ({ defaultLocation = "" }: { defaultLocation?: string }) 
     if (error) {
       setSendError(true);
     } else {
+      submissionId.current = crypto.randomUUID();
       setSubmitted(true);
       // Measurement must never delay or prevent the visitor's confirmation.
       void reportBookingConversion(true).catch(() => undefined);

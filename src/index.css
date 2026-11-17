@@ -34,6 +34,10 @@
     --input: 201 15% 88%;
     --ring: 201 100% 20%;
 
+    --google-background: 0 0% 100%;
+    --google-foreground: 0 0% 12%;
+    --google-border: 120 1% 46%;
+
     --radius: 0.75rem;
 
     --warm: 35 30% 96%;

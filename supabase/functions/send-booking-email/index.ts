@@ -1,13 +1,10 @@
 import { z } from 'npm:zod@3.23.8'
+import { createClient } from 'npm:@supabase/supabase-js@2'
+import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors'
 import { sendTemplateEmail } from '../_shared/transactional-email-templates/send-email.ts'
 
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers':
-    'authorization, x-client-info, apikey, content-type',
-}
-
 const BodySchema = z.object({
+  submissionId: z.string().uuid().optional(),
   name: z.string().trim().min(1).max(120),
   email: z.string().trim().email().max(255),
   phone: z.string().trim().max(40).optional().default(''),
@@ -65,7 +62,7 @@ Deno.serve(async (req) => {
     )
   }
 
-  const { name, email, phone, service, location, schedule, message, lang } =
+  const { submissionId, name, email, phone, service, location, schedule, message, lang } =
     parsed.data
 
   const ip =
@@ -77,9 +74,39 @@ Deno.serve(async (req) => {
     )
   }
 
-  const eventId = crypto.randomUUID()
+  const eventId = submissionId ?? crypto.randomUUID()
+  const supabaseUrl = Deno.env.get('SUPABASE_URL')
+  const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
+  if (!supabaseUrl || !serviceRoleKey) {
+    return new Response(JSON.stringify({ error: 'Service unavailable.' }), {
+      status: 503,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    })
+  }
+  const supabase = createClient(supabaseUrl, serviceRoleKey)
 
   try {
+    // Store every valid website request before attempting email delivery.
+    const { error: storeError } = await supabase
+      .from('contact_requests')
+      .upsert({
+        id: eventId,
+        received_at: new Date().toISOString(),
+        source: 'website',
+        name,
+        email,
+        phone: phone || null,
+        service: service || null,
+        location,
+        schedule,
+        message: message || null,
+        status: 'new',
+        internal_notes: '',
+        created_by: null,
+      }, { onConflict: 'id', ignoreDuplicates: true })
+
+    if (storeError) throw storeError
+
     // 1) Notify the clinic
     await sendTemplateEmail('booking-notification', email, {
       templateData: { name, email, phone, service, location, schedule, message },
@@ -98,12 +125,12 @@ Deno.serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })
   } catch (error) {
-    console.error('Failed to send booking emails', {
-      code: (error as any)?.code,
+    console.error('Failed to process booking request', {
+      code: (error as { code?: string })?.code,
       message: (error as Error)?.message,
     })
     return new Response(
-      JSON.stringify({ error: 'Failed to send email. Please try again later.' }),
+      JSON.stringify({ error: 'Failed to process request. Please try again later.' }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }

@@ -14,6 +14,6 @@ export default function Privacy() {
       <p>O destinatário dos dados de publicidade é o Google. Consulte a <a className="text-primary underline" href="https://business.safety.google/privacy/" target="_blank" rel="noopener noreferrer">informação de privacidade do Google</a>, incluindo conservação e eventuais transferências internacionais.</p>
       <Button variant="outline" onClick={() => window.dispatchEvent(new Event("open-cookie-settings"))}>Definições de cookies</Button>
       <h2 className="text-xl">Pedidos de consulta e contactos</h2>
-      <p>Os dados fornecidos num pedido de consulta são usados pela clínica para responder ao pedido e não são enviados ao Google por esta instalação. Para questões de privacidade ou exercício dos seus direitos, contacte <a className="text-primary underline" href="mailto:geral@clinicadesassossego.pt">geral@clinicadesassossego.pt</a>.</p>
+      <p>Os dados fornecidos num pedido de consulta são usados pela clínica para responder e acompanhar o pedido. Os pedidos do site e os contactos recebidos por telefone ou WhatsApp podem ser registados numa área reservada, acessível apenas a membros autorizados da clínica. Estes dados não são enviados ao Google por esta instalação. Para questões de privacidade ou exercício dos seus direitos, contacte <a className="text-primary underline" href="mailto:geral@clinicadesassossego.pt">geral@clinicadesassossego.pt</a>.</p>
     </main><Footer /></>;
 }

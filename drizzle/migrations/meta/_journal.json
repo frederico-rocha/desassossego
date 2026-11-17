@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1794909878166,
+      "tag": "0000_create_clinic_contact_tracking",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794910093772,
+      "tag": "0001_restrict_internal_auth_functions",
+      "breakpoints": true
+    }
+  ]
+}

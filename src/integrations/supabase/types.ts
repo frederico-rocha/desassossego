@@ -14,16 +14,122 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_requests: {
+        Row: {
+          created_at: string
+          created_by: string | null
+          email: string | null
+          id: string
+          internal_notes: string
+          location: string | null
+          message: string | null
+          name: string
+          phone: string | null
+          received_at: string
+          schedule: string | null
+          service: string | null
+          source: Database["public"]["Enums"]["contact_source"]
+          status: Database["public"]["Enums"]["contact_status"]
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          created_by?: string | null
+          email?: string | null
+          id?: string
+          internal_notes?: string
+          location?: string | null
+          message?: string | null
+          name: string
+          phone?: string | null
+          received_at?: string
+          schedule?: string | null
+          service?: string | null
+          source: Database["public"]["Enums"]["contact_source"]
+          status?: Database["public"]["Enums"]["contact_status"]
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          created_by?: string | null
+          email?: string | null
+          id?: string
+          internal_notes?: string
+          location?: string | null
+          message?: string | null
+          name?: string
+          phone?: string | null
+          received_at?: string
+          schedule?: string | null
+          service?: string | null
+          source?: Database["public"]["Enums"]["contact_source"]
+          status?: Database["public"]["Enums"]["contact_status"]
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          full_name: string
+          preferences: Json
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name?: string
+          preferences?: Json
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name?: string
+          preferences?: Json
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin"
+      contact_source: "website" | "phone" | "whatsapp"
+      contact_status: "new" | "contacted" | "scheduled" | "closed"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +256,10 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin"],
+      contact_source: ["website", "phone", "whatsapp"],
+      contact_status: ["new", "contacted", "scheduled", "closed"],
+    },
   },
 } as const
