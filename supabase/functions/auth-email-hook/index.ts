@@ -130,7 +130,7 @@ const handler = createAuthEmailHandler({
   sendUrl: Deno.env.get('LOVABLE_SEND_URL'),
   emails: {
     signup: {
-      subject: 'Confirm your email',
+      subject: 'Confirme o seu email — desasSossego',
       render: (data) =>
         React.createElement(SignupEmail, {
           siteName: SITE_NAME,
@@ -149,7 +149,7 @@ const handler = createAuthEmailHandler({
         }),
     },
     magiclink: {
-      subject: 'Your login link',
+      subject: 'A sua ligação de acesso — desasSossego',
       render: (data) =>
         React.createElement(MagicLinkEmail, {
           siteName: SITE_NAME,
